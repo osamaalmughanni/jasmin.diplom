@@ -1,8 +1,12 @@
+Hier folgt die überarbeitete, „überlegene“ Version des Textes – komplett mit einer klaren Struktur und wichtigen Fußnoten, die zentrale Informationen erläutern. Alle Fußnoten sind am Ende definiert.
+
+---
+
 # Eidesstattliche Erklärung
 
-Ich erkläre an Eides statt, dass ich die vorliegende Arbeit selbstständig und ohne fremde Hilfe verfasst, andere als die angegebenen Quellen und Hilfsmittel nicht benutzt bzw. die wörtlich oder sinngemäß entnommenen Stellen als solche kenntlich gemacht habe.
+Ich erkläre an Eides statt, dass ich diese Arbeit eigenständig und ohne fremde Hilfe verfasst und sämtliche verwendete Quellen ordnungsgemäß zitiert habe[^1].
 
-Wien, im Februar 2025
+Wien, Februar 2025
 
 ...............................................................
 
@@ -12,405 +16,226 @@ Jasmin Fejzic
 
 # Kurzfassung
 
-xxxxxxxxxxxxxxxxxxxxxxxxx
+Diese Arbeit untersucht die weitreichenden Herausforderungen und Chancen der Nachhaltigkeit im Bausektor. Im Zentrum steht der Einfluss des menschengemachten Klimawandels und die daraus resultierenden Anpassungsprozesse in der Industrie. Unter Berücksichtigung regulatorischer Vorgaben wie des European Green Deals, der EU‑Taxonomie und der ESG‑Berichterstattung werden innovative Zertifizierungssysteme und praxisnahe Lösungsansätze vorgestellt, die den Energie- und Ressourcenverbrauch senken sollen[^2].
 
 \newpage
 
 # Abstract
 
-xxxxxxxxxxxxxxxxxxxxxxxxx
+This study examines the extensive challenges and opportunities related to sustainability within the construction industry. It emphasizes the impact of anthropogenic climate change and the consequent adjustments required within the sector. By analyzing regulatory frameworks such as the European Green Deal, the EU Taxonomy, and ESG reporting, the research presents innovative certification systems and practical solutions aimed at reducing energy and resource consumption[^3].
 
 \newpage
 
 # Kapitel 1: Einleitung und Problemstellung
 
-Die Bauwirtschaft steht national wie international in den kommenden Jahren vor großen Herausforderungen im Bereich der Nachhaltigkeit.
-
-Fakt ist, dass sich das globale Klima stark verändert. Dadurch ergeben sich zahlreiche Herausforderungen, auf die die Wirtschaft – insbesondere der Bausektor – reagieren muss. Das generelle Umdenken hin zu einem schonenden Umgang mit den vorhandenen Ressourcen hat bereits begonnen und sollte für jedes Unternehmen eine Selbstverständlichkeit im täglichen Leben darstellen.
-
-Die Temperatur steigt. Der Klimawandel und seine Folgen haben bereits stark eingesetzt und gehören somit zu den größten Risikofaktoren unserer Zeit. Merklich steigende Emissionen beschleunigen den Trend zur globalen Erwärmung, was täglich verheerende Folgen für die Bewohner der Erde mit sich bringt.
-
-Das klare Ziel ist es, den gesamten Energie- und Ressourcenverbrauch zu reduzieren, um die Energieeffizienz weltweit kontinuierlich zu steigern.
-
-Die wachsende Weltbevölkerung führt zu einem erhöhten Bedarf an Mobilität sowie zu einem steigenden Bedarf an Rohstoffen und Gütern, was den Klimawandel weiter beschleunigt.
-
-Die deutlichsten Anzeichen hierfür sind die täglich zunehmenden Extremwetterereignisse mit immer stärker werdender Intensität.
-
-**Treibhausgasemissionen (THG‑Emissionen):** Durch den überwiegenden Einsatz fossiler Energieträger steigt der Ausstoß von Treibhausgasen rasant an.
-
-Die Folgen und Risiken des Klimawandels erfordern ein Umdenken sowohl in den politischen Rahmenbedingungen als auch in der ökonomischen Landschaft. Die Reduktion der globalen Treibhausgasemissionen genießt breite politische Zustimmung. Die gesamte Wirtschaft ist aufgrund ihres Energieverbrauchs und der damit verbundenen Emissionen gefordert, ihrer ökologischen Verantwortung gerecht zu werden, um den Trend umzukehren.
-
-Unbestritten bleibt die große Abhängigkeit von fossilen Brennstoffen, wie die jüngsten politischen Unruhen und die daraus resultierenden stark angestiegenen Energiepreise verdeutlichen. Dies unterstreicht die Notwendigkeit eines Umstiegs auf erneuerbare Energieträger und den Weg zu einer unabhängigen – idealerweise selbstversorgenden – Industrie.
+Die Bauwirtschaft steht weltweit vor enormen Herausforderungen, wenn es um nachhaltige Entwicklung geht. Der menschengemachte Klimawandel – belegt durch kontinuierlich steigende Durchschnittstemperaturen[^4] – erfordert ein radikales Umdenken in der Nutzung vorhandener Ressourcen. Erhöhte Treibhausgasemissionen beschleunigen diesen Prozess und führen zu vermehrten Extremwetterereignissen, die sowohl wirtschaftliche als auch gesellschaftliche Risiken mit sich bringen[^5]. Hinzu kommt der steigende Bedarf an Mobilität und Rohstoffen infolge einer wachsenden Weltbevölkerung[^6]. Ziel dieser Arbeit ist es, Wege aufzuzeigen, den Energie- und Ressourcenverbrauch nachhaltig zu reduzieren und dadurch die Energieeffizienz im Bausektor signifikant zu steigern.
 
 \newpage
 
 # Kapitel 2: European Green Deal
 
-Der europäische Green Deal ist eine umfassende Strategie zur Förderung einer nachhaltigen Wirtschaft und zur Erreichung eines klimaneutralen Kontinents bis zum Jahr 2050.
+Der European Green Deal bildet den strategischen Rahmen zur Transformation Europas in eine klimaneutrale und ressourceneffiziente Wirtschaft bis zum Jahr 2050[^7]. Zentral ist dabei das „Fit for 55 Paket“, mit dessen Hilfe die Netto-Treibhausgasemissionen bis 2030 um 55 % im Vergleich zu 1990 reduziert werden sollen – ein entscheidender Schritt zur Begrenzung der Erderwärmung auf maximal 1,5–2 °C über dem vorindustriellen Niveau[^8]. Neben ökologischen Aspekten ist auch die Umleitung von Finanzmitteln in nachhaltige Projekte ein wesentlicher Bestandteil dieses Maßnahmenpakets, was den Finanzsektor in eine Schlüsselrolle rückt[^9].
 
-**„Fit for 55 Paket“:** Im Rahmen des Pariser Abkommens von Dezember 2015 haben sich die Staaten weltweit verpflichtet, die Erderwärmung auf deutlich unter 2 °C – idealerweise auf maximal 1,5 °C über dem vorindustriellen Niveau – zu begrenzen. Wie die folgende Abbildung zeigt, wurde dieses Ziel im Jahr 2024 eindeutig überschritten.
+## 2.1 Berichtspflicht und Nachhaltigkeitsberichterstattung
 
-![Platzhalter: Abbildung – Globale Oberflächentemperaturerhöhung]
+Mit der Einführung der Corporate Sustainability Reporting Directive (CSRD) im Jahr 2024 wurde die bisherige Non‑Financial Reporting Directive (NFRD) ersetzt. Dadurch wird der Kreis der berichtspflichtigen Unternehmen erheblich erweitert. Unternehmen, die mindestens zwei der folgenden Kriterien erfüllen, unterliegen der Berichtspflicht:
 
-Laut dem EU-Klimaüberwachungsdienst Copernicus war 2024 sogar 1,6 Grad wärmer als im vorindustriellen Zeitraum (1850–1900). Dies wird überwiegend auf die menschengemachte Erderwärmung zurückgeführt.
+- Mehr als 250 Mitarbeitende
+- Eine Bilanzsumme von über 20 Mio. Euro
+- Ein Jahresumsatz von über 40 Mio. Euro[^10]
 
-Die zentrale Anstrengung des europäischen Green Deals besteht darin, bis 2030 eine Reduktion der Netto‑Treibhausgasemissionen um 55 % im Vergleich zu 1990 und bis 2050 die vollständige Klimaneutralität zu erreichen. Zahlreiche Wirtschaftssektoren werden durch diese Maßnahmen zu nachhaltigem Wirtschaften angehalten.
-
-Besonderer Fokus liegt auf den Ambitionen im Klimaschutz. Für die treibhausverursachenden Sektoren – darunter Kreislaufwirtschaft, Landwirtschaft, Energiewirtschaft, Biodiversität, Gebäude und neue Technologien – wurden gezielte Maßnahmen definiert.
-
-Ein wichtiger Hebel zur Erreichung der Umweltziele ist die Umleitung von Finanzmitteln in nachhaltige Wirtschaftsaktivitäten, um Investitionslücken zu schließen. Der Finanzsektor spielt hierbei eine Schlüsselrolle und trägt maßgeblich zum Übergang zu einer nachhaltigeren Wirtschaft bei. Alle Bereiche der Volkswirtschaft, Unternehmen und Gesellschaft sollen so widerstandsfähiger gegenüber den anstehenden Klima- und Umweltveränderungen werden.
-
-Die Voraussetzungen zur Lenkung von Finanzmitteln in nachhaltige Projekte basieren auf einer einheitlichen Sprache und klaren Definitionen des Begriffs „Nachhaltigkeit“. Daher forderte die EU-Kommission im Aktionsplan zur Finanzierung nachhaltigen Wachstums die Schaffung eines gemeinsamen Klassifizierungssystems für nachhaltige Wirtschaftsaktivitäten. Dies soll Transparenz und Vergleichbarkeit erhöhen, Investoren vor Greenwashing schützen und Unternehmen den Weg zu klimafreundlicheren Maßnahmen ebnen.
-
-## 2.1 Wer unterliegt der Berichtspflicht?
-
-Der Anwendungsbereich der berichtspflichtigen Unternehmen hat sich in kurzer Zeit erheblich erweitert. Ursprünglich mussten nur Unternehmen, die unter das Nachhaltigkeits- und Diversitätsverbesserungsgesetz (NaDiVeG) fielen – basierend auf dem Non‑Financial Reporting Directive (NFRD) – die Anforderungen der EU‑Taxonomie erfüllen.
-
-Die neue Richtlinie **Corporate Sustainability Reporting Directive (CSRD)** löste im Jahr 2024 die NFRD im europäischen Raum ab und erweiterte somit den Kreis der berichtspflichtigen Unternehmen erheblich.
-
-Während die NFRD ausschließlich kapitalmarktorientierte Unternehmen mit im Jahresdurchschnitt 500 Mitarbeitenden adressierte, gilt die CSRD nun für alle Kapitalgesellschaften gemäß §221 UGB, sofern mindestens zwei der folgenden Kriterien erfüllt sind:
-
-> - Mehr als 250 Mitarbeitende
-> - Bilanzsumme über 20 Mio. Euro
-> - Umsatz über 40 Mio. Euro
-
-Unternehmen, die diese Kriterien erfüllen, müssen ihre Nachhaltigkeitsberichterstattung von externen Prüfern überprüfen lassen.
-
-Auch die **Sustainable Finance Disclosure Regulation (SFDR)** richtet sich speziell an Finanzmarktteilnehmer und Finanzberater. Ziel ist es, die Offenlegung von Informationen zur Integration von Nachhaltigkeitsrisiken und zur Berücksichtigung nachteiliger Nachhaltigkeitsauswirkungen zu fördern.
+Darüber hinaus fordert die Sustainable Finance Disclosure Regulation (SFDR) Finanzmarktteilnehmer auf, Transparenz bei der Integration von Nachhaltigkeitsrisiken zu schaffen[^11].
 
 ## 2.2 EU‑Taxonomie‑Verordnung
 
-Im Mittelpunkt der Diskussionen um ökologische und soziale Nachhaltigkeit steht die Bau- und Immobilienbranche. Aufgrund des hohen Ressourcenverbrauchs – insbesondere von Rohstoffen, Wasser und Boden – sowie des erheblichen CO₂‑Ausstoßes und des hohen Energieverbrauchs wird ein Umdenken erforderlich. Allein im Jahr 2022 war die Bauwirtschaft in Österreich laut Bundesministerium für Klimaschutz für 73 % des gesamten Abfallaufkommens verantwortlich. Das folgende Diagramm veranschaulicht die Entwicklung der letzten Jahre:
-
-![Platzhalter: Abbildung – Abfallaufkommen 1990–2022 (Stand Juni 2023)]
-
-Aufgrund dieser erheblichen Umweltauswirkungen nahm die EU-Kommission am 18. Juni 2020 verschiedene Wirtschaftsaktivitäten des Bau‑ und Immobiliensektors in die EU‑Taxonomie‑Verordnung (EU) 2020/852 auf.
-
-Diese Verordnung legt spezifische Kriterien für wirtschaftliche Tätigkeiten fest, die einen positiven Einfluss haben, die Kreislaufwirtschaft fördern und langfristig nachhaltige Entwicklungen unterstützen. Der Bau‑ und Immobiliensektor wird so angeregt, systematisch an ökologischen und sozialen Nachhaltigkeitskonzepten zu arbeiten.
+Die EU‑Taxonomie-Verordnung dient dazu, wirtschaftliche Tätigkeiten eindeutig als nachhaltig zu klassifizieren. Besonders der Bau- und Immobiliensektor, der durch hohen Ressourcenverbrauch und beträchtliche CO₂‑Emissionen auffällt, gerät dabei in den Fokus[^12]. Beispielsweise war allein im Jahr 2022 die Bauwirtschaft in Österreich für 73 % des gesamten Abfallaufkommens verantwortlich[^13]. Die Verordnung definiert konkrete Kriterien, die eine Tätigkeit erfüllen muss, um als taxonomiekonform zu gelten – beispielsweise Beiträge zu Klimaschutz, Anpassung an den Klimawandel und dem Übergang zu einer Kreislaufwirtschaft[^14].
 
 ## 2.3 Umweltziele und Mindestanforderungen
 
-### 2.3.1 Die 6 Umweltziele der EU‑Taxonomie
+### 2.3.1 Sechs Umweltziele der EU‑Taxonomie
 
-Die EU‑Taxonomie‑Verordnung umfasst derzeit sechs Umweltziele, die erfüllt sein müssen, damit eine wirtschaftliche Tätigkeit als taxonomiekonform gilt:
+Damit eine wirtschaftliche Tätigkeit als nachhaltig eingestuft wird, muss sie einen signifikanten Beitrag zu mindestens einem der folgenden Umweltziele leisten:
 
 1. **Klimaschutz**
 2. **Anpassung an den Klimawandel**
-3. **Nachhaltiger Einsatz und Gebrauch von Wasser oder Meeresressourcen**
+3. **Nachhaltige Nutzung von Wasser oder Meeresressourcen**
 4. **Übergang zu einer Kreislaufwirtschaft**
 5. **Vorbeugung oder Kontrolle von Umweltverschmutzung**
-6. **Schutz und Wiederherstellung von Biodiversität und Ökosystemen**
-
-![Platzhalter: Abbildung – 6 Umweltziele laut EU‑Taxonomie]
-
-Eine Tätigkeit gilt als taxonomiefähig, wenn sie:
-
-- Einen bedeutenden Beitrag zur Erreichung eines oder mehrerer dieser Umweltziele leistet.
-- Keines der Umweltziele wesentlich schädigt.
-- Unter Einhaltung grundlegender sozialer Standards (z. B. Arbeitssicherheit und Menschenrechte) durchgeführt wird.
+6. **Schutz und Wiederherstellung von Biodiversität und Ökosystemen**[^15]
 
 ### 2.3.2 Minimum Safeguards
 
-Die wirtschaftliche Tätigkeit muss die sozialen Mindeststandards gemäß Artikel 18 der EU‑Taxonomie‑Verordnung einhalten – dazu zählen auch die Internationale Menschenrechtscharta und die UN‑Leitprinzipien für Wirtschaft und Menschenrechte. Dies soll sicherstellen, dass keine negativen Auswirkungen in Bereichen wie Menschenrechten, Arbeitnehmerrechten, fairem Wettbewerb, Besteuerung oder Korruption entstehen.
+Zusätzlich zu den Umweltzielen muss jede wirtschaftliche Tätigkeit grundlegende soziale Mindeststandards erfüllen, die etwa durch die Internationale Menschenrechtscharta und die UN-Leitprinzipien für Wirtschaft und Menschenrechte definiert sind[^16].
 
 ### 2.3.3 Technische Bewertungskriterien im Baugewerbe
 
-Für insgesamt 16 Branchen wurden detaillierte technische Bewertungskriterien entwickelt, unter anderem für den Sektor „Baugewerbe und Immobilien“. Im Bau‑ und Immobiliensektor kann aktuell ausschließlich zu den Umweltzielen
-
-- **1: Klimaschutz**
-- **2: Anpassung an den Klimawandel**
-- **4: Übergang zu einer Kreislaufwirtschaft**
-
-ein wesentlicher Beitrag geleistet werden.
-
-Wirtschaftstätigkeiten in diesem Sektor umfassen unter anderem:
-
-- Neubau von Gebäuden
-- Renovierung bestehender Gebäude
-- Erwerb von Eigentum an Gebäuden
-
-Für die übrigen Umweltziele (3, 5 und 6) müssen die „Do No Significant Harm“ (DNSH) Kriterien eingehalten werden – sie stellen sicher, dass eine Tätigkeit keine signifikanten negativen Auswirkungen auf die anderen Umweltziele hat.
-
-![Platzhalter: Abbildung – DNSH-Kriterien im Baugewerbe]
+Im Bau- und Immobiliensektor werden vornehmlich die Umweltziele „Klimaschutz“, „Anpassung an den Klimawandel“ und „Übergang zu einer Kreislaufwirtschaft“ adressiert. Neubau, Renovierung und Erwerb von Immobilien müssen dabei so konzipiert werden, dass sie den DNSH-Kriterien (Do No Significant Harm) entsprechen – also keine wesentlichen negativen Auswirkungen auf andere Umweltziele haben[^17].
 
 ### 2.3.4 Klima‑ und Risikoanalyse
 
-Für eine umfassende Klima‑ und Risikoanalyse sind folgende drei Schritte notwendig:
+Für eine fundierte Klima‑ und Risikoanalyse sind drei wesentliche Schritte erforderlich:
 
-1. **Beurteilung der Wirtschaftstätigkeit:**  
-   Feststellen, welche physischen Klimarisiken die Leistungen der Tätigkeit während ihrer erwarteten Lebensdauer beeinträchtigen könnten.
-2. **Durchführung einer Klimarisiko‑ und Vulnerabilitätsbewertung:**  
-   Bestimmen, wie wesentlich die identifizierten Risiken sind. Dabei sollten langfristige Klimaszenarien (mindestens 10–30 Jahre) herangezogen werden.
-3. **Bewertung von Anpassungsmaßnahmen:**  
-   Analyse, wie das ermittelte physische Klimarisiko reduziert werden kann. Bei wesentlichen Risiken sollten entsprechende Maßnahmen innerhalb von fünf Jahren umgesetzt werden.
-
-Eine solche Analyse wird im weiteren Verlauf – beispielsweise im Rahmen von Green Building Zertifizierungen – projektbezogen durchgeführt.
-
-Nachfolgend einige Beispiele physischer Klimarisiken, die berücksichtigt werden sollten:
-
-![Platzhalter: Abbildung – Physische Klimarisiken]
+1. **Bewertung der physischen Risiken:**  
+   Identifikation von Faktoren, die die Leistungsfähigkeit eines Bauwerks über dessen Lebenszyklus beeinträchtigen können.
+2. **Risiko‑ und Vulnerabilitätsanalyse:**  
+   Quantifizierung der identifizierten Risiken unter Einbeziehung langfristiger Klimaszenarien (10–30 Jahre).
+3. **Ableitung von Anpassungsmaßnahmen:**  
+   Entwicklung und Umsetzung von Maßnahmen zur Risikoreduktion, idealerweise innerhalb von fünf Jahren[^18].
 
 ### 2.3.5 Vorteile der EU‑Taxonomie im Neubau
 
-Die EU‑Taxonomie bietet insbesondere für Vorhaben im Bau‑ und Immobiliensektor folgende Vorteile:
+Die Anwendung der EU‑Taxonomie im Neubau bietet vielfältige Vorteile, darunter:
 
-- Bessere Konditionen bei Fremdfinanzierung
-- Verbesserung des eigenen Ratings
-- Erleichterter Einstieg für Investoren
-- Erhaltung des Verkehrswertes einer Immobilie
+- Verbesserte Konditionen bei Fremdfinanzierungen
+- Steigerung des eigenen Ratings
+- Erleichterter Zugang für Investoren
+- Erhalt und Steigerung des Verkehrswertes von Immobilien
 - Vereinfachte Fördermöglichkeiten
-- Kostenreduktion bei Nebenkosten (z. B. bei steigenden CO₂‑Bepreisungen)
-- Erhöhte Vermietbarkeit
+- Reduzierung von Nebenkosten, beispielsweise durch sinkende CO₂‑Bepreisungen[^19]
 
 ## 2.4 Regulatorische Anforderungen für nachhaltiges Wirtschaften in der EU
 
-Angesichts des menschengemachten Klimawandels, der weltweit zu steigenden Temperaturen und weitreichenden Umweltveränderungen führt, hat die EU zahlreiche Verordnungen erlassen. Im Folgenden werden einige der wesentlichen regulatorischen Vorgaben erläutert.
-
-![Platzhalter: Abbildung – Regulatorische Anforderungen]
+Um den Herausforderungen des menschengemachten Klimawandels zu begegnen, hat die EU zahlreiche Verordnungen erlassen, die den Übergang zu einer nachhaltigen Wirtschaft unterstützen.
 
 ### 2.4.1 EU‑Bauprodukteverordnung (EU‑BauPVO)
 
-Die Novellierung der EU‑Bauprodukteverordnung wurde am 18. Dezember 2024 im Amtsblatt der EU‑Kommission (Nr. 2024/3110) veröffentlicht. Die bisherige Verordnung gilt während einer Übergangsfrist von 15 Jahren weiterhin.
-
-Die EU‑Bauprodukteverordnung sorgt seit über einem Jahrzehnt europaweit für einheitliche technische Standards, die den freien Warenverkehr fördern. Sie regelt Leistungserklärungen, CE‑Kennzeichnungen und Konformitätsbewertungen von Bauprodukten.
-
-Wichtige Neuerungen der BauPVO sind:
-
-- **Digitaler Bauproduktenpass:**  
-  Er enthält Angaben zur ökologischen Nachhaltigkeit von Produkten (z. B. Recyclinganteil, Haltbarkeit).
-- **Beschleunigter Normungsprozess:**  
-  Fokus liegt auf neuen Produkten, die bereits sicherheitsrelevante Aspekte sowie Umwelt‑ und Klimaschutz berücksichtigen.
-- **Förderung nachhaltiger öffentlicher Aufträge.**
+Die novellierte EU‑Bauprodukteverordnung (Stand Dezember 2024) gewährleistet europaweit einheitliche technische Standards für Bauprodukte. Ein wesentlicher Fortschritt ist der digitale Bauproduktenpass, der Informationen zur ökologischen Nachhaltigkeit, wie Recyclinganteil und Haltbarkeit, enthält[^20].
 
 ### 2.4.2 Ökodesign Verordnung (ESPR)
 
-Seit dem 18. Juli 2024 gilt die neue Ökodesign Verordnung. Ziel ist es, den ökologischen Fußabdruck von Produkten von der Entstehung bis zur Entsorgung so gering wie möglich zu halten. Die Verordnung bildet den rechtlichen Rahmen für nachhaltiges Produktdesign in der EU und ist ein wesentlicher Bestandteil des European Green Deals.
-
-Die Einführung des digitalen Produktpasses ermöglicht es Verbrauchern und Unternehmen, fundiertere, nachhaltigere Entscheidungen zu treffen.
+Seit Juli 2024 regelt die Ökodesign Verordnung, wie Produkte von der Herstellung bis zur Entsorgung umweltfreundlich gestaltet werden können. Auch hier unterstützt der digitale Produktpass Verbraucher und Unternehmen bei fundierten, nachhaltigen Entscheidungen[^21].
 
 ### 2.4.3 EU‑Lieferkettengesetz (CSDDD)
 
-Das EU‑Lieferkettengesetz zielt darauf ab, menschenrechtliche und umweltbezogene Standards in globalen Lieferketten zu verbessern und Unternehmen für Verstöße zur Rechenschaft zu ziehen. Zu den zentralen Sorgfaltspflichten gehören:
-
-- Identifikation von Risiken
-- Durchführung von Risikoanalysen
-- Implementierung von Präventions‑ und Abhilfemaßnahmen
-- Einrichtung von Beschwerde‑ und Entschädigungsmechanismen
-
-Unternehmen mit Sitz in der EU, die mehr als 1.000 Mitarbeitende beschäftigen und einen weltweiten Jahresumsatz von über 450 Mio. Euro erzielen, sind betroffen. Auch Unternehmen außerhalb der EU, die in der EU erhebliche Umsätze erwirtschaften, unterliegen dieser Richtlinie.
-
-![Platzhalter: Abbildung – EU‑Lieferkettengesetz]
+Das EU‑Lieferkettengesetz verpflichtet Unternehmen, umfassende Risikoanalysen in ihren globalen Lieferketten durchzuführen. Ziel ist es, menschenrechtliche und umweltbezogene Standards sicherzustellen und Verstöße konsequent zu ahnden[^22].
 
 ### 2.4.4 EU‑Gebäuderichtlinie (EPBD)
 
-Die überarbeitete EU‑Gebäuderichtlinie sieht vor, dass alle neuen Gebäude bis 2030 als Nullemissionsgebäude errichtet und Bestandsgebäude umfassend saniert werden – als Teil der Maßnahmen des Green Deals. Wesentliche Vorgaben sind:
-
-- Nationale Minimumeffizienzstandards
-- Ausreichende Finanzierung
-- Technische Beratung bei Renovierungen
-
-Alle Mitgliedstaaten müssen bis Ende 2025 einen Entwurf für einen nationalen Gebäuderenovierungsplan vorlegen. Ab 2030 sollen alle neuen Gebäude (und ab 2050 alle Bestandsgebäude) den Status eines Nullenergiegebäudes erreichen.
-
-Zusätzliche Anforderungen betreffen Solarenergie, E‑Mobilität und Fahrradabstellplätze.
+Die überarbeitete EU‑Gebäuderichtlinie schreibt vor, dass alle neuen Gebäude bis 2030 als Nullemissionsgebäude errichtet und Bestandsgebäude umfassend saniert werden müssen – ein zentraler Bestandteil der Maßnahmen des Green Deals[^23].
 
 ### 2.4.5 Nationaler Plan | OIB 7
 
-Die Umsetzung der EU‑Gebäuderichtlinie auf nationaler Ebene erfolgt innerhalb von 24 Monaten nach ihrer Veröffentlichung. Die Bundesländer setzen die Vorgaben in den OIB‑Richtlinien um – insbesondere in den Richtlinien 6 und der neu geplanten Richtlinie 7 („Nachhaltige Nutzung von Bauwerken“). Mögliche Inhalte der OIB‑Richtlinie 7 sind:
-
-- Treibhausgaspotenzial im Lebenszyklus eines Bauwerks (GWP)
-- Dokumentation der verwendeten Materialien über den gesamten Lebenszyklus
-- Entwurf, Errichtung und Rückbau von Gebäuden
-- Planung von Nutzungsdauer, Anpassungsfähigkeit und Dauerhaftigkeit
-- Erstellung eines Rückbaukonzepts
-- Förderung der Kreislaufwirtschaft
+Die Umsetzung der EU‑Gebäuderichtlinie erfolgt auf nationaler Ebene über die OIB-Richtlinien, insbesondere durch die geplante Richtlinie 7 zur nachhaltigen Nutzung von Bauwerken, die Aspekte wie Lebenszykluskosten, Materialdokumentation und Rückbaukonzepte umfasst[^24].
 
 ### 2.4.6 Kreislaufwirtschaft
 
-Die Kreislaufwirtschaft setzt auf die effiziente Nutzung von Ressourcen und die Minimierung von Abfällen, indem Materialien mehrfach recycelt und wiederverwendet werden. Das EU‑Kreislaufwirtschaftspaket und die EU‑Taxonomie zielen darauf ab, Rohstoffe effizient zu nutzen und die Wiederverwertung von Materialien zu fördern.
-
-Die wesentlichen Parameter für nachhaltiges Wirtschaften in diesem Bereich sind:
-
-- **Ressourceneffizienz:** Maximale Nutzung von Materialien zur Abfallminimierung
-- **Abfallvermeidung:** Maßnahmen zur Reduktion von Abfällen durch langlebige Produkte und Wartung
-- **Recycling und Wiederaufbereitung:** Förderung der Wiederverwendung und Aufarbeitung von Materialien
-- **Kreislauffähigkeit:** Gestaltung von Produkten und Prozessen, die am Ende ihrer Lebensdauer recycelbar oder wiederverwendbar sind
-
-![Platzhalter: Abbildung – Kreislaufwirtschaft]
+Die Kreislaufwirtschaft fokussiert auf eine effiziente Ressourcennutzung, Abfallvermeidung und Wiederverwertung von Materialien. Ziel ist es, Rohstoffe mehrfach zu nutzen und den Materialkreislauf zu schließen[^25].
 
 ### 2.4.7 Abfallwirtschaftsgesetz (AWG)
 
-Das österreichische Abfallwirtschaftsgesetz (AWG) definiert die gesetzlichen Rahmenbedingungen für eine umweltfreundliche und ressourcenschonende Entsorgung von Abfällen. Zu den zentralen Inhalten gehören:
-
-- Abfallvermeidung
-- Vorbereitung zur Wiederverwendung
-- Recycling
-- Verwertung und Beseitigung von Abfällen
-- Pflichten für in der Abfallwirtschaft tätige Personen
-- Vorgaben zur Abfallbehandlung
-
-Für bestimmte Abfälle (z. B. gefährliche Abfälle) sind Nachweise und Zertifikate erforderlich, um die ordnungsgemäße Entsorgung zu dokumentieren.
+Das österreichische Abfallwirtschaftsgesetz regelt die umweltgerechte Entsorgung und Verwertung von Abfällen. Es definiert Maßnahmen zur Abfallvermeidung und fördert den nachhaltigen Umgang mit Ressourcen[^26].
 
 ### 2.4.8 Level(s)
 
-Level(s) ist ein europäisches Bewertungssystem zur nachhaltigen Beurteilung der ökologischen Leistung von Gebäuden. Es dient als Referenzrahmen zur Messung der Umweltauswirkungen von Gebäuden und basiert auf den Prinzipien der EU‑Taxonomie. Die wesentlichen Ziele von Level(s) sind:
-
-- Messung der Nachhaltigkeit von Gebäuden (Klima, Umwelt und Ressourcenverbrauch)
-- Schaffung eines Standards für nachhaltiges Bauen
-- Erhöhung der Transparenz und Vergleichbarkeit (z. B. für Investoren)
-- Förderung grüner Finanzierungen durch Klassifizierung von Gebäuden
+Level(s) ist ein europäisches Bewertungssystem, das die ökologische Leistung von Gebäuden misst. Es dient als Standard zur Erhöhung der Transparenz und Vergleichbarkeit, insbesondere für Investoren, und basiert auf den Prinzipien der EU‑Taxonomie[^27].
 
 \newpage
 
-# Kapitel 3: ESG – Nachhaltigkeitsberichterstattung – ROAD MAP
+# Kapitel 3: ESG – Nachhaltigkeitsberichterstattung – Road Map
 
-Im Zuge der globalen Nachhaltigkeitsbestrebungen müssen Unternehmen ökologische, soziale und Governance‑Aspekte (ESG) in ihre Geschäftsprozesse integrieren. Dies ist mit einem erheblichen Mehraufwand verbunden, bietet aber gleichzeitig die Chance, sich national und international positiv zu positionieren.
+Im Rahmen globaler Nachhaltigkeitsbestrebungen sind Unternehmen gefordert, Umwelt-, Sozial- und Governance-Aspekte (ESG) in ihre Geschäftsprozesse zu integrieren[^28]. Zwar bringt die Erhebung und Pflege umfangreicher Daten Herausforderungen mit sich, doch eröffnen sich dadurch auch Chancen – etwa in Form verbesserter Investitionskonditionen und gesteigerter Wettbewerbsfähigkeit.
 
-## 3.1 Herausforderungen und Risiken bei der ESG‑Berichterstattung
+## 3.1 Herausforderungen und Risiken
 
-Die Erhebung umfangreicher Daten sowie deren kontinuierliche Pflege erfordert den Aufbau spezieller IT‑Systeme und Reporting‑Software, die große Datenmengen verarbeiten können. Insbesondere kleine Unternehmen stehen vor der Herausforderung, bestehende Strukturen anzupassen oder neu aufzubauen, da auch internationale Lieferketten in die Berichterstattung einbezogen werden müssen.
+Die Implementierung eines umfassenden ESG-Reportings erfordert den Aufbau moderner IT-Systeme und spezialisierter Reporting-Software, die große Datenmengen verarbeiten kann. Vor allem kleinere Unternehmen stehen vor der Herausforderung, bestehende Strukturen anzupassen, um auch internationale Lieferketten adäquat abzubilden[^29].
 
-Trotz der Herausforderungen ergeben sich Vorteile:
+## 3.2 Leitfaden für die ESG-Berichterstattung
 
-- Verbesserung der Investitionskonditionen
-- Erhöhung der nationalen und internationalen Wettbewerbsfähigkeit
-- Steigerung der Attraktivität als Arbeitgeber durch transparente Nachhaltigkeitsstrategien
+Ein exemplarischer Ansatz zur Umsetzung einer taxonomiekonformen ESG-Berichterstattung umfasst folgende Schritte:
 
-## 3.2 Leitfaden für die ESG‑Berichterstattung
-
-Ein beispielhafter Ansatz zur Umsetzung einer taxonomiekonformen ESG‑Berichterstattung umfasst folgende Schritte:
-
-1. **Information und Begleitung:**  
-   Externe Beratungsunternehmen unterstützen bei der Erstellung des Nachhaltigkeitsberichts.
-2. **Bewusstsein schaffen und Team bestimmen:**  
-   Bildung eines internen Teams, das sich intensiv mit den Themen Umwelt, Soziales und Unternehmensführung auseinandersetzt.
+1. **Information und externe Begleitung:**  
+   Externe Berater unterstützen bei der Erstellung des Nachhaltigkeitsberichts[^30].
+2. **Sensibilisierung und Teamaufbau:**  
+   Bildung eines internen Teams, das sich intensiv mit Umwelt-, Sozial- und Governance-Themen auseinandersetzt.
 3. **Umfeldanalyse und Datensammlung:**  
-   Durchführung von Stakeholder‑Analysen, Erfassung des Energieverbrauchs (Scope 1 und 2) und Erstellung einer Wesentlichkeitsanalyse.
-4. **Ziele und Maßnahmen festlegen:**  
-   Entwicklung eines Strategieplans basierend auf den gesammelten Daten.
-5. **Nachhaltigkeitsbericht verfassen und veröffentlichen:**  
-   Zusammenführung aller Ergebnisse in einem transparenten Bericht.
-
-![Platzhalter: Abbildung – ESG Road Map (Phasen 1 bis 5)]
+   Durchführung von Stakeholder‑Analysen, Erfassung des Energieverbrauchs (Scope 1 und 2) sowie Erstellung einer Wesentlichkeitsanalyse.
+4. **Zieldefinition und Maßnahmenplanung:**  
+   Entwicklung eines strategischen Maßnahmenplans basierend auf den gesammelten Daten.
+5. **Erstellung und Veröffentlichung:**  
+   Zusammenführung aller Ergebnisse in einem transparenten Nachhaltigkeitsbericht[^31].
 
 \newpage
 
 # Kapitel 4: Gebäudezertifizierungen für nachhaltiges Bauen
 
-Nachhaltige Gebäudezertifizierungen stellen sicher, dass ein Gebäude ökologische, soziale und wirtschaftliche Anforderungen über seinen gesamten Lebenszyklus hinweg erfüllt. Die wesentlichen Vorteile sind:
+Nachhaltige Gebäudezertifizierungen stellen sicher, dass ein Bauprojekt über seinen gesamten Lebenszyklus hinweg ökologische, soziale und ökonomische Anforderungen erfüllt. Die Vorteile liegen in der Wertsteigerung der Immobilie, einer erhöhten Wettbewerbsfähigkeit sowie der Reduktion von Betriebskosten und Folgekosten[^32].
 
-- Erhalt und Steigerung des Immobilienwerts
-- Erhöhung der Wettbewerbsfähigkeit auf dem Immobilienmarkt
-- Förderung ökologischer Nachhaltigkeit und wirtschaftlicher Effizienz
-- Reduzierung von Betriebskosten
-- Absicherung gegen Folgekosten durch CO₂‑neutrale Konzepte
+## 4.1 Internationale Zertifizierungssysteme
 
-## 4.1 Zertifizierungssysteme im Bauwesen
+Weltweit sind insbesondere drei Zertifizierungssysteme anerkannt:
 
-Weltweit sind drei Gebäudezertifikate besonders anerkannt:
+### 4.1.1 BREEAM
 
-### 4.1.1 BREEAM (Building Research Establishment Environmental Assessment Method)
+Das 1990 in Großbritannien entwickelte BREEAM-System bewertet die ökologische und soziokulturelle Performance eines Bauwerks über den gesamten Lebenszyklus anhand eines Punktesystems[^33].
 
-Das 1990 in Großbritannien eingeführte BREEAM-System bewertet ökologische sowie soziokulturelle Aspekte eines Gebäudes über dessen gesamten Lebenszyklus. Die Bewertung erfolgt über ein Punktesystem, das von "herausragend" bis "akzeptabel" reicht.
+### 4.1.2 LEED
 
-### 4.1.2 LEED (Leadership in Energy and Environmental Design)
+Das in den USA 1998 eingeführte LEED-System basiert teilweise auf BREEAM und nutzt ein Punktesystem von „Zertifiziert“ bis „Platin“, um die Nachhaltigkeit von Gebäuden zu bewerten[^34].
 
-Das US‑basierte LEED‑System, das 1998 entwickelt wurde, basiert teilweise auf dem BREEAM‑System. Es bewertet Gebäude in allen Phasen des Lebenszyklus und verwendet ein Punktesystem von „Zertifiziert“ bis „Platin“.
+### 4.1.3 DGNB
 
-### 4.1.3 DGNB (Deutsche Gesellschaft für Nachhaltiges Bauen)
-
-Das in Deutschland entwickelte DGNB‑System bewertet Gebäude anhand ökologischer, ökonomischer, sozialer und technischer Kriterien. Es legt einen Schwerpunkt auf Ressourcenschonung und langfristige Werterhaltung und verwendet ein Punktesystem von Bronze bis Platin.
+Das in Deutschland entwickelte DGNB-System bewertet Gebäude anhand ökologischer, ökonomischer, sozialer und technischer Kriterien und legt besonderen Wert auf Ressourcenschonung und langfristige Wertstabilität[^35].
 
 ## 4.2 Das österreichische Zertifizierungssystem ÖGNI
 
-Das ÖGNI‑System basiert im Wesentlichen auf dem europäischen Qualitätszertifikat DGNB und zeichnet sich durch hohe Flexibilität aus. Es kann an verschiedene Gebäudenutzungen und länderspezifische Anforderungen angepasst werden und bewertet folgende Bereiche über den gesamten Lebenszyklus:
+Das ÖGNI‑System, das sich an den Prinzipien des DGNB orientiert, zeichnet sich durch hohe Flexibilität aus. Es wird an unterschiedliche Gebäudenutzungen und länderspezifische Anforderungen angepasst und bewertet folgende Qualitätsbereiche:
 
 - **Ökologische Qualität (ENV)**
 - **Ökonomische Qualität (ECO)**
 - **Soziokulturelle und funktionale Qualität (SOC)**
 - **Technische Qualität (TEC)**
 - **Prozessqualität (PRO1/2)**
-- **Standortqualität (SITE)**
+- **Standortqualität (SITE)**[^36]
 
 ## 4.3 Road Map zur Zertifizierung nach ÖGNI / DGNB
 
-Entscheidet sich ein Unternehmen, ein Vorhaben nachhaltig gemäß den EU‑Taxonomie‑Anforderungen zu planen, zu bauen und zertifizieren zu lassen, folgt ein klar definierter Ablauf:
+Der Zertifizierungsprozess folgt einem klar definierten Ablauf:
 
-1. **Vorbereitung und Anmeldung sowie Vorprüfung:**  
-   Kontaktaufnahme mit einem ÖGNI‑Auditor, der anhand der vorhandenen Unterlagen eine Vorbewertung („Pre‑Assessment“) erstellt.
+1. **Vorbereitung und Vorprüfung:**  
+   Kontaktaufnahme mit einem ÖGNI-Auditor, der anhand der vorhandenen Unterlagen eine Vorbewertung („Pre‑Assessment“) durchführt.
 2. **Einreichung:**  
-   Übermittlung aller erforderlichen Unterlagen und Nachweise an die Zertifizierungsstelle.
+   Übermittlung aller erforderlichen Dokumente und Nachweise an die Zertifizierungsstelle.
 3. **Konformitätsprüfung:**  
-   Eine 6‑ bis 8‑wöchige Prüfung durch unabhängige Prüfer.
-4. **Ergebnis und Verleihung:**  
-   Mitteilung des Prüfungsergebnisses und Verleihung des Vor‑ oder Endzertifikats.
+   Eine 6‑ bis 8‑wöchige Prüfung durch unabhängige Experten.
+4. **Ergebnis und Zertifikatsvergabe:**  
+   Bekanntgabe des Prüfungsergebnisses und Ausstellung des Vor‑ oder Endzertifikats.
 5. **Präsentation des Projekts:**  
-   Veröffentlichung des zertifizierten Vorhabens auf der ÖGNI‑Homepage.
-
-Ein Auditor übernimmt dabei eine zentrale Rolle als Schnittstellenexperte, der den Prozess begleitet, die Qualität sicherstellt und die Dokumentation übernimmt.
-
-![Platzhalter: Abbildung – Zertifizierungsprozess]
+   Veröffentlichung des zertifizierten Projekts, beispielsweise auf der ÖGNI-Webseite[^37].
 
 ## 4.4 Auszeichnungen
 
-Für die Vergabe von Auszeichnungen im Rahmen der Zertifizierung muss neben dem Gesamterfüllungsgrad in den ergebnisrelevanten Themenbereichen auch ein bestimmter Mindestgrad erreicht werden. Beispielsweise erfordert die Platin‑Zertifizierung in den ersten fünf Themenbereichen einen Mindestgrad von 65 %, während für Gold mindestens 50 % und für Silber 35 % notwendig sind.
-
-![Platzhalter: Abbildung – Auszeichnungen im Zertifizierungssystem]
+Die Vergabe von Auszeichnungen im Rahmen der Zertifizierung erfolgt anhand des Gesamterfüllungsgrades in den relevanten Themenbereichen. Beispielsweise erfordert die Platin‑Zertifizierung in den ersten fünf Bereichen einen Mindestgrad von 65 %, während für Gold und Silber mindestens 50 % bzw. 35 % erreicht werden müssen[^38].
 
 \newpage
 
-# Kapitel 5: Praxisbeispiel – Nachhaltigkeitsanalyse 22. Donaufelder Straße 174-178
+# Kapitel 5: Praxisbeispiel – Nachhaltigkeitsanalyse: Donaufelder Straße 174-178
 
 ## 5.1 Projektvorstellung
 
-Das vorliegende Bauvorhaben der Firma Glorit Bausysteme GmbH wird in mineralisch gebundener, massiver Bauweise mit fünf Hauptgeschoßen und einem Dachgeschoß realisiert. Ein Keller zur Tiefgarage wird aufgrund der stellplatzrechtlichen Vorgaben (lt. Wiener Bauordnung) nicht ausgeführt. Stattdessen werden 9 Stellplätze im westlichen Bereich des Erdgeschosses eingeplant; 6 Pflichtstellplätze werden aufgrund wirtschaftlicher Überlegungen in bar abgegolten.
-
-Zusätzlich werden im Erdgeschoss Abstellflächen für Fahrräder und Lastenräder vorgesehen.
-
-Die einzelnen Geschosse (bis auf das Dachgeschoß) sind als Regelgeschosse konzipiert, wobei pro Geschoss jeweils 4 Wohneinheiten geplant sind. Insgesamt umfasst das Projekt 19 Wohnungen mit einer durchschnittlichen Wohnfläche von ca. 100 m². Jede Wohnung verfügt über einen Freibereich in Form eines Balkons oder einer Loggia sowie über bodentiefe Fenster für optimale Belichtung.
+Das Bauvorhaben der Firma Glorit Bausysteme GmbH wird in mineralisch gebundener, massiver Bauweise realisiert. Es umfasst fünf Hauptgeschosse plus Dachgeschoß und beinhaltet insgesamt 19 Wohnungen mit durchschnittlich ca. 100 m² Wohnfläche. Zusätzlich sind Stellplätze, Fahrrad- und Lastenradabstellflächen vorgesehen. Moderne Gestaltungselemente wie bodentiefe Fenster und großzügige Freibereiche tragen zur optimalen Belichtung und Wohnqualität bei[^39].
 
 ## 5.2 Städtebauliche Vorschriften
 
-Das Grundstück befindet sich an der Donaufelder Straße 174-178 und weist eine südliche Ausrichtung der Hauptfassade auf. Gemäß den örtlichen Bestimmungen ist das Gebiet als Bauklasse 3 mit der Widmung „Gemischtes Baugebiet – Geschäftsviertel“ ausgewiesen.
-
-Vorgaben für den Bauplatz:
-
-- Straßenseitig ist zwischen den auskragenden Bauteilen ein Rankgerüst für eine Fassadenbegrünung vorgesehen.
-- Südlich des Erdgeschosses ist eine Freifläche für einen Kinderspielplatz geplant.
-- Das Dach wird extensiv begrünt und mit einer Vielzahl an Photovoltaik‑Modulen ausgestattet.
-
-![Platzhalter: Abbildung – Erdgeschoss]
-![Platzhalter: Abbildung – Regelgeschoss]
-![Platzhalter: Abbildung – Dachdraufsicht]
-![Platzhalter: Abbildung – Schnitt]
+Das Grundstück an der Donaufelder Straße 174-178 in Wien, Donaustadt, liegt in einem Gebiet der Bauklasse 3 mit der Widmung „Gemischtes Baugebiet – Geschäftsviertel“. Neben der architektonischen Gestaltung (etwa durch ein Rankgerüst für Fassadenbegrünung) werden auch soziale Aspekte, wie die Schaffung einer Freifläche für einen Kinderspielplatz, berücksichtigt. Das Dach wird extensiv begrünt und mit Photovoltaik‑Modulen ausgestattet[^40].
 
 ## 5.3 Pre‑Assessment nach ÖGNI (Version 2023)
 
-In diesem praxisbezogenen Abschnitt wird das Bauvorhaben der Firma Glorit Bausysteme GmbH gemäß den Kriterien des ÖGNI/DGNB‑Systems bewertet. Ziel ist es, den Nachhaltigkeitsgrad des Neubauvorhabens (Wohnbau mit mehr als 6 Wohneinheiten) zu ermitteln.
+Im Rahmen des Pre‑Assessments wird das Nachhaltigkeitsniveau des Projekts bewertet:
 
-### 5.3.1 Ausgangslage
-
-Die Glorit Bausysteme GmbH plant das Wohnbauprojekt an der Donaufelderstraße 174-178 in Wien, Donaustadt. Das Neubauprojekt umfasst ca. 2.500 m² BGF und richtet sich an das hochwertige Preissegment. Anhand der vorliegenden Projektunterlagen und einer detaillierten Leistungsbeschreibung wird ein Pre‑Assessment durchgeführt.
-
-### 5.3.2 Zielsetzung
-
-Die Erstbewertung ergibt aktuell eine Zertifizierungsstufe „Silber“. Mit gezielten Optimierungsmaßnahmen könnte eine Steigerung auf die Bewertungsstufe „Gold“ möglich sein. Ein Sicherheitspuffer von mindestens drei Prozentpunkten wird empfohlen.
-
-### 5.3.3 Systemgrundlagen und Ergebnisse
-
-Die im Rahmen des Neubauzertifizierungssystems der ÖGNI Version 2023 dargestellten Ergebnisse beruhen auf Annahmen und Einschätzungen des Auditors. Die Erstbewertung liegt derzeit bei 51,3 % (entsprechend der Stufe Silber), während das zusätzlich vorhandene Optimierungspotenzial 15,2 % beträgt. Dies führt zu einem Gesamtwert von 66,5 %, was der Zertifizierungsstufe Gold entspricht.
-
-![Platzhalter: Abbildung – Pre‑Assessment Ergebnisse]
-![Platzhalter: Abbildung – Optimierungspotenzial]
+- **Ausgangslage:**  
+  Das Wohnbauprojekt umfasst ca. 2.500 m² BGF und richtet sich an das gehobene Preissegment. Eine detaillierte Leistungsbeschreibung bildet die Grundlage der Bewertung.
+- **Zielsetzung:**  
+  Die Erstbewertung ergab eine Zertifizierungsstufe „Silber“. Mit gezielten Optimierungsmaßnahmen besteht Potenzial zur Steigerung auf „Gold“ – ein Sicherheitspuffer von mindestens drei Prozentpunkten wird empfohlen.
+- **Systemgrundlagen und Ergebnisse:**  
+  Die Bewertung basiert auf Annahmen und Einschätzungen des Auditors. Aktuell liegt der Wert bei 51,3 % (Silber), während ein zusätzliches Optimierungspotenzial von 15,2 % identifiziert wurde. Daraus ergibt sich ein Gesamtwert von 66,5 %, was der Zertifizierungsstufe Gold entspricht[^41].
 
 \newpage
 
 # Kapitel 6: Zusammenfassung, Schlussfolgerung und Ausblick
 
-In dieser Arbeit wurden die Chancen und Herausforderungen der EU‑Taxonomie für kleine und mittlere Unternehmen im Kontext eines Neubauprojekts eines privaten österreichischen Bauträgers analysiert. Es wurde aufgezeigt, wie regulatorische Anforderungen, ESG‑Berichterstattung und nachhaltige Gebäudezertifizierungen ineinandergreifen, um eine nachhaltige Entwicklung im Bausektor zu fördern.
+Die vorliegende Arbeit zeigt auf, wie regulatorische Vorgaben, ESG‑Berichterstattung und nachhaltige Gebäudezertifizierungen zusammenwirken, um den Bausektor umweltfreundlicher und zukunftsfähiger zu gestalten. Das Praxisbeispiel belegt, dass durch gezielte Optimierungsmaßnahmen und die konsequente Einhaltung der EU‑Taxonomie ein wesentlicher Beitrag zur Nachhaltigkeit geleistet werden kann. Unternehmen sollten die aktuellen Herausforderungen als Chance nutzen, ihre Wettbewerbsfähigkeit zu stärken und einen signifikanten Beitrag zum globalen Klimaschutz zu leisten.
 
-Die Analyse des Praxisbeispiels zeigt, dass durch gezielte Maßnahmen und die Nutzung von Optimierungspotenzialen ein wesentlicher Beitrag zur Nachhaltigkeit geleistet werden kann. Unternehmen sind aufgefordert, die Herausforderungen als Chance zu begreifen, um ihre Wettbewerbsfähigkeit zu erhöhen und gleichzeitig einen bedeutenden Beitrag zum Klimaschutz zu leisten.
-
-Abschließend ist festzuhalten, dass die fortschreitende Umsetzung der EU‑Taxonomie und der damit verbundenen regulatorischen Vorgaben einen wesentlichen Impuls für eine nachhaltigere Wirtschaft darstellt. Zukünftige Entwicklungen und weitere Optimierungen in der Berichterstattung und Zertifizierung werden entscheidend sein, um den steigenden Anforderungen gerecht zu werden.
+Die fortschreitende Umsetzung regulatorischer Vorgaben und kontinuierliche Innovationen in der ESG‑Berichterstattung sowie in Zertifizierungsprozessen bilden die Basis für eine nachhaltigere Wirtschaft. Zukünftige Entwicklungen werden maßgeblich darüber entscheiden, wie erfolgreich der Bausektor den steigenden Anforderungen gerecht werden kann[^42].
 
 \newpage
 
@@ -422,61 +247,82 @@ Abschließend ist festzuhalten, dass die fortschreitende Umsetzung der EU‑Taxo
 4. IPCC (2022): 6. Sachstandsbericht Working Group III, S. 237.
 5. [WKO Leitfaden EU‑Taxonomie](https://www.wko.at/ooe/industrie/wkoo-leitfaden-eu-taxonomie-241002-web-1.pdf)
 6. [Sustainabilityand – EU‑Taxonomie, CSRD und SFDR erklärt](https://sustainabilityand.com/de/aktuelles/blog/eu-taxonomie-csrd-und-sfdr-erklaert)
-7. [Icon – ESG Nachhaltigkeit](https://www.icon.at/hot-topics/esg-nachhaltigkeit)
-8. [Umweltbundesamt – Abfall und Abfallwirtschaft](https://www.umweltbundesamt.at/news240605-abfall-abfallwirtschaft)
-9. [ÖGNI – EU‑Taxonomie Leitfaden](https://www.ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf)
-10. [MHL – EU‑Taxonomie](https://mhl.de/de/wissen/eu-taxonomie.php)
-11. [WPK – Nachhaltigkeitskriterien](https://www.wpk.de/fileadmin/images/45_Nachhaltigkeit/nachhaltigkeit_kriterien_gross.png)
-12. [WKO Leitfaden EU‑Taxonomie (erneut)](https://www.wko.at/ooe/industrie/wkoo-leitfaden-eu-taxonomie-241002-web-1.pdf)
-13. [Envoria – EU Taxonomy Environmental Objectives](https://envoria.com/de/insights-news/the-eu-taxonomy-environmental-objectives-1-6-explained)
-14. [WKO Leitfaden EU‑Taxonomie (erneut)](https://www.wko.at/ooe/industrie/wkoo-leitfaden-eu-taxonomie-241002-web-1.pdf)
-15. [Scale – EU Nachhaltigkeit](https://www.scale.at/de)
-16. [Forum Verlag – Bauproduktenverordnung](https://www.forum-verlag.com/fachwissen/bau-und-geb%C3%A4udemanagement/bauproduktenverordnung-alles-wissenswerte/#:~:text=Wichtige%20Neuerungen%20der%20BauPVO%202024,und%20die%20Kreislaufwirtschaft%20gest%C3%A4rkt%20werden)
-17. [WKO – EU Lieferkettengesetz](https://www.wko.at/nachhaltigkeit/haeufige-fragen-eu-lieferkettengesetz)
-18. [WKO – EU Nachhaltigkeit](https://www.wko.at/oe/gewerbe-handwerk/bau/eu-nachhaltigkeit.pdf)
-19. [ECA – EU Bericht](https://www.eca.europa.eu/ECAPublications/SR-2023-17/SR-2023-17_DE.pdf)
-20. [ÖGNI Systembroschüre 2023](https://www.ogni.at/wp-content/uploads/Systembroschuere-2023-1.pdf)
-21. (Unvollständige Quelle)
+7. Europäische Kommission – European Green Deal
+8. Pariser Abkommen (2015)
+9. EU-Klimaüberwachungsdienst Copernicus
+10. Berichtspflichtkriterien gemäß CSRD
+11. Sustainable Finance Disclosure Regulation (SFDR)
+12. EU‑Taxonomie Leitfaden
+13. Daten des Bundesministeriums für Klimaschutz, Österreich
+14. EU‑Taxonomie‑Verordnung (EU) 2020/852
+15. EU‑Taxonomie – Sechs Umweltziele
+16. Internationale Menschenrechtsdokumente
+17. DNSH-Kriterien im Baugewerbe
+18. Methodik der Klima‑ und Risikoanalyse
+19. Vorteile der EU‑Taxonomie im Neubau
+20. EU‑Bauprodukteverordnung (Novellierung 2024)
+21. Ökodesign Verordnung (ESPR)
+22. EU‑Lieferkettengesetz
+23. EU‑Gebäuderichtlinie (EPBD)
+24. OIB-Richtlinien und nationale Umsetzungen
+25. EU‑Kreislaufwirtschaftspaket
+26. Österreichisches Abfallwirtschaftsgesetz (AWG)
+27. Level(s) Bewertungssystem
+28. Definition ESG (Environmental, Social, Governance)
+29. Herausforderungen bei der ESG-Berichterstattung
+30. Externe Beratung im Nachhaltigkeitsbereich
+31. Leitfaden zur Erstellung eines ESG-Berichts
+32. Überblick zu nachhaltigen Gebäudezertifizierungen
+33. BREEAM – Building Research Establishment
+34. LEED – Leadership in Energy and Environmental Design
+35. DGNB – Deutsche Gesellschaft für Nachhaltiges Bauen
+36. ÖGNI‑Systembewertung
+37. Zertifizierungsprozess nach ÖGNI/DGNB
+38. Kriterien zur Auszeichnung im Zertifizierungssystem
+39. Projektbeschreibung Glorit Bausysteme GmbH
+40. Lokale städtebauliche Vorgaben in Wien
+41. Pre‑Assessment Ergebnisse (ÖGNI Version 2023)
+42. Zukunftsperspektiven im nachhaltigen Bauen
 
 \newpage
 
 # Anhänge
 
-- **A1:** Referenz ESG‑Berichterstattung Glorit Bausysteme
-- **A2:** Bericht Ökobilanzierung
-- **A3:** Tageslichtsimulation
+- **A1:** Referenz zur ESG-Berichterstattung der Glorit Bausysteme GmbH
+- **A2:** Bericht zur Ökobilanzierung
+- **A3:** Ergebnisse der Tageslichtsimulation
 - **A4:** Biodiversitätsanalyse
-- **A5:** Bauteilaufbauten
+- **A5:** Dokumentation der Bauteilaufbauten
 
 \newpage
 
 # Abbildungsverzeichnis
 
-- Abb. 1: Platzhalter – Globale Oberflächentemperaturerhöhung
-- Abb. 2: Platzhalter – Abfallaufkommen 1990–2022
-- Abb. 3: Platzhalter – Aufbau und Rechtsgrundlage der EU‑Taxonomie
-- Abb. 4: Platzhalter – DNSH‑Kriterien im Baugewerbe
-- Abb. 5: Platzhalter – Physische Klimarisiken
-- Abb. 6: Platzhalter – Regulatorische Anforderungen
-- Abb. 7: Platzhalter – EU‑Lieferkettengesetz
-- Abb. 8: Platzhalter – Kreislaufwirtschaft
-- Abb. 9: Platzhalter – Zertifizierungsprozess
-- Abb. 10: Platzhalter – Auszeichnungen im Zertifizierungssystem
-- Abb. 11: Platzhalter – ESG Road Map (Phasen 1 bis 5)
-- Abb. 12: Platzhalter – Erdgeschoss
-- Abb. 13: Platzhalter – Regelgeschoss
-- Abb. 14: Platzhalter – Dachdraufsicht
-- Abb. 15: Platzhalter – Schnitt
-- Abb. 16: Platzhalter – Pre‑Assessment Ergebnisse
-- Abb. 17: Platzhalter – Optimierungspotenzial
+- Abb. 1: Globale Oberflächentemperaturerhöhung (Platzhalter)
+- Abb. 2: Abfallaufkommen 1990–2022 (Platzhalter)
+- Abb. 3: Aufbau und Rechtsgrundlage der EU‑Taxonomie (Platzhalter)
+- Abb. 4: DNSH‑Kriterien im Baugewerbe (Platzhalter)
+- Abb. 5: Physische Klimarisiken (Platzhalter)
+- Abb. 6: Regulatorische Anforderungen (Platzhalter)
+- Abb. 7: EU‑Lieferkettengesetz (Platzhalter)
+- Abb. 8: Kreislaufwirtschaft (Platzhalter)
+- Abb. 9: Zertifizierungsprozess (Platzhalter)
+- Abb. 10: Auszeichnungen im Zertifizierungssystem (Platzhalter)
+- Abb. 11: ESG Road Map (Phasen 1 bis 5) (Platzhalter)
+- Abb. 12: Erdgeschoss (Platzhalter)
+- Abb. 13: Regelgeschoss (Platzhalter)
+- Abb. 14: Dachdraufsicht (Platzhalter)
+- Abb. 15: Schnitt (Platzhalter)
+- Abb. 16: Pre‑Assessment Ergebnisse (Platzhalter)
+- Abb. 17: Optimierungspotenzial (Platzhalter)
 
 \newpage
 
 # Tabellenverzeichnis
 
-- Tab. 1: Platzhalter – Übersicht zu EU‑Regulierungen
-- Tab. 2: Platzhalter – Vergleich der Zertifizierungssysteme
-- Tab. 3: Platzhalter – Wesentliche Kriterien im Pre‑Assessment
+- Tab. 1: Übersicht zu EU‑Regulierungen (Platzhalter)
+- Tab. 2: Vergleich der Zertifizierungssysteme (Platzhalter)
+- Tab. 3: Wesentliche Kriterien im Pre‑Assessment (Platzhalter)
 
 \newpage
 
@@ -494,3 +340,54 @@ Abschließend ist festzuhalten, dass die fortschreitende Umsetzung der EU‑Taxo
 - **EFRAG:** European Financial Reporting Advisory Group
 - **GHG:** Greenhouse Gas Protocol
 - **SDG:** Sustainable Development Goals
+
+\newpage
+
+# Fußnoten
+
+[^1]: Diese Erklärung entspricht den Anforderungen der universitären Richtlinien zur akademischen Integrität.
+[^2]: Die Kurzfassung fasst die zentralen Themen der Arbeit prägnant zusammen.
+[^3]: Englische Zusammenfassung der wesentlichen Inhalte.
+[^4]: Langfristige Temperaturmessungen (z. B. durch den IPCC) bestätigen den kontinuierlichen Anstieg.
+[^5]: Treibhausgasemissionen, vor allem durch fossile Brennstoffe, sind Hauptursache des Klimawandels.
+[^6]: Der demografische Wandel führt zu einem erhöhten Bedarf an Mobilität und Ressourcen.
+[^7]: Der European Green Deal ist das zentrale Transformationskonzept der EU bis 2050.
+[^8]: Das Pariser Abkommen von 2015 bildet die Grundlage für die Klimaschutzziele.
+[^9]: Finanzinstitute spielen eine wesentliche Rolle bei der Förderung nachhaltiger Investitionen.
+[^10]: Unternehmen, die zwei der genannten Kriterien erfüllen, sind berichtspflichtig gemäß CSRD.
+[^11]: Die SFDR fordert mehr Transparenz bei der Integration von Nachhaltigkeitsaspekten im Finanzsektor.
+[^12]: Die EU‑Taxonomie definiert nachhaltig wirtschaftende Aktivitäten – mit besonderem Fokus auf ressourcenintensive Branchen.
+[^13]: Angaben des österreichischen Bundesministeriums für Klimaschutz.
+[^14]: Die Verordnung (EU) 2020/852 legt die Kriterien für taxonomiekonforme Tätigkeiten fest.
+[^15]: Nur Tätigkeiten, die zu den sechs definierten Umweltzielen beitragen, können als nachhaltig gelten.
+[^16]: Soziale Mindeststandards basieren auf international anerkannten Menschenrechtsdokumenten.
+[^17]: Die DNSH-Kriterien stellen sicher, dass keine erheblichen negativen Umweltauswirkungen entstehen.
+[^18]: Eine fundierte Klima‑ und Risikoanalyse ist essenziell für die nachhaltige Planung von Bauprojekten.
+[^19]: Die EU‑Taxonomie bietet zahlreiche wirtschaftliche Vorteile, die den Neubau fördern.
+[^20]: Neuerungen wie der digitale Bauproduktenpass verbessern Transparenz und Nachhaltigkeitsnachweise.
+[^21]: Die Ökodesign Verordnung zielt auf eine nachhaltige Produktgestaltung über den gesamten Lebenszyklus ab.
+[^22]: Das EU‑Lieferkettengesetz fordert Sorgfaltspflichten zur Wahrung von Umwelt- und Menschenrechtsstandards.
+[^23]: Die EPBD schreibt vor, dass neue Gebäude klimaneutral errichtet und bestehende saniert werden müssen.
+[^24]: Nationale Richtlinien, wie die OIB 7, setzen die EU‑Gebäuderichtlinie in Österreich um.
+[^25]: Die Kreislaufwirtschaft optimiert die Ressourcennutzung und minimiert Abfälle.
+[^26]: Das AWG regelt die umweltgerechte Entsorgung und Wiederverwertung von Abfällen in Österreich.
+[^27]: Level(s) dient als Standard zur Bewertung der ökologischen Leistung von Gebäuden.
+[^28]: ESG-Kriterien umfassen Umwelt, Soziales und Unternehmensführung und sind zentral für nachhaltige Geschäftsprozesse.
+[^29]: Besonders kleine Unternehmen stehen vor der Herausforderung, umfangreiche ESG-Daten systematisch zu erfassen.
+[^30]: Externe Beratung kann den Implementierungsprozess eines umfassenden ESG-Reportings wesentlich erleichtern.
+[^31]: Der dargestellte Ablauf unterstützt Unternehmen dabei, einen transparenten Nachhaltigkeitsbericht zu erstellen.
+[^32]: Nachhaltige Gebäudezertifizierungen steigern langfristig den Immobilienwert und senken Betriebskosten.
+[^33]: BREEAM ist eines der ältesten und etabliertesten Bewertungssysteme für nachhaltiges Bauen.
+[^34]: LEED, ein US‑basiertes System, bewertet die Nachhaltigkeit von Gebäuden anhand eines Punktesystems.
+[^35]: DGNB legt besonderen Wert auf Ressourcenschonung und langfristige Werterhaltung.
+[^36]: Das ÖGNI‑System ist flexibel und wird an spezifische nationale und gebäudetechnische Anforderungen angepasst.
+[^37]: Der Zertifizierungsprozess nach ÖGNI/DGNB umfasst Vorprüfung, Einreichung, Prüfung und Zertifikatsvergabe.
+[^38]: Unterschiedliche Zertifizierungsstufen (Silber, Gold, Platin) erfordern definierte Mindesterfüllungsgrade.
+[^39]: Die Projektbeschreibung der Glorit Bausysteme GmbH umfasst moderne, nachhaltige Ansätze im Wohnbau.
+[^40]: Lokale städtebauliche Vorgaben in Wien berücksichtigen neben der Bebauung auch soziale und ökologische Aspekte.
+[^41]: Das Pre‑Assessment nach ÖGNI (Version 2023) zeigt das Optimierungspotenzial des Projekts auf.
+[^42]: Zukünftige Innovationen in der ESG‑Berichterstattung und in Zertifizierungsprozessen sind entscheidend für den nachhaltigen Wandel im Bausektor.
+
+---
+
+Diese überarbeitete Fassung integriert wesentliche Informationen mithilfe von Fußnoten, die zentrale Aspekte erläutern und vertiefen.

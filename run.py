@@ -4,7 +4,7 @@ from glob import glob
 from PyPDF2 import PdfMerger
 
 def generate_pdf():
-    """ Generate a German cover page PDF and a main document PDF, then merge them. """
+    """ Generate a German cover page PDF and a main document PDF, then merge them, supporting Markdown footnotes. """
     
     input_dir = "md"  # Folder where markdown files are stored
     output_pdf = "da.pdf"
@@ -26,7 +26,7 @@ def generate_pdf():
     # 1️⃣ Cover Page Generation (First Markdown File)
     cover_md = open(md_files[0], "r", encoding="utf-8").read()
     try:
-        pypandoc.convert_text(cover_md, "pdf", format="md", outputfile=cover_pdf, extra_args=[
+        pypandoc.convert_text(cover_md, "pdf", format="markdown+footnotes", outputfile=cover_pdf, extra_args=[
             "--pdf-engine=xelatex",
             "-V", "geometry:a4paper",
             "-V", "fontsize=14pt",
@@ -46,7 +46,7 @@ def generate_pdf():
             combined_md += f"\\newpage\n\n{content}"  # New page before each markdown file
 
     try:
-        pypandoc.convert_text(combined_md, "pdf", format="md", outputfile=document_pdf, extra_args=[
+        pypandoc.convert_text(combined_md, "pdf", format="markdown+footnotes", outputfile=document_pdf, extra_args=[
             "--pdf-engine=xelatex",
             "-V", "geometry:a4paper",
             "-V", "fontsize=12pt",
