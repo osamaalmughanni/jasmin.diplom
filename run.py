@@ -7,7 +7,7 @@ def generate_pdf():
     """ Generate a German cover page PDF and a main document PDF, then merge them. """
     
     input_dir = "md"  # Folder where markdown files are stored
-    output_pdf = "Diplomarbeit.pdf"
+    output_pdf = "da.pdf"
     cover_pdf = "temp_cover.pdf"
     document_pdf = "temp_document.pdf"
 
