@@ -10,7 +10,8 @@ def generate_pdf():
       2) A table of contents (TOC) is generated but also has NO page numbers.
       3) Actual page numbering begins AFTER the TOC on the true document start page.
       4) No words are split with a dash/hyphen across lines (hyphenation disabled).
-      5) Use Pandoc via subprocess (not pypandoc), with proper UTF-8 handling on Windows.
+      5) Titles are NOT justified, but paragraphs are fully justified.
+      6) Use Pandoc via subprocess (not pypandoc), with proper UTF-8 handling on Windows.
     """
 
     input_dir = "md"  # Folder containing the Markdown files
@@ -19,10 +20,14 @@ def generate_pdf():
     document_pdf = "temp_document.pdf"
     disable_hyphenation_file = "disable_hyphenation.tex"
 
-    # Create a small LaTeX header file to disable hyphenation completely
+    # Create a small LaTeX header file to disable hyphenation and justify only paragraphs
     disable_hyphenation = r"""
 \usepackage[none]{hyphenat}
 \sloppy
+\usepackage{titlesec}
+\titleformat{\section}{\raggedright\Large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\raggedright\large\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\raggedright\normalsize\bfseries}{}{0em}{}
 """
     with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
         f.write(disable_hyphenation)
@@ -47,7 +52,6 @@ def generate_pdf():
             original_cover_md = f.read()
 
         # Prepend LaTeX commands to ensure no page numbering on cover
-        # \pagenumbering{gobble} + \thispagestyle{empty}
         cover_md = (
             r"\pagenumbering{gobble}" "\n"
             r"\thispagestyle{empty}" "\n"
@@ -56,7 +60,7 @@ def generate_pdf():
 
         cmd_cover = [
             "pandoc",
-            "-f", "markdown+footnotes",  # Input format with footnotes
+            "-f", "markdown+footnotes",
             "-o", cover_pdf,
             "--pdf-engine=xelatex",
             "-V", "geometry=a4paper",
@@ -66,28 +70,15 @@ def generate_pdf():
             "-H", disable_hyphenation_file
         ]
 
-        # Run pandoc for the cover page, ensuring UTF-8 input
         subprocess.run(cmd_cover, input=cover_md, text=True, check=True, encoding="utf-8")
         print(f"✅ Titelseite erstellt: {cover_pdf}")
-
     except subprocess.CalledProcessError as e:
         print(f"❌ Fehler bei der Erstellung der Titelseite: {e}")
         return
 
     ########################################################################
     # 2) Main Document Generation
-    #    - No page numbers for the TOC
-    #    - Page numbering (1,2,3...) starts AFTER the TOC
-    #    - Combine the remaining MD files into one
     ########################################################################
-    # We build a LaTeX snippet at the start that:
-    #   - Disables page numbering (\pagenumbering{gobble}).
-    #   - Provides a custom German TOC heading (optional).
-    #   - Inserts the TOC with \tableofcontents.
-    #   - On a new page, switch to arabic numbering (\pagenumbering{arabic}).
-    # Then we append the actual markdown content from all remaining MD files.
-
-    # Basic LaTeX for the start of the main doc:
     main_doc_header = r"""
 \pagenumbering{gobble}
 \thispagestyle{empty}
@@ -100,7 +91,6 @@ def generate_pdf():
 
     combined_md = main_doc_header
 
-    # Add each subsequent Markdown file content, forcing a new page before each
     for md_file in md_files[1:]:
         with open(md_file, "r", encoding="utf-8") as f:
             content = f.read()
@@ -123,7 +113,6 @@ def generate_pdf():
 
         subprocess.run(cmd_document, input=combined_md, text=True, check=True, encoding="utf-8")
         print(f"✅ Hauptdokument erstellt: {document_pdf}")
-
     except subprocess.CalledProcessError as e:
         print(f"❌ Fehler bei der Erstellung des Hauptdokuments: {e}")
         return
@@ -144,7 +133,6 @@ def generate_pdf():
         os.remove(document_pdf)
         os.remove(disable_hyphenation_file)
         print(f"🗑️ Temporäre Dateien gelöscht: {cover_pdf}, {document_pdf}, {disable_hyphenation_file}")
-
     except Exception as e:
         print(f"❌ Fehler beim Zusammenfügen der PDFs: {e}")
 
