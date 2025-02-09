@@ -13,8 +13,6 @@ fontsize: 11pt
 
 **Diplomarbeit**
 
-![Habibi Jasmin.](images/test.pdf)
-
 **Die EU‑Taxonomie: Chancen und Herausforderungen für kleine und mittlere Unternehmen**
 
 Analyse eines Neubauprojektes aus der Perspektive eines privaten österreichischen Bauträgers

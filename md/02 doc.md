@@ -1,7 +1,3 @@
-Hier folgt die überarbeitete, „überlegene“ Version des Textes – komplett mit einer klaren Struktur und wichtigen Fußnoten, die zentrale Informationen erläutern. Alle Fußnoten sind am Ende definiert.
-
----
-
 # Eidesstattliche Erklärung
 
 Ich erkläre an Eides statt, dass ich diese Arbeit eigenständig und ohne fremde Hilfe verfasst und sämtliche verwendete Quellen ordnungsgemäß zitiert habe[^1].
