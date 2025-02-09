@@ -8,7 +8,7 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
     Scans the fonts directory for .ttf and .otf files, groups them by font family,
     and generates a LaTeX header file that dynamically sets the main font (using its regular
     file) and registers available styles (bold, italic, bolditalic, and any extras).
-    
+
     Naming convention: Font files should be named as FamilyName-Style.ttf (or .otf),
     e.g. Lora-Regular.ttf, Lora-Bold.ttf, Lora-Italic.otf, etc.
     """
@@ -74,8 +74,8 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
     header_lines = []
     header_lines.append("% Dynamic font header generated automatically")
     header_lines.append("\\usepackage{fontspec}")
-    # Construct the options for \setmainfont.
-    options = [f"Path={fonts_dir}/"]
+    # Add Ligatures=TeX to better handle special characters.
+    options = [f"Path={fonts_dir}/", "Ligatures=TeX"]
     if "bold" in variants:
         options.append("BoldFont={" + variants["bold"] + "}")
     if "italic" in variants:
@@ -117,6 +117,11 @@ def generate_pdf():
       6) Pandoc (via subprocess) is used with proper UTF-8 handling.
       
     Dynamic fonts are loaded via a generated LaTeX header file (see generate_dynamic_font_header).
+
+    NOTE: The LaTeX header now includes modifications to force footnotes within figures to appear on the same page
+          and to reduce white space around images.
+          Instead of forcing placement via the header, we now pass the figure placement variable (fig-pos=H)
+          to pandoc so that it generates figures as [H] floats.
     """
     input_dir = "md"  # Folder containing the Markdown files.
     output_pdf = "da.pdf"
@@ -125,10 +130,19 @@ def generate_pdf():
     disable_hyphenation_file = "disable_hyphenation.tex"
     dynamic_font_file = "dynamic_font.tex"
 
-    # Create a LaTeX header to disable hyphenation and adjust title formatting.
+    # Create a LaTeX header to disable hyphenation, adjust title formatting,
+    # force footnotes in figures to appear on the same page,
+    # and reduce white space around images.
     disable_hyphenation = r"""
 \usepackage[none]{hyphenat}
 \sloppy
+\usepackage{footnote}
+\makesavenoteenv{figure}
+\usepackage{caption}
+\captionsetup[figure]{aboveskip=0pt, belowskip=0pt}
+\setlength{\textfloatsep}{5pt plus 1pt minus 2pt}
+\setlength{\floatsep}{5pt plus 1pt minus 2pt}
+\setlength{\intextsep}{5pt plus 1pt minus 2pt}
 \usepackage{titlesec}
 \titleformat{\section}{\raggedright\Large\bfseries}{}{0em}{}
 \titleformat{\subsection}{\raggedright\large\bfseries}{}{0em}{}
@@ -137,9 +151,9 @@ def generate_pdf():
     try:
         with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
             f.write(disable_hyphenation)
-        print(f"✅ Hyphenation header created: {disable_hyphenation_file}")
+        print(f"✅ Hyphenation/footnote/compact header created: {disable_hyphenation_file}")
     except Exception as e:
-        print(f"❌ Fehler beim Erstellen der Hyphenation-Header-Datei: {e}")
+        print(f"❌ Fehler beim Erstellen der Header-Datei: {e}")
         return
 
     # Generate the dynamic font header.
@@ -180,6 +194,7 @@ def generate_pdf():
             "-V", "geometry=a4paper",
             "-V", "fontsize=14pt",
             "-V", "margin=1in",
+            "-V", "fig-pos=H",
             "-H", disable_hyphenation_file,
             "-H", dynamic_font_file
         ]
@@ -218,6 +233,7 @@ def generate_pdf():
             "-V", "fontsize=12pt",
             "-V", "lang=de",
             "-V", "margin=1in",
+            "-V", "fig-pos=H",
             "--number-sections",
             "-H", disable_hyphenation_file,
             "-H", dynamic_font_file
