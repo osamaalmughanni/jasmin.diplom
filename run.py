@@ -5,15 +5,15 @@ from PyPDF2 import PdfMerger
 
 def generate_pdf():
     """
-    Generate a German cover page PDF and a main document PDF, then merge them,
-    ensuring:
-    1) No word is ever split with a dash (no hyphenation).
-    2) Words do not break across lines or pages.
-    3) We use Pandoc directly (via subprocess) instead of pypandoc.
-    4) Proper handling of Unicode (UTF-8) on Windows.
+    Generate a German cover page PDF and a main document PDF, then merge them, ensuring:
+      1) The cover page has NO page numbering at all.
+      2) A table of contents (TOC) is generated but also has NO page numbers.
+      3) Actual page numbering begins AFTER the TOC on the true document start page.
+      4) No words are split with a dash/hyphen across lines (hyphenation disabled).
+      5) Use Pandoc via subprocess (not pypandoc), with proper UTF-8 handling on Windows.
     """
 
-    input_dir = "md"  # Folder where markdown files are stored
+    input_dir = "md"  # Folder containing the Markdown files
     output_pdf = "da.pdf"
     cover_pdf = "temp_cover.pdf"
     document_pdf = "temp_document.pdf"
@@ -24,7 +24,6 @@ def generate_pdf():
 \usepackage[none]{hyphenat}
 \sloppy
 """
-    # Write this header to a temporary file
     with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
         f.write(disable_hyphenation)
 
@@ -40,24 +39,34 @@ def generate_pdf():
         print(f"❌ Keine Markdown-Dateien gefunden in '{input_dir}'.")
         return
 
-    # 1) Cover Page Generation (first Markdown file)
+    ########################################################################
+    # 1) Cover Page Generation (no page numbering at all)
+    ########################################################################
     try:
         with open(md_files[0], "r", encoding="utf-8") as f:
-            cover_md = f.read()
+            original_cover_md = f.read()
+
+        # Prepend LaTeX commands to ensure no page numbering on cover
+        # \pagenumbering{gobble} + \thispagestyle{empty}
+        cover_md = (
+            r"\pagenumbering{gobble}" "\n"
+            r"\thispagestyle{empty}" "\n"
+            + original_cover_md
+        )
 
         cmd_cover = [
             "pandoc",
-            "-f", "markdown+footnotes",         # Input format with footnotes
-            "-o", cover_pdf,                    # Output PDF file
-            "--pdf-engine=xelatex",             # Use XeLaTeX
+            "-f", "markdown+footnotes",  # Input format with footnotes
+            "-o", cover_pdf,
+            "--pdf-engine=xelatex",
             "-V", "geometry=a4paper",
             "-V", "fontsize=14pt",
             "-V", "mainfont=Lora",
             "-V", "margin=1in",
-            "-H", disable_hyphenation_file      # Include header to disable hyphenation
+            "-H", disable_hyphenation_file
         ]
 
-        # Explicitly specify UTF-8 encoding to avoid charmap issues on Windows
+        # Run pandoc for the cover page, ensuring UTF-8 input
         subprocess.run(cmd_cover, input=cover_md, text=True, check=True, encoding="utf-8")
         print(f"✅ Titelseite erstellt: {cover_pdf}")
 
@@ -65,13 +74,37 @@ def generate_pdf():
         print(f"❌ Fehler bei der Erstellung der Titelseite: {e}")
         return
 
-    # 2) Main Document Generation (remaining Markdown files)
-    #    We insert a \newpage before each file's content
-    combined_md = "\\newpage\n\n"
+    ########################################################################
+    # 2) Main Document Generation
+    #    - No page numbers for the TOC
+    #    - Page numbering (1,2,3...) starts AFTER the TOC
+    #    - Combine the remaining MD files into one
+    ########################################################################
+    # We build a LaTeX snippet at the start that:
+    #   - Disables page numbering (\pagenumbering{gobble}).
+    #   - Provides a custom German TOC heading (optional).
+    #   - Inserts the TOC with \tableofcontents.
+    #   - On a new page, switch to arabic numbering (\pagenumbering{arabic}).
+    # Then we append the actual markdown content from all remaining MD files.
+
+    # Basic LaTeX for the start of the main doc:
+    main_doc_header = r"""
+\pagenumbering{gobble}
+\thispagestyle{empty}
+\renewcommand*\contentsname{Inhaltsverzeichnis}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{plain}
+"""
+
+    combined_md = main_doc_header
+
+    # Add each subsequent Markdown file content, forcing a new page before each
     for md_file in md_files[1:]:
         with open(md_file, "r", encoding="utf-8") as f:
             content = f.read()
-        combined_md += f"\\newpage\n\n{content}"
+        combined_md += f"\n\\newpage\n\n{content}\n"
 
     try:
         cmd_document = [
@@ -83,13 +116,11 @@ def generate_pdf():
             "-V", "fontsize=12pt",
             "-V", "mainfont=Lora",
             "-V", "margin=1in",
-            "-V", "lang=de",      # German language (but hyphenation disabled via header)
-            "--toc",              # Table of contents
-            "--number-sections",  # Numbered sections
+            "-V", "lang=de",
+            "--number-sections",
             "-H", disable_hyphenation_file
         ]
 
-        # Explicitly specify UTF-8 encoding to avoid charmap issues on Windows
         subprocess.run(cmd_document, input=combined_md, text=True, check=True, encoding="utf-8")
         print(f"✅ Hauptdokument erstellt: {document_pdf}")
 
@@ -97,7 +128,9 @@ def generate_pdf():
         print(f"❌ Fehler bei der Erstellung des Hauptdokuments: {e}")
         return
 
+    ########################################################################
     # 3) Merge Cover Page and Main Document
+    ########################################################################
     try:
         merger = PdfMerger()
         merger.append(cover_pdf)
