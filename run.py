@@ -1,4 +1,6 @@
+
 import os
+import re
 import subprocess
 from glob import glob
 from PyPDF2 import PdfMerger
@@ -27,7 +29,7 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
     for font_path in font_files:
         base = os.path.basename(font_path)  # e.g. Lora-Bold.ttf
         name, ext = os.path.splitext(base)
-        # Expect a filename like Family-Style. If no dash found, assume “regular”.
+        # Expect a filename like Family-Style. If no dash found, assume "regular".
         if '-' in name:
             family, style = name.rsplit('-', 1)
         else:
@@ -90,7 +92,6 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
     main_styles = {"regular", "bold", "italic", "bolditalic"}
     additional_styles = [s for s in variants if s not in main_styles]
     for style in additional_styles:
-        # Create a command name like: \loralightfont (family name lowercased and without spaces).
         cmd_name = "\\" + best_family.replace(" ", "").lower() + style + "font"
         header_lines.append(f"\\newfontface{cmd_name}[Path={fonts_dir}/]{{{variants[style]}}}")
 
@@ -105,6 +106,33 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
         print(f"❌ Fehler beim Schreiben des dynamischen Font-Headers: {e}")
         return False
 
+def replace_pdf_links(md_content):
+    """
+    Replaces markdown links to PDFs with LaTeX code to include the PDF pages,
+    scaled to 75%, centered, and with a gray border.
+
+    For example, a markdown link like:
+      [Some PDF Title](pdf/SomeDocument.pdf)
+
+    is replaced with:
+      \clearpage
+      \includepdf[pages=-,frame,scale=0.75]{\detokenize{pdf/SomeDocument.pdf}}
+      \clearpage
+    """
+    pattern = r'\[([^\]]+)\]\(([^)]+\.pdf)\)'
+    def repl(match):
+        pdf_path = match.group(2)
+        # Insert \includepdf with the desired options.
+        return (
+            "\n\\clearpage\n"
+            "\\includepdf[pages=-,"
+            "frame,"              # draws a border
+            "scale=0.75]"         # 75% scale; page numbering remains as-is.
+            "{\\detokenize{" + pdf_path + "}}\n"
+            "\\clearpage\n"
+        )
+    return re.sub(pattern, repl, md_content)
+
 def generate_pdf():
     """
     Erzeugt eine deutsche Titelseite-PDF und ein Hauptdokument-PDF, die dann zusammengefügt werden.
@@ -115,12 +143,14 @@ def generate_pdf():
       4) Die Silbentrennung ist deaktiviert.
       5) Abschnittstitel sind linksbündig (ragged right), während Absätze voll gerechtfertigt sind.
       6) Pandoc (via subprocess) wird mit korrekter UTF-8-Verarbeitung eingesetzt.
-      
+
     Dynamische Fonts werden via eines generierten LaTeX-Headers (siehe generate_dynamic_font_header) geladen.
 
-    WICHTIG: Der LaTeX-Header sorgt dafür, dass das Dokument kompakt ist. Mithilfe
-             von tocloft und flushbottom werden überflüssige Leerzeilen (besonders im Inhaltsverzeichnis)
-             minimiert.
+    Zusätzlich:
+      Markdown-Links zu PDFs (z.B. [Title](pdf/file.pdf)) werden erkannt und automatisch so
+      umgewandelt, dass alle Seiten des PDFs ins Dokument eingebunden werden – dabei werden die
+      Seiten skaliert (75%), zentriert und mit einem grauen Rahmen versehen, wobei die Seitenzahlen
+      erhalten bleiben.
     """
     input_dir = "md"  # Ordner mit den Markdown-Dateien.
     output_pdf = "da.pdf"
@@ -129,8 +159,8 @@ def generate_pdf():
     disable_hyphenation_file = "disable_hyphenation.tex"
     dynamic_font_file = "dynamic_font.tex"
 
-    # Neuer LaTeX-Header: Deaktiviert Silbentrennung und fügt Anpassungen für kompaktere Layouts ein.
-    # Dabei werden tocloft-Einstellungen und flushbottom eingesetzt, um leere Bereiche zu minimieren.
+    # Neuer LaTeX-Header: Deaktiviert Silbentrennung und fügt Layout-Anpassungen ein.
+    # Enthält außerdem den Hack, um die pdfpages-Rahmenfarbe auf Grau zu setzen.
     disable_hyphenation = r"""
 \usepackage[none]{hyphenat}
 \sloppy
@@ -144,15 +174,42 @@ def generate_pdf():
 \setlength{\cftaftertoctitleskip}{1em}
 \setlength{\cftparskip}{0pt}
 \flushbottom
+
 \usepackage{titlesec}
 \titleformat{\section}{\raggedright\Large\bfseries}{}{0em}{}
 \titleformat{\subsection}{\raggedright\large\bfseries}{}{0em}{}
 \titleformat{\subsubsection}{\raggedright\normalsize\bfseries}{}{0em}{}
+
+% We need pdfpages for embedding external PDFs
+\usepackage{pdfpages}
+
+% We need xcolor to set the frame color to gray
+\usepackage{xcolor}
+
+% ------------------------------------------------------------------
+% Hack to force the border color (frame) in pdfpages to be gray.
+% (pdfpages normally draws the frame in black.)
+% ------------------------------------------------------------------
+\makeatletter
+\def\AM@ruleColor{gray}%
+\def\AM@rule{%
+    \@tempdima\AM@pageht
+    \advance\@tempdima-\dp\@currbox
+    \edef\AM@pageht{\the\@tempdima}
+    \leavevmode
+    \color{\AM@ruleColor}
+    \vrule\@width\AM@frame\@height\AM@pageht
+    \hb@xt@\wd\@currbox{\hss
+        \vbox to \ht\@currbox{\box\@currbox\vss}%
+    \hss}%
+}
+\makeatother
 """
+
     try:
         with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
             f.write(disable_hyphenation)
-        print(f"✅ Header (Silbentrennung, TOC-Anpassung, Abstand) erstellt: {disable_hyphenation_file}")
+        print(f"✅ Header (Silbentrennung, TOC-Anpassung, Abstände, grauer Rahmen) erstellt: {disable_hyphenation_file}")
     except Exception as e:
         print(f"❌ Fehler beim Erstellen der Header-Datei: {e}")
         return
@@ -179,6 +236,8 @@ def generate_pdf():
     try:
         with open(md_files[0], "r", encoding="utf-8") as f:
             original_cover_md = f.read()
+        # Ersetze PDF-Links (falls dort schon PDFs verlinkt sind).
+        original_cover_md = replace_pdf_links(original_cover_md)
 
         # LaTeX-Befehle voranstellen, damit die Titelseite keine Seitenzahlen hat.
         cover_md = (
@@ -222,6 +281,8 @@ def generate_pdf():
     for md_file in md_files[1:]:
         with open(md_file, "r", encoding="utf-8") as f:
             content = f.read()
+        # Ersetze PDF-Links in jedem Markdown-Inhalt.
+        content = replace_pdf_links(content)
         combined_md += f"\n\\newpage\n\n{content}\n"
 
     try:

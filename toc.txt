@@ -1,0 +1,39 @@
+1  Einleitung | Problemstellung
+1.1	Motivation und Zielsetzung
+1.2	Gliederung
+
+2	European Green Deal
+2.1	Welche Unternehmen sind berichtspflichtig
+2.2	EU-Taxonomie Verordnung
+2.2.1	Was sind die 6 Umweltziele der EU-Taxonomie
+2.2.2	Mindestschutz: Minimum Safeguards
+
+3	Bewertungskriterien in der EU-Taxonomie
+3.1	Sektoren der Taxonomie Verordnung
+3.2	Wirtschaftliche Aktivitäten im Bausektor
+3.3	DO NO SIGNIFICANT HARM – KRITERIEN (DNHS)
+3.4	Klima- und Risikoanalyse
+3.5	Technische Bewertungskriterien im Baugewerbe
+3.5.1	Umweltziel 1 – Klimaschutz
+3.5.2	Umweltziel 2 – Anpassung an den Klimawandel
+3.5.3	Umweltziel 3 – Nachhaltige Nutzung und Schutz von Wasser- und Meeresressourcennutzung
+3.6	Fazit zur EU-Taxonomie im Baugewerbe
+
+4	Regulatoriken zur Nachhaltigkeit in der EU
+4.1	Relevanz der Kreislaufwirtschaft
+4.1.1	EU- Bauprodukteverordnung (EU-BauPVO)
+4.1.2	Ökodesign Verordnung (ESPR)
+4.1.3	EU-Lieferkettengesetz (CSDDD)
+4.1.4	EU-Gebäuderichtlinie (EPBD)
+4.1.5	OIB 7 der nationale Plan
+4.1.6	Abfallwirtschaftsgesetz (AWG)
+4.1.7	Level(s) 
+
+5	ESG – Nachhaltigkeitsberichterstattung 
+5.1	Status Quo der Berichtspflichterstattung national
+5.2	Berichtspflicht: Klein- und Mittelbetriebe (KMU)
+5.3	Nachhaltigkeit als Chance für KMU
+5.4	Herausforderungen in Bezug auf ESG-Reporting
+5.5	ESG-Reporting: Der richtige Einstieg
+5.6	ESG im Unternehmen
+5.6.1	Chronologie des ESG-Reportings
