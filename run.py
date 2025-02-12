@@ -72,7 +72,7 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
 
     # Begin building the LaTeX header.
     header_lines = []
-    header_lines.append("% Dynamic font header generated automatically")
+    header_lines.append("% Dynamisch generierter Font-Header")
     header_lines.append("\\usepackage{fontspec}")
     # Add Ligatures=TeX to better handle special characters.
     options = [f"Path={fonts_dir}/", "Ligatures=TeX"]
@@ -99,50 +99,51 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
     try:
         with open(header_filename, "w", encoding="utf-8") as f:
             f.write(header_content)
-        print(f"✅ Dynamic font header created: {header_filename}")
+        print(f"✅ Dynamischer Font-Header erstellt: {header_filename}")
         return True
     except Exception as e:
-        print(f"❌ Error writing dynamic font header: {e}")
+        print(f"❌ Fehler beim Schreiben des dynamischen Font-Headers: {e}")
         return False
 
 def generate_pdf():
     """
-    Generate a German cover page PDF and a main document PDF, then merge them.
-    Requirements:
-      1) The cover page has NO page numbering.
-      2) The table of contents (TOC) has NO page numbers.
-      3) Actual page numbering starts AFTER the TOC.
-      4) Hyphenation is disabled (no words are split with a dash).
-      5) Section titles are ragged right while paragraphs are fully justified.
-      6) Pandoc (via subprocess) is used with proper UTF-8 handling.
+    Erzeugt eine deutsche Titelseite-PDF und ein Hauptdokument-PDF, die dann zusammengefügt werden.
+    Anforderungen:
+      1) Die Titelseite hat KEINE Seitenzahlen.
+      2) Das Inhaltsverzeichnis (TOC) hat KEINE Seitenzahlen.
+      3) Die eigentliche Seitenzählung beginnt NACH dem TOC.
+      4) Die Silbentrennung ist deaktiviert.
+      5) Abschnittstitel sind linksbündig (ragged right), während Absätze voll gerechtfertigt sind.
+      6) Pandoc (via subprocess) wird mit korrekter UTF-8-Verarbeitung eingesetzt.
       
-    Dynamic fonts are loaded via a generated LaTeX header file (see generate_dynamic_font_header).
+    Dynamische Fonts werden via eines generierten LaTeX-Headers (siehe generate_dynamic_font_header) geladen.
 
-    NOTE: The LaTeX header now includes modifications to force footnotes within figures to appear on the same page
-          and to reduce white space around images.
-          Instead of forcing placement via the header, we now pass the figure placement variable (fig-pos=H)
-          to pandoc so that it generates figures as [H] floats.
+    WICHTIG: Der LaTeX-Header sorgt dafür, dass das Dokument kompakt ist. Mithilfe
+             von tocloft und flushbottom werden überflüssige Leerzeilen (besonders im Inhaltsverzeichnis)
+             minimiert.
     """
-    input_dir = "md"  # Folder containing the Markdown files.
+    input_dir = "md"  # Ordner mit den Markdown-Dateien.
     output_pdf = "da.pdf"
     cover_pdf = "temp_cover.pdf"
     document_pdf = "temp_document.pdf"
     disable_hyphenation_file = "disable_hyphenation.tex"
     dynamic_font_file = "dynamic_font.tex"
 
-    # Create a LaTeX header to disable hyphenation, adjust title formatting,
-    # force footnotes in figures to appear on the same page,
-    # and reduce white space around images.
+    # Neuer LaTeX-Header: Deaktiviert Silbentrennung und fügt Anpassungen für kompaktere Layouts ein.
+    # Dabei werden tocloft-Einstellungen und flushbottom eingesetzt, um leere Bereiche zu minimieren.
     disable_hyphenation = r"""
 \usepackage[none]{hyphenat}
 \sloppy
-\usepackage{footnote}
-\makesavenoteenv{figure}
 \usepackage{caption}
-\captionsetup[figure]{aboveskip=0pt, belowskip=0pt}
-\setlength{\textfloatsep}{5pt plus 1pt minus 2pt}
-\setlength{\floatsep}{5pt plus 1pt minus 2pt}
-\setlength{\intextsep}{5pt plus 1pt minus 2pt}
+\captionsetup[figure]{aboveskip=10pt, belowskip=10pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\usepackage{tocloft}
+\setlength{\cftbeforetoctitleskip}{-1em}
+\setlength{\cftaftertoctitleskip}{1em}
+\setlength{\cftparskip}{0pt}
+\flushbottom
 \usepackage{titlesec}
 \titleformat{\section}{\raggedright\Large\bfseries}{}{0em}{}
 \titleformat{\subsection}{\raggedright\large\bfseries}{}{0em}{}
@@ -151,35 +152,35 @@ def generate_pdf():
     try:
         with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
             f.write(disable_hyphenation)
-        print(f"✅ Hyphenation/footnote/compact header created: {disable_hyphenation_file}")
+        print(f"✅ Header (Silbentrennung, TOC-Anpassung, Abstand) erstellt: {disable_hyphenation_file}")
     except Exception as e:
         print(f"❌ Fehler beim Erstellen der Header-Datei: {e}")
         return
 
-    # Generate the dynamic font header.
+    # Dynamischen Font-Header erzeugen.
     if not generate_dynamic_font_header(dynamic_font_file, fonts_dir="fonts"):
-        print("❌ Dynamic font header generation failed. Aborting.")
+        print("❌ Dynamischer Font-Header konnte nicht erzeugt werden. Abbruch.")
         return
 
-    # Ensure the input directory exists.
+    # Prüfe, ob das Eingabeverzeichnis existiert.
     if not os.path.exists(input_dir):
         print(f"❌ Verzeichnis '{input_dir}' existiert nicht.")
         return
 
-    # Get all Markdown files (sorted).
+    # Alle Markdown-Dateien (sortiert) einlesen.
     md_files = sorted(glob(os.path.join(input_dir, "*.md")))
     if not md_files:
         print(f"❌ Keine Markdown-Dateien gefunden in '{input_dir}'.")
         return
 
     ########################################################################
-    # 1) Cover Page Generation (no page numbering)
+    # 1) Titelseite erzeugen (ohne Seitenzahlen)
     ########################################################################
     try:
         with open(md_files[0], "r", encoding="utf-8") as f:
             original_cover_md = f.read()
 
-        # Prepend LaTeX commands to ensure no page numbering on cover.
+        # LaTeX-Befehle voranstellen, damit die Titelseite keine Seitenzahlen hat.
         cover_md = (
             r"\pagenumbering{gobble}" "\n"
             r"\thispagestyle{empty}" "\n" +
@@ -206,7 +207,7 @@ def generate_pdf():
         return
 
     ########################################################################
-    # 2) Main Document Generation
+    # 2) Hauptdokument erzeugen
     ########################################################################
     main_doc_header = r"""
 \pagenumbering{gobble}
@@ -246,7 +247,7 @@ def generate_pdf():
         return
 
     ########################################################################
-    # 3) Merge Cover Page and Main Document
+    # 3) Titelseite und Hauptdokument zusammenführen
     ########################################################################
     try:
         merger = PdfMerger()
@@ -256,7 +257,7 @@ def generate_pdf():
         merger.close()
         print(f"✅ Finale PDF erfolgreich erstellt: {output_pdf}")
 
-        # Delete temporary files.
+        # Temporäre Dateien löschen.
         for temp_file in [cover_pdf, document_pdf, disable_hyphenation_file, dynamic_font_file]:
             try:
                 os.remove(temp_file)

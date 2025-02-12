@@ -18,7 +18,7 @@ Sowohl die vorgelagerten Wirtschaftsprozesse als auch der eigentliche Bauprozess
 
 \newpage
 
-# EUROPEAN GREEN DEAL
+## EUROPEAN GREEN DEAL
 
 Der europäische Green Deal ist eine umfassende Strategie zur Förderung einer nachhaltigen Wirtschaft und zur Erreichung eines klimaneutralen Kontinents bis zum Jahr 2050.
 
