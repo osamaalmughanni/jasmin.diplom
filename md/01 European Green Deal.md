@@ -4,7 +4,7 @@ Der europäische Green Deal ist eine umfassende Strategie zur Förderung einer n
 
 „Fit for 55 Paket" – Im Rahmen des Pariser Abkommens im Dezember 2015 haben sich weltweit Staaten auf gemeinsame Bemühungen verpflichtet, um die Erderwärmung auf weit unter 2 °C zu halten bzw. zusätzlich zum vorindustriellen Niveau (1990) auf maximal 1,5 °C zu begrenzen. Wie die nachfolgende Abbildung zeigt, wurde dieses Ziel im Jahr 2024 eindeutig überschritten.
 
-![Globale Oberflächentemperaturerhöhung über das vorindustrielle Niveau 1990 ^[Eigene Darstellung nach: www.quarks.de/umwelt/klimawandel/1-5-grad-ziel/ - Quelle: Copernicus (2025)]](pdf/01.pdf)
+!Abb: Globale Oberflächentemperaturerhöhung über das vorindustrielle Niveau 1990 {pdf="pdf/01.pdf", note="Eigene Darstellung nach: www.quarks.de/umwelt/klimawandel/1-5-grad-ziel/ - Quelle: Copernicus (2025)"}
 
 Laut dem EU-Klimaüberwachungsdienst Copernicus war 2024 sogar 1,6 Grad wärmer als der vorindustrielle Zeitraum 1850–1900. Der Grund hierfür liegt zum größten Teil an der menschengemachten Erderwärmung, so Experten^[Vgl. https://www.quarks.de/umwelt/klimawandel/1-5-grad-ziel/#einskommafünf2].
 
@@ -12,7 +12,7 @@ Die zentrale Anstrengung des europäischen Green Deals soll als Zwischenziel inn
 
 Besonders im Mittelpunkt der EU-Initiativen stehen die Klimaschutzambitionen. Dabei wurden gezielt die folgenden Sektoren als Schwerpunkte gewählt: Kreislaufwirtschaft, Landwirtschaft, Energiewirtschaft, Biodiversität, Gebäude sowie neue Technologien. Die nachfolgende Abbildung veranschaulicht den prozentualen Anteil der einzelnen Sektoren am weltweiten Ausstoß von Treibhausgasen.
 
-![Treibhausgasverursacher nach Sektoren (Global) ^[www.landschafftleben.at/hintergruende/landwirtschaft-ernaehrung-klima/daten]](pdf/02.pdf)
+!Abb: Treibhausgasverursacher nach Sektoren (Global) {pdf="pdf/02.pdf", note="www.landschafftleben.at/hintergruende/landwirtschaft-ernaehrung-klima/daten"}
 
 Ein entscheidender Hebel für das Erreichen der Umweltziele liegt in der gezielten Lenkung von Finanzmitteln in nachhaltige Wirtschaftsaktivitäten sowie in der Schließung bestehender Investitionslücken. In diesem Kontext kommt dem Finanzsektor eine Schlüsselrolle zu, indem er den Übergang hin zu einer nachhaltigeren Wirtschaft maßgeblich unterstützt. Alle Bereiche der Volkswirtschaft, Unternehmen und Gesellschaft sollten widerstandsfähiger gegenüber den fortschreitenden Klima- und Umweltveränderungen gestaltet werden.
 
@@ -26,7 +26,7 @@ Unter den zahlreichen Neuerungen lassen sich die drei wichtigsten EU-Regularien 
 
 Die folgende Darstellung verdeutlicht die drei zentralen Instrumente (CSRD, SFDR und EU-Taxonomie), die zusammenwirken und sich ergänzen, um einen klaren, glaubwürdigen und einheitlichen Rahmen für nachhaltige Finanzierungen zu schaffen. Die EU-Taxonomie bietet eine einheitliche Grundlage für das Verständnis von Nachhaltigkeit und hebt die Bedeutung von „grünen“ Aktivitäten hervor. Die SFDR sorgt dafür, dass Finanzprodukte transparent bewertet und dargestellt werden. Mit der CSRD wird auf Unternehmensebene mehr Klarheit geschaffen, indem Anforderungen an die Nachhaltigkeitsberichterstattung formuliert werden^[Vgl. www.sustainabilityand.com/de/aktuelles/blog/eu-taxonomie-csrd-und-sfdr-erklaert].
 
-![Synergien der EU-Taxonomie, CSRD und SFDR ^[Eigene Darstellung nach: sustainabilityand.com/de/aktuelles/blog/eu-taxonomie-csrd-und-sfdr-erklaert]](pdf/03.pdf)
+!Abb: Synergien der EU-Taxonomie, CSRD und SFDR {pdf="pdf/03.pdf", note="Eigene Darstellung nach: sustainabilityand.com/de/aktuelles/blog/eu-taxonomie-csrd-und-sfdr-erklaert"}
 
 ## Welche Unternehmen sind berichtspflichtig?
 
@@ -42,13 +42,13 @@ Unternehmen, die bereits betroffen sind, haben die Verpflichtung, ihre Berichter
 
 Die Bau- und Immobilienbranche nimmt eine zentrale Stellung in den Diskussionen über ökologische und soziale Nachhaltigkeit ein. Dies liegt nicht nur am enormen Ressourcenverbrauch – einschließlich Rohstoffen, Wasser und Boden – sondern auch an den signifikanten CO₂-Emissionen und dem hohen Energieverbrauch, die einen umfassenden gesellschaftlichen Wandel erfordern. In der nachfolgenden Abbildung des Umweltbundesamts wird aufgezeigt, dass das gesamte Abfallaufkommen in Österreich im Jahr 2022 nahezu 74 Millionen Tonnen betrug – davon entfielen beeindruckende 75 % auf den Bausektor.
 
-![Abfallaufkommen 1990–2022 (Stand Juni 2023) ^[Eigene Darstellung nach: www.umweltbundesamt.at/news240605-abfall-abfallwirtschaft]](pdf/05.pdf)
+!Abb: Abfallaufkommen 1990–2022 (Stand Juni 2023) {pdf="pdf/05.pdf", note="Eigene Darstellung nach: www.umweltbundesamt.at/news240605-abfall-abfallwirtschaft"}
 
 Aufgrund dieser erheblichen Umweltauswirkungen hat die EU-Kommission am 18. Juni 2020 verschiedenste Wirtschaftsaktivitäten des Bau- und Immobiliensektors in die EU-Taxonomie-Verordnung (EU) 2020/852 als taxonomiefähige Tätigkeiten aufgenommen.
 
 Im Folgenden sind die maßgeblichen Rechtsakte aufgeführt, die gegenwärtig die Bewertungskriterien der EU-Taxonomie festlegen und auf denen dieser Leitfaden basiert:
 
-![Aufbau und Rechtsgrundlage der EU-Taxonomie ^[Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf]](pdf/08.pdf)
+!Abb: Aufbau und Rechtsgrundlage der EU-Taxonomie {pdf="pdf/08.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
 
 Diese EU-Verordnung identifiziert spezifische Kriterien für wirtschaftliche Aktivitäten, die sich positiv auswirken, die Kreislaufwirtschaft ermöglichen und auf lange Sicht fördern. Der Bau- und Immobiliensektor wird somit systematisch dazu gedrängt, an ökologischen und sozialen Nachhaltigkeitskonzepten zu arbeiten.
 
@@ -63,7 +63,7 @@ Die unmittelbar anwendbare Verordnung umfasst aktuell sechs Umweltziele, die erf
 5. Vorbeugung oder Kontrolle von Umweltverschmutzung
 6. Schutz und Wiederherstellung von Biodiversität und Ökosystemen
 
-![Die 6 Umweltziele der EU-Taxonomie ^[Eigene Darstellung nach: envoria.com/de/insights-news/the-eu-taxonomy-environmental-objectives-1-6-explained]](pdf/06.pdf)
+!Abb: Die 6 Umweltziele der EU-Taxonomie {pdf="pdf/06.pdf", note="Eigene Darstellung nach: envoria.com/de/insights-news/the-eu-taxonomy-environmental-objectives-1-6-explained"}
 
 ### Mindestschutz: Minimum Safeguards
 
@@ -85,9 +85,9 @@ Folgende wirtschaftliche Aktivitäten werden in diesem Sektor bewertet:
 - Renovierung bestehender Gebäude
 - Erwerb von Eigentum an Gebäuden
 
-![Übersicht der taxonomiefähigen Wirtschaftstätigkeiten in der Bau- und Immobilienbranche ^[Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf]](pdf/09.pdf)
+!Abb: Übersicht der taxonomiefähigen Wirtschaftstätigkeiten in der Bau- und Immobilienbranche {pdf="pdf/09.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
 
-![Übersicht Zusammenspiel Wirtschaftstätigkeit, wesentlicher Beitrag und DNSH-Kriterien ^[Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf]](pdf/10.pdf)
+!Abb: Übersicht Zusammenspiel Wirtschaftstätigkeit, wesentlicher Beitrag und DNSH-Kriterien {pdf="pdf/10.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
 
 ## Do No Significant Harm – Kriterien (DNSH)
 
@@ -105,7 +105,7 @@ Eine derartige Klima- und Risikoanalyse ist am Ende dieser Arbeit als Anhang bei
 
 In der folgenden Abbildung werden einige Beispiele für physische Klimarisiken aufgeführt, die im Rahmen der Analyse von Klimarisiken und Verwundbarkeiten berücksichtigt werden sollten^[Vgl. www.wko.at/ooe/industrie/wkoo-leitfaden-eu-taxonomie-241002-web-1].
 
-![Übersicht 28 physische Klimagefahren ^[Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf]](pdf/11.pdf)
+!Abb: Übersicht 28 physische Klimagefahren {pdf="pdf/11.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
 
 # Fazit zur EU-Taxonomie im Neubau
 
@@ -143,15 +143,15 @@ Nachfolgend werden Bewertungstabellen auf Basis des Leitfadens der ÖGNI zur Nac
 
 ### Umweltziel 1 – Klimaschutz
 
-![Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen des Klimaschutzes ^[Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf]](pdf/20.pdf)
+!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen des Klimaschutzes {pdf="pdf/20.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
 
 ### Umweltziel 2 – Anpassung an den Klimawandel
 
-![Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen der Anpassung an den Klimawandel ^[Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf]](pdf/21.pdf)
+!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen der Anpassung an den Klimawandel {pdf="pdf/21.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
 
 ### Umweltziel 3 – Nachhaltige Nutzung und Schutz von Wasser- und Meeresressourcen
 
-![Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für die nachhaltige Nutzung und den Schutz von Wasser- und Meeresressourcen ^[Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf]](pdf/21.pdf)
+!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für die nachhaltige Nutzung und den Schutz von Wasser- und Meeresressourcen {pdf="pdf/21.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
 
 # Regulatorik zur Nachhaltigkeit in der EU
 
@@ -166,7 +166,7 @@ Zu den Hauptursachen des Klimawandels zählen:
 
 Aus diesem Grund hat die EU zahlreiche Verordnungen im Bereich Nachhaltigkeit beschlossen und den EU-Mitgliedstaaten verordnet. Im Folgenden werden einige der bereits gültigen sowie die anstehenden Nachhaltigkeitsvorgaben beleuchtet, die speziell für die Bauwirtschaft relevant sind.
 
-![Übersicht Nachhaltigkeitsverordnungen in der EU ^[Eigene Darstellung nach: scale.co.at_Präsentation 9.10.24_LCC v. Lukas Röder & Nino Ivic]](pdf/12.pdf)
+!Abb: Übersicht Nachhaltigkeitsverordnungen in der EU {pdf="pdf/12.pdf", note="Eigene Darstellung nach: scale.co.at_Präsentation 9.10.24_LCC v. Lukas Röder & Nino Ivic"}
 
 ## Relevanz der Kreislaufwirtschaft
 
@@ -185,9 +185,7 @@ Durch die gezielte Lenkung von Investitionen in nachhaltige und kreislauforienti
 
 Die europäische Richtlinie zum Abfallrahmen (2008/98/EG) vom 19. November 2008 sowie die EU-Richtlinie zur Kreislaufwirtschaft legen die Grundprinzipien der Abfallwirtschaft fest – wobei an oberster Stelle die Abfallvermeidung steht, gefolgt von Recycling und Verwertung. Am Ende der Abfallbewirtschaftung steht stets die Beseitigung.
 
-Die folgende Grafik zeigt die Hierarchie der Abfallrahmenrichtlinie:
-
-![Phasen der Kreislaufwirtschaft und EU-Abfallvermeidung ^[Eigene Darstellung nach: www.eca.europa.eu/de/publications/sr-2023-17]](pdf/14.pdf)
+!Abb: Phasen der Kreislaufwirtschaft und EU-Abfallvermeidung {pdf="pdf/14.pdf", note="Eigene Darstellung nach: www.eca.europa.eu/de/publications/sr-2023-17"}
 
 In der Bau- und Immobilienbranche zielt der EU-Plan darauf ab, sämtliche Abfälle zu minimieren und deren Kreislauffähigkeit deutlich zu erhöhen. Besondere Maßnahmen und weitere regulatorische Anforderungen sollen dazu beitragen, Bauprodukte nachhaltiger zu gestalten und leichter am Markt wiederzuverwenden. Die Integration der Abfallrahmenrichtlinie in den EU-Aktionsplan fördert die Umsetzung national verbindlicher Recyclingquoten und Abfallvermeidungsprogramme – und trägt damit stark zur Schaffung einer ressourcenschonenden und abfallarmen Kreislaufwirtschaft bei^[Vgl. Dr. Koppelhuber – Leitfaden-Rückbauorientiertes Planung und Bauen im Holzbau, 2025, S.8].
 
@@ -222,7 +220,7 @@ Das Lieferkettengesetz legt Sorgfaltspflichten fest, die sicherstellen sollen, d
 
 Betroffen sind Unternehmen mit Sitz in der EU, die mehr als 1.000 Arbeitnehmer beschäftigen und einen weltweiten Jahresumsatz von über 450 Millionen Euro erzielen. Unternehmen mit Sitz in Drittstaaten unterliegen der Richtlinie, sofern sie in der EU einen Umsatz von mehr als 450 Millionen Euro erzielen^[Vgl. www.wko.at/nachhaltigkeit/haeufige-fragen-eu-lieferkettengesetz].
 
-![Übersicht Nachhaltigkeitsverordnungen in der EU ^[Eigene Darstellung nach: wko.at/nachhaltigkeit/haeufige-fragen-eu-lieferkettengesetz]](pdf/13.pdf)
+!Abb: Übersicht Nachhaltigkeitsverordnungen in der EU {pdf="pdf/13.pdf", note="Eigene Darstellung nach: wko.at/nachhaltigkeit/haeufige-fragen-eu-lieferkettengesetz"}
 
 ### EU-Gebäuderichtlinie (EPBD)
 

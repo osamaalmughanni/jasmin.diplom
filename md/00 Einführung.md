@@ -16,8 +16,8 @@ Sowohl die vorgelagerten Wirtschaftsprozesse als auch der eigentliche Bauprozess
 
 ## ZIELSETZUNG
 
-—
+-
 
 ## GLIEDERUNG
 
-—
+-

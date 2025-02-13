@@ -4,13 +4,11 @@
 
 Wie bereits ausführlich in den vorangegangenen Kapiteln dargelegt, sieht sich die Welt mit erheblichen Herausforderungen im Bereich der Nachhaltigkeit und des Klimaschutzes konfrontiert. Alle 193 Mitgliedstaaten der Vereinten Nationen haben sich verpflichtet, nicht nur das Pariser Abkommen – das die Erderwärmung auf maximal 1,5 °C begrenzen soll – zu unterstützen, sondern auch aktiv an der Umsetzung der Nachhaltigkeitsziele (SDGs) der UN mitzuwirken^[Vgl. wko.at/ooe/umwelt-energie/nachhaltigkeitsberichte].
 
-_Quelle: Vgl. wko.at/ooe/umwelt-energie/nachhaltigkeitsberichte_
-
 ## STATUS QUO DER BERICHTSPFLICHTERSTATTUNG NATIONAL
 
 Bis zum Jahr 2023 waren etwas mehr als 100 Unternehmen – darunter Banken, Versicherungen und kapitalmarktorientierte Unternehmen mit mehr als 500 Mitarbeitenden – zur Berichterstattung verpflichtet. Diese Unternehmen unterlagen bereits dem Nachhaltigkeits- und Diversitätsverbesserungsgesetz (NaDiVeG). Ab dem Jahr 2025 wird sich diese Zahl erheblich erhöhen: Mehr als 2.000 Unternehmen werden dann verpflichtet sein, für das abgelaufene Geschäftsjahr 2024 erstmals nach den Vorgaben der neuen Corporate Sustainability Reporting Directive (CSRD) zu berichten. Im Folgenden werden die Berichtsgruppen aufgeführt, die bereits mit den Anforderungen der EU-Taxonomie sowie den European Sustainability Reporting Standards (ESRS) vertraut sind und diese durch die CSRD-Verpflichtung umsetzen.
 
-![Unternehmen in den verschiedenen Berichtsgruppen mit einer Berichtsverpflichtung ^[Eigene Darstellung nach: pro.earth/2024/12/10/pwc-oesterreich-analysiert-nachhaltigkeitsbericht]](pdf/17.pdf)
+!Abb: Unternehmen in den verschiedenen Berichtsgruppen {pdf="pdf/17.pdf", note="Eigene Darstellung nach: pro.earth/2024/12/10/pwc-oesterreich-analysiert-nachhaltigkeitsbericht"}
 
 ## BERICHTSPFLICHT: KLEIN- UND MITTELBETRIEBE (KMU)
 
@@ -58,7 +56,7 @@ Nachhaltigkeit im Unternehmen zu verankern, geht weit über die Reduzierung des 
 4. Ziele und Maßnahmen festlegen
 5. Nachhaltigkeitsbericht verfassen und veröffentlichen
 
-![Bildliche Darstellung eines Ablaufes zum ESG Reporting ^[Eigene Darstellung]](pdf/17.pdf)
+!Abb: Bildliche Darstellung eines Ablaufes zum ESG Reporting {pdf="pdf/17.pdf", note="Eigene Darstellung"}
 
 #### Schritt 1: Information und Begleitung zum Thema Nachhaltigkeit
 
@@ -93,7 +91,7 @@ Im folgenden Abschnitt wird die Vorgehensweise der Firma Glorit Bausysteme GmbH 
 
 Die Zusammenarbeit mit beratenden Unternehmen bei der Erstellung des Nachhaltigkeitsberichts erfolgt im vorliegenden Fall durch das Beratungsunternehmen PwC. Ein frühzeitiger Austausch über den gemeinsamen Weg bietet zahlreiche Vorteile. In diesem Prozess wird zusammen mit den Experten eine klare strategische Ausrichtung festgelegt.
 
-![Gemeinsame Festlegung der Phasen für die ESG-Strategie ^[Glorit (PwC)]](pdf/37.pdf)
+!Abb: Gemeinsame Festlegung der Phasen für die ESG-Strategie {pdf="pdf/37.pdf", note="Glorit (PwC)"}
 
 ## BEWUSSTSEIN SCHAFFEN UND EIN TEAM BESTIMMEN
 
@@ -107,45 +105,45 @@ Im Mittelpunkt stehen Kriterien wie eine Stakeholder-Analyse, die Erfassung des 
 
 Dieser Begriff bezieht sich auf alle Personen, Gruppen oder Institutionen, die direkt oder indirekt von den Aktivitäten eines Unternehmens betroffen sind oder die selbst Einfluss auf dessen Handeln ausüben.
 
-![Institutionen für eine Stakeholderanalyse ^[Stakeholderanalyse -- Sonia Mos]](pdf/29.pdf)
+!Abb: Institutionen für eine Stakeholderanalyse {pdf="pdf/29.pdf", note="Stakeholderanalyse -- Sonia Mos"}
 
 ### FRAGEBÖGEN AN STAKEHOLDERN
 
 Der folgende Fragebogen wurde im Zuge der Befragung an alle Stakeholder aus den verschiedensten Gruppierungen gesendet:
 
-![Vorgefertigter Fragebogen für eine Stakeholderbefragung ^[PwC/Glorit)]](pdf/24.pdf)
+!Abb: Vorgefertigter Fragebogen für eine Stakeholderbefragung {pdf="pdf/24.pdf", note="PwC/Glorit"}
 
 ### AUSWERTUNG ZU ERFOLGTEN RÜCKMELDUNGEN
 
-![Antworten je Stakeholdergruppe ^[PwC/Glorit)]](pdf/25.pdf)
+!Abb: Antworten je Stakeholdergruppe {pdf="pdf/25.pdf", note="PwC/Glorit"}
 
 ## ENERGIEVERBRÄUCHE (GWP) AUSWERTEN
 
 Es besteht die Möglichkeit, den CO₂-Ausstoß eines Unternehmens (Scope 1 und 2) durch die Auswertung aller Rechnungen in einer übersichtlichen Tabelle darzustellen. Im vorliegenden Fall bezieht sich dies auf die Emissionen, die bei der Firma Glorit Bausysteme durch das Verwaltungsgebäude, die Fertighausproduktionsstätte, die Lagerhallen sowie die Baustellen und Bestandsobjekte entstanden sind. Die Emissionen im Rahmen von Scope 3 werden in dieser Auswertung noch nicht berücksichtigt. Die Analyse dieser Emissionen ist für das Jahr 2026 vorgesehen, da sie mit einem höheren Aufwand verbunden ist.
 
-![Scope 1+2 Verbräuche bei Glorit im Jahr 2023 ^[Eigene Darstellung]](pdf/23.pdf)
+!Abb: Scope 1+2 Verbräuche bei Glorit im Jahr 2023 {pdf="pdf/23.pdf", note="Eigene Darstellung"}
 
-![THG-Bilanz Glorit im Jahr 2023 ^[Eigene Darstellung]](pdf/37.pdf)
+!Abb: THG-Bilanz Glorit im Jahr 2023 {pdf="pdf/37.pdf", note="Eigene Darstellung"}
 
 ## WESENTLICHKEITSANALYSE
 
 Durch das Sammeln von Daten, Umfragen und internen Abstimmungsrunden können anschließend konkrete Verbesserungspläne entwickelt und in die Tat umgesetzt werden. Zu Beginn wird ein gemeinsamer Workshop zu den relevanten Themenfeldern wie Umwelt, Soziales und Unternehmensführung durchgeführt – in diesem Fall unter der Leitung der externen Beratungsfirma PwC. Hierbei werden spezifische Chancen und Risiken, die für das Unternehmen von Bedeutung sind, eingehend diskutiert.
 
-![Workshop: Ergebnisrunde betreffend (E)nvironment ^[Eigene Darstellung]](pdf/27.pdf)
+!Abb: Workshop: Ergebnisrunde betreffend (E)nvironment {pdf="pdf/27.pdf", note="Eigene Darstellung"}
 
-![Workshop: Ergebnisrunde betreffend (S)ocial ^[Eigene Darstellung]](pdf/28.pdf)
+!Abb: Workshop: Ergebnisrunde betreffend (S)ocial {pdf="pdf/28.pdf", note="Eigene Darstellung"}
 
-![Workshop: Ergebnisrunde betreffend G)overnance ^[Eigene Darstellung]](pdf/31.pdf)
+!Abb: Workshop: Ergebnisrunde betreffend (G)overnance {pdf="pdf/31.pdf", note="Eigene Darstellung"}
 
 ### ZIELE UND MASSNAHMEN FESTLEGEN
 
 Strategieplan: Die Ergebnisse der gemeinsamen Diskussionsrunden fließen in einen sogenannten Strategieplan ein, der den aktuellen Reifegrad sowie die Tendenz in den jeweiligen Themenbereichen (Umwelt, Soziales und Unternehmensführung) abbildet (siehe nachfolgende Auflistungen).
 
-![Ergebnisse Reifegradanalyse Environment ^[Eigene Darstellung]](pdf/26.pdf)
+!Abb: Ergebnisse Reifegradanalyse Environment {pdf="pdf/26.pdf", note="Eigene Darstellung"}
 
-![Ergebnisse Reifegradanalyse Social ^[Eigene Darstellung]](pdf/33.pdf)
+!Abb: Ergebnisse Reifegradanalyse Social {pdf="pdf/33.pdf", note="Eigene Darstellung"}
 
-![Ergebnisse Reifegradanalyse Governance ^[Eigene Darstellung]](pdf/30.pdf)
+!Abb: Ergebnisse Reifegradanalyse Governance {pdf="pdf/30.pdf", note="Eigene Darstellung"}
 
 Im Anhang mit dem Buchstaben A findet sich die vollständige Liste der Maßnahmen zu den Nachhaltigkeitspunkten gemäß der CSRD-Verordnung.
 
@@ -157,4 +155,4 @@ Die Ergebnisse werden abschließend in einer offenen, klaren und transparenten W
 
 Der vollständige ESG-Bericht der Fa. Glorit Bausysteme GmbH wird als Anhang dieser Diplomarbeit beigefügt und kann als Referenz für eine Nachhaltigkeitsberichterstattung herangezogen werden.
 
-![Workshop: Titelseite Glorit Nachhaltigkeitsbericht 2023 ^[Darstellung Glorit]](pdf/49.pdf)
+!Abb: Workshop: Titelseite Glorit Nachhaltigkeitsbericht 2023 {pdf="pdf/49.pdf", note="Darstellung Glorit"}

@@ -1,0 +1,34 @@
+% Custom References Header for PDF Embeddings with separate footnote numbering
+\usepackage{ifthen}
+\usepackage{manyfoot}
+\DeclareNewFootnote{abb}[arabic]
+% Ensure counter 'abb' exists; if not, define it.
+\makeatletter
+\@ifundefined{c@abb}{\newcounter{abb}}{}
+\makeatother
+
+% Robust command to embed a PDF with a separate footnote stream if possible
+\newcommand{\abbpdf}[3]{%
+  \ifcsname c@abb\endcsname%
+    \refstepcounter{abb}%
+    \begin{figure}[H]
+      \centering
+      \IfFileExists{#1}{%
+        \includepdf[pages=-,frame,scale=0.75]{\detokenize{#1}}%
+      }{%
+        \textbf{[PDF #1 nicht gefunden]}%
+      }%
+      \caption*{Abb. \theabb: #2\footnoteabb{#3}}%
+    \end{figure}%
+  \else%
+    \begin{figure}[H]
+      \centering
+      \IfFileExists{#1}{%
+        \includepdf[pages=-,frame,scale=0.75]{\detokenize{#1}}%
+      }{%
+        \textbf{[PDF #1 nicht gefunden]}%
+      }%
+      \caption*{Abb. #2\footnote{#3}}%
+    \end{figure}%
+  \fi
+}

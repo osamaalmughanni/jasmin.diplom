@@ -9,33 +9,41 @@ fontsize: 11pt
 
 \newpage
 
-# Deckblatt
+# **Diplomarbeit**
 
-**Diplomarbeit**
+## **Die EU‑Taxonomie: Chancen und Herausforderungen für kleine und mittlere Unternehmen**
 
-**Die EU‑Taxonomie: Chancen und Herausforderungen für kleine und mittlere Unternehmen**
+### _Analyse eines Neubauprojektes aus der Perspektive eines privaten österreichischen Bauträgers_
 
-Analyse eines Neubauprojektes aus der Perspektive eines privaten österreichischen Bauträgers
+zur Erlangung des akademischen Grades
 
-zur Erlangung des akademischen Grades  
-**Diplom‑Ingenieur**
+### **Diplom‑Ingenieur**
 
-im Rahmen des Studiums  
-**Masterstudium Architektur**
+im Rahmen des Studiums
 
-eingereicht von  
-**Ing. Jasmin FEJZIC BSc.**  
-Matrikelnummer 01025008
+### **Masterstudium Architektur**
 
-ausgeführt am Institut für Architekturwissenschaften  
-der Fakultät für Interdisziplinäre Tragwerksplanung und Ingenieurholzbau  
-der Technischen Universität Wien
+eingereicht von
 
-**Betreuung:**  
-Betreuer: Associate Professor Dipl.-Ing. Dr. Alireza FADAI  
-Mitwirkung: Univ.-Ass. Dipl.-Ing. Marius VALENTE
+### **Ing. Jasmin FEJZIC BSc.**
+
+_Matrikelnummer: 01025008_
+
+ausgeführt am  
+**Institut für Architekturwissenschaften**  
+Fakultät für Interdisziplinäre Tragwerksplanung und Ingenieurholzbau  
+Technische Universität Wien
+
+### **Betreuung**
+
+**Betreuer:** Associate Professor Dipl.-Ing. Dr. Alireza FADAI  
+**Mitwirkung:** Univ.-Ass. Dipl.-Ing. Marius VALENTE
+
+\vfill
 
 Wien, im Februar 2025
+
+\vspace{2cm}
 
 (Unterschrift Verfasser/in)
 

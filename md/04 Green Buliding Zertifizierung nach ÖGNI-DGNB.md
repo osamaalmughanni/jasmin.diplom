@@ -62,9 +62,9 @@ Das Nachhaltigkeitskonzept dieses Systems ist umfassend und geht über das klass
 
 Folgende Nutzungskategorien können im DGNB/ÖGNI-System für Zertifizierungen herangezogen werden:
 
-![Übersicht Hauptnutzungskategorien nach DBGN/ÖGNI ^[Eigene Darstellung nach: ögni.at]](pdf/38.pdf)
+!Abb: Übersicht Hauptnutzungskategorien nach DBGN/ÖGNI {pdf="pdf/38.pdf", note="Eigene Darstellung nach: ögni.at"}
 
-Das ÖGNI/DGNB-System berücksichtigt nicht nur Neubauten, sondern auch Bestandsgebäude, wobei Sanierungen eine zentrale Rolle spielen. Um einen verantwortungsvollen Umgang mit der Bausubstanz zu gewährleisten und unnötige Abrisse zu vermeiden, ist die Bestandsaufnahme als Grundlage der Planung eine wesentliche Voraussetzung für die Zertifizierung. Darüber hinaus fördert die Zertifizierung eine ressourcenschonende Schadstoffsanierung. Maßnahmen, die zur Förderung einer Circular Economy beitragen, werden mit Bonuspunkten honoriert. Auch die Flächenentsiegelung sowie der Erhalt der Biodiversität werden im Sinne eines nachhaltigen Ressourcenschutzes unterstützt. Gleichzeitig legt das System großen Wert auf ein ganzheitliches Verständnis von Nachhaltigkeit, das sowohl die Gesundheit und den Komfort der Menschen als auch die langfristige Wirtschaftlichkeit des Bauprojekts berücksichtigt ^[Vgl. www.ögni.at/wp-content/uploads/Systembroschuere-2023-1].
+Das ÖGNI/DGNB-System berücksichtigt nicht nur Neubauten, sondern auch Bestandsgebäude, wobei Sanierungen eine zentrale Rolle spielen. Um einen verantwortungsvollen Umgang mit der Bausubstanz zu gewährleisten und unnötige Abrisse zu vermeiden, ist die Bestandsaufnahme als Grundlage der Planung eine wesentliche Voraussetzung für die Zertifizierung. Darüber hinaus fördert die Zertifizierung eine ressourcenschonende Schadstoffsanierung. Maßnahmen, die zur Förderung einer Circular Economy beitragen, werden mit Bonuspunkten honoriert. Auch die Flächenentsiegelung sowie der Erhalt der Biodiversität werden im Sinne eines nachhaltigen Ressourcenschutzes unterstützt. Gleichzeitig legt das System großen Wert auf ein ganzheitliches Verständnis von Nachhaltigkeit, das sowohl die Gesundheit und den Komfort der Menschen als auch die langfristige Wirtschaftlichkeit des Bauprojekts berücksichtigt^[Vgl. www.ögni.at/wp-content/uploads/Systembroschuere-2023-1].
 
 > ÖGNI/DGNB  
 > **ROAD MAP**  
@@ -113,7 +113,7 @@ Nach der endgültigen Freigabe des Auftraggebers und der Übermittlung einer Pro
 
 Das ÖGNI/DGNB-Zertifizierungssystem verfolgt das Ziel, eine gleichbleibend hohe Qualität von Bauvorhaben zu fördern. Daher reicht der Gesamt-Erfüllungsgrad allein nicht aus, um eine Auszeichnung zu erhalten. Zusätzlich muss in den relevanten Themenbereichen ein bestimmtes Mindestniveau – der Mindesterfüllungsgrad – erreicht werden. So ist beispielsweise für die Platin-Zertifizierung ein Mindesterfüllungsgrad von 65 % in den ersten fünf Themenbereichen erforderlich. Für eine Gold-Auszeichnung sind mindestens 50 % notwendig, während für die Silber-Auszeichnung bereits 35 % ausreichen.
 
-![Gesamterfüllungsgrad zu den Auszeichnungen ^[www.ögni.at/Systembroschüre]](pdf/59.pdf)
+!Abb: Gesamterfüllungsgrad zu den Auszeichnungen {pdf="pdf/59.pdf", note="www.ögni.at/Systembroschüre"}
 
 > **ÖGNI/DGBN ROAD MAP**  
 > zur Gebäudezertifizierung
@@ -152,17 +152,17 @@ Basierend auf den Ergebnissen der Zertifizierung kann zusätzlich eine Bewertung
 
 Im Folgenden wird die Gewichtung der einzelnen Kategorien gemäß dem ÖGNI/DGNB-System dargestellt. Die Tabelle bildet die Grundlage für die Bewertung des anschließenden Pre-Assessments.
 
-![Gewichtung der Hauptkategorien nach ÖGNI/DGNB ^[www.ögni.at/systembroschüre]](pdf/41.pdf)
+!Abb: Gewichtung der Hauptkategorien nach ÖGNI/DGNB {pdf="pdf/41.pdf", note="www.ögni.at/systembroschüre"}
 
 Im Folgenden werden die Analyseblätter zur Erstbewertung aufgelistet und anschließend alle Positionen zur Optimierung finanziell bewertet und dargestellt.
 
 ### Praxisbeispiel – Optimierungspotenziale (BW Beton)
 
-[Pre-Assessment: Donaufelder Straße 174-178, Neubau Wohnen (mehr als 6 WE)](pdf/Pre-Assessment_Auswertung-Gesamt.pdf)
+[Pre-Assessment: Donaufelder Straße 174-178, Neubau Wohnen (mehr als 6 WE)]{pdf="pdf/Pre-Assessment_Auswertung-Gesamt.pdf", note=""}
 
 ### Praxisbeispiel – ERGEBNIS
 
-[Pre-Assessment: Donaufelder Straße 174-178, Neubau Wohnen (mehr als 6 WE)](pdf/Optimierungspotenzial-Gesamt.pdf)
+[Pre-Assessment: Donaufelder Straße 174-178, Neubau Wohnen (mehr als 6 WE)]{pdf="pdf/Optimierungspotenzial-Gesamt.pdf", note=""}
 
 ### ERGEBNISDARSTELLUNG ERSTBEWERTUNG NACH ÖGNI/DGNB
 

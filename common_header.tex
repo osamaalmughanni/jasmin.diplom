@@ -1,0 +1,48 @@
+
+\usepackage[none]{hyphenat}
+\usepackage{float}
+\sloppy
+\usepackage{caption}
+\captionsetup[figure]{aboveskip=10pt, belowskip=10pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\usepackage{tocloft}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+
+% Tweak section headings if you like:
+\titleformat{\section}{\huge\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\large\bfseries}{\thesubsubsection}{1em}{}
+
+% -------------------------------------------------------
+% Our custom counters for Abbildungen:
+\newcounter{abbfootnote}
+\renewcommand{\theabbfootnote}{Abb.\arabic{abbfootnote}}
+\newcommand{\abbnotelist}{}
+\makeatletter
+\newcommand{\abbfootnotetext}[1]{%
+  \refstepcounter{abbfootnote}%
+  \global\expandafter\def\expandafter\abbnotelist\expandafter{%
+    \abbnotelist
+    \noindent\textsuperscript{\theabbfootnote}\quad #1\par
+  }%
+}
+\makeatother
+
+% -------------------------------------------------------
+% Our custom counters for Anhänge:
+\newcounter{anhangcounter}
+\renewcommand{\theanhangcounter}{Anh.\arabic{anhangcounter}}
+\newcommand{\anhanglist}{}
+\makeatletter
+\newcommand{\anhangfootnotetext}[2]{%
+  \refstepcounter{anhangcounter}%
+  \global\expandafter\def\expandafter\anhanglist\expandafter{%
+    \anhanglist
+    \noindent\textsuperscript{\theanhangcounter}\quad #1: #2\par
+  }%
+}
+\makeatother

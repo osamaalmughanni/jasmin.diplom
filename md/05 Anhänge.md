@@ -1,49 +1,13 @@
 # Anhänge
 
-\newpage
+!Anh: Wesentlichkeitsanalyse {pdf="pdf/Anhang_A_Wesentlichkeitsanalyse.pdf", desc="Analyse der wesentlichen ESG-Themen und deren Bedeutung."}
 
-## Wesentlichkeitsanalyse
+!Anh: ESG-Bericht {pdf="pdf/Anhang_B_250211_ESG-Bericht.pdf", desc="Detaillierter ESG-Bericht mit Nachhaltigkeitsbewertungen."}
 
-\newpage
+!Anh: Tageslichtberechnung {pdf="pdf/Anhang_C_Tageslichtberechnung.pdf", desc="Berechnung der Tageslichtverhältnisse für das Gebäude."}
 
-[Wesentlichkeitsanalyse](pdf/Anhang_A_Wesentlichkeitsanalyse.pdf)
+!Anh: Physische Klimarisikoanalyse {pdf="pdf/Anhang_D_Physische-Klimarisikoanalyse.pdf", desc="Bewertung physischer Klimarisiken und deren Auswirkungen."}
 
-\newpage
+!Anh: Angebot Wärmebrückenkatalog {pdf="pdf/Anhang_E_Angebot_Wärmebrückenkatalog.pdf", desc="Angebot für den Wärmebrückenkatalog zur energetischen Optimierung."}
 
-## ESG-Bericht
-
-\newpage
-
-[ESG-Bericht](pdf/Anhang_B_250211_ESG-Bericht.pdf)
-
-\newpage
-
-## Tageslichtberechnung
-
-\newpage
-
-[Tageslichtberechnung](pdf/Anhang_C_Tageslichtberechnung.pdf)
-
-\newpage
-
-## Physische Klimarisikoanalyse
-
-\newpage
-
-[Physische Klimarisikoanalyse](pdf/Anhang_D_Physische-Klimarisikoanalyse.pdf)
-
-\newpage
-
-## Angebot Wärmebrückenkatalog
-
-\newpage
-
-[Angebot Wärmebrückenkatalog](pdf/Anhang_E_Angebot_Wärmebrückenkatalog.pdf)
-
-\newpage
-
-## DFS Biodiversitätsanalyse
-
-\newpage
-
-[DFS Biodiversitätsanalyse](pdf/Anhang_F_DFS_Biodiversitätsanalyse.pdf)
+!Anh: DFS Biodiversitätsanalyse {pdf="pdf/Anhang_F_DFS_Biodiversitätsanalyse.pdf", desc="Analyse der Biodiversität und deren Auswirkungen auf das Projekt."}

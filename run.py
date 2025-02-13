@@ -1,35 +1,59 @@
-
 import os
 import re
 import subprocess
+import unicodedata
 from glob import glob
-from PyPDF2 import PdfMerger
+from PyPDF2 import PdfReader
+
+# Global variables to collect entries.
+abb_entries = []  # For figures (Abbildungsverzeichnis)
+abb_count = 0
+
+anh_entries = []  # For attachments (Anhängeverzeichnis)
+anh_count = 0
+
+def escape_latex(text):
+    """
+    Escapes LaTeX special characters in the given text.
+    """
+    if not isinstance(text, str):
+        return text
+    # Order matters: backslash first.
+    replacements = [
+        ('\\', r'\textbackslash{}'),
+        ('&', r'\&'),
+        ('%', r'\%'),
+        ('$', r'\$'),
+        ('#', r'\#'),
+        ('_', r'\_'),
+        ('{', r'\{'),
+        ('}', r'\}'),
+        ('~', r'\textasciitilde{}'),
+        ('^', r'\textasciicircum{}'),
+    ]
+    for old, new in replacements:
+        text = text.replace(old, new)
+    return text
 
 def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="fonts"):
     """
     Scans the fonts directory for .ttf and .otf files, groups them by font family,
-    and generates a LaTeX header file that dynamically sets the main font (using its regular
-    file) and registers available styles (bold, italic, bolditalic, and any extras).
-
-    Naming convention: Font files should be named as FamilyName-Style.ttf (or .otf),
-    e.g. Lora-Regular.ttf, Lora-Bold.ttf, Lora-Italic.otf, etc.
+    and generates a LaTeX header file that dynamically sets the main font and registers
+    available styles.
     """
     if not os.path.exists(fonts_dir):
         print(f"❌ Fonts directory '{fonts_dir}' does not exist.")
         return False
 
-    # Gather all .ttf and .otf files.
     font_files = glob(os.path.join(fonts_dir, "*.ttf")) + glob(os.path.join(fonts_dir, "*.otf"))
     if not font_files:
         print(f"❌ No font files found in '{fonts_dir}'.")
         return False
 
     families = {}
-    # Process each font file.
     for font_path in font_files:
-        base = os.path.basename(font_path)  # e.g. Lora-Bold.ttf
-        name, ext = os.path.splitext(base)
-        # Expect a filename like Family-Style. If no dash found, assume "regular".
+        base = os.path.basename(font_path)
+        name, _ = os.path.splitext(base)
         if '-' in name:
             family, style = name.rsplit('-', 1)
         else:
@@ -37,7 +61,6 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
             style = "regular"
         family = family.strip()
         style = style.lower().strip()
-        # Normalize common style names.
         if style in ("regular", "normal", "book"):
             style = "regular"
         elif style in ("bold", "black", "heavy"):
@@ -46,14 +69,13 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
             style = "italic"
         elif style in ("bolditalic", "bold-italic"):
             style = "bolditalic"
-        # Group by family.
+
         if family not in families:
             families[family] = {}
         if style in families[family]:
             print(f"⚠️ Duplicate style '{style}' for font family '{family}'. Overriding previous entry.")
         families[family][style] = base
 
-    # Select the best family (here, the one with the most variants)
     best_family = None
     best_count = 0
     for fam, variants in families.items():
@@ -61,22 +83,19 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
             best_count = len(variants)
             best_family = fam
 
-    if best_family is None:
+    if not best_family:
         print("❌ No valid font families found.")
         return False
 
     variants = families[best_family]
-    # Ensure a "regular" variant exists.
     if "regular" not in variants:
         fallback_variant = list(variants.values())[0]
         variants["regular"] = fallback_variant
-        print(f"⚠️ No regular variant found for font family '{best_family}'. Using '{fallback_variant}' as regular.")
+        print(f"⚠️ No regular variant found for '{best_family}'. Using '{fallback_variant}' as regular.")
 
-    # Begin building the LaTeX header.
     header_lines = []
-    header_lines.append("% Dynamisch generierter Font-Header")
+    header_lines.append("% Dynamically generated Font Header")
     header_lines.append("\\usepackage{fontspec}")
-    # Add Ligatures=TeX to better handle special characters.
     options = [f"Path={fonts_dir}/", "Ligatures=TeX"]
     if "bold" in variants:
         options.append("BoldFont={" + variants["bold"] + "}")
@@ -85,10 +104,8 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
     if "bolditalic" in variants:
         options.append("BoldItalicFont={" + variants["bolditalic"] + "}")
     options_str = ", ".join(options)
-    # Use the regular file (with extension) as the main font.
     header_lines.append(f"\\setmainfont[{options_str}]{{{variants['regular']}}}")
 
-    # For any additional (nonstandard) styles, register them as new font faces.
     main_styles = {"regular", "bold", "italic", "bolditalic"}
     additional_styles = [s for s in variants if s not in main_styles]
     for style in additional_styles:
@@ -100,69 +117,127 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
     try:
         with open(header_filename, "w", encoding="utf-8") as f:
             f.write(header_content)
-        print(f"✅ Dynamischer Font-Header erstellt: {header_filename}")
+        print(f"✅ Dynamic font header created: {header_filename}")
         return True
     except Exception as e:
-        print(f"❌ Fehler beim Schreiben des dynamischen Font-Headers: {e}")
+        print(f"❌ Error writing dynamic font header: {e}")
         return False
 
-def replace_pdf_links(md_content):
+def replace_abb_syntax(md_content):
     """
-    Replaces markdown links to PDFs with LaTeX code to include the PDF pages,
-    scaled to 75%, centered, and with a gray border.
-
-    For example, a markdown link like:
-      [Some PDF Title](pdf/SomeDocument.pdf)
-
-    is replaced with:
-      \clearpage
-      \includepdf[pages=-,frame,scale=0.75]{\detokenize{pdf/SomeDocument.pdf}}
-      \clearpage
+    Processes custom syntax for figures.
+    Expected syntax:
+      !Abb: Some Title {pdf="pdf/17.pdf", note="Footnote text"}
+    Replaces it with a LaTeX figure block and collects the data for the final Abbildungsverzeichnis.
     """
-    pattern = r'\[([^\]]+)\]\(([^)]+\.pdf)\)'
-    def repl(match):
-        pdf_path = match.group(2)
-        # Insert \includepdf with the desired options.
+    global abb_count, abb_entries
+
+    pattern = re.compile(
+        r'^\!Abb:\s*(.*?)\s*\{pdf="([^"]+)",\s*note="([^"]+)"\}',
+        flags=re.MULTILINE
+    )
+    def abb_repl(match):
+        global abb_count, abb_entries
+        title = escape_latex(match.group(1).strip())
+        pdf_file = unicodedata.normalize("NFC", match.group(2).strip())
+        note = escape_latex(match.group(3).strip())
+        abb_count += 1
+        # Collect the entry for the final list.
+        entry = f"Abb.{abb_count}: {title}. {note}"
+        abb_entries.append(entry)
+        # Return a LaTeX figure block with a caption.
         return (
-            "\n\\clearpage\n"
-            "\\includepdf[pages=-,"
-            "frame,"              # draws a border
-            "scale=0.75]"         # 75% scale; page numbering remains as-is.
-            "{\\detokenize{" + pdf_path + "}}\n"
-            "\\clearpage\n"
+            "\\begin{figure}[htbp]\n"
+            "\\centering\n"
+            f"\\includegraphics[width=0.9\\textwidth]{{\\detokenize{{{pdf_file}}}}}\n"
+            f"\\caption{{Abb.{abb_count}: {title}}}\n"
+            "\\end{figure}\n"
         )
-    return re.sub(pattern, repl, md_content)
+    return pattern.sub(abb_repl, md_content)
+
+def replace_anh_syntax(md_content):
+    """
+    Processes custom syntax for attachments.
+    Expected syntax:
+      !Anh: Some Title {pdf="pdf/attachment.pdf", desc="A detailed description."}
+    Replaces it by:
+      1. A title block (with title and description).
+      2. A blank page.
+      3. Inserting each page of the PDF individually (using pdfpages) so that page numbering remains continuous.
+    Also collects a clean entry for the final Anhängeverzeichnis.
+    """
+    global anh_count, anh_entries
+
+    pattern = re.compile(
+        r'^\!Anh:\s*(.*?)\s*\{pdf="([^"]+)"(?:,\s*desc="([^"]+)")?\}',
+        flags=re.MULTILINE
+    )
+    def anh_repl(match):
+        global anh_count, anh_entries
+        title = escape_latex(match.group(1).strip())
+        pdf_file = unicodedata.normalize("NFC", match.group(2).strip())
+        desc = escape_latex(match.group(3).strip()) if match.group(3) else ""
+        anh_count += 1
+        # Collect the entry for the final list.
+        entry = f"Anh.{anh_count}: {title}. {desc}"
+        anh_entries.append(entry)
+        
+        # Title block for the attachment:
+        title_block = (
+            "\\clearpage\n"
+            "\\thispagestyle{plain}\n"
+            "\\begin{center}\n"
+            f"{{\\Huge \\textbf{{{title}}}}}\\par\n"
+        )
+        if desc:
+            title_block += f"{{\\Large {desc}}}\\par\n"
+        title_block += "\\end{center}\n"
+        title_block += "\\clearpage\n"
+        
+        # Insert a blank page.
+        blank_page = (
+            "\\clearpage\n"
+            "\\thispagestyle{plain}\n"
+            "\\mbox{}\n"
+            "\\newpage\n"
+        )
+        
+        # Determine the number of pages in the external PDF.
+        try:
+            reader = PdfReader(pdf_file)
+            num_pages = len(reader.pages)
+        except Exception as e:
+            print(f"⚠️ Could not determine page count for {pdf_file}: {e}")
+            num_pages = 0
+        
+        # Include each page individually.
+        pdf_includes = ""
+        for i in range(1, num_pages + 1):
+            pdf_includes += (
+                f"\\includepdf[pages={{{i}}},frame,scale=0.75,"
+                "pagecommand={\\thispagestyle{empty}\\stepcounter{page}}]"
+                f"{{\\detokenize{{{pdf_file}}}}}\n"
+            )
+        
+        return title_block + blank_page + pdf_includes
+    return pattern.sub(anh_repl, md_content)
 
 def generate_pdf():
     """
-    Erzeugt eine deutsche Titelseite-PDF und ein Hauptdokument-PDF, die dann zusammengefügt werden.
-    Anforderungen:
-      1) Die Titelseite hat KEINE Seitenzahlen.
-      2) Das Inhaltsverzeichnis (TOC) hat KEINE Seitenzahlen.
-      3) Die eigentliche Seitenzählung beginnt NACH dem TOC.
-      4) Die Silbentrennung ist deaktiviert.
-      5) Abschnittstitel sind linksbündig (ragged right), während Absätze voll gerechtfertigt sind.
-      6) Pandoc (via subprocess) wird mit korrekter UTF-8-Verarbeitung eingesetzt.
-
-    Dynamische Fonts werden via eines generierten LaTeX-Headers (siehe generate_dynamic_font_header) geladen.
-
-    Zusätzlich:
-      Markdown-Links zu PDFs (z.B. [Title](pdf/file.pdf)) werden erkannt und automatisch so
-      umgewandelt, dass alle Seiten des PDFs ins Dokument eingebunden werden – dabei werden die
-      Seiten skaliert (75%), zentriert und mit einem grauen Rahmen versehen, wobei die Seitenzahlen
-      erhalten bleiben.
+    Generates one single PDF from all Markdown files with continuous page numbering.
+    The document is built by concatenating all Markdown files (with custom replacements).
+    At the end, two plain-text sections (Abbildungsverzeichnis and Anhängeverzeichnis)
+    are appended that list the collected entries.
     """
-    input_dir = "md"  # Ordner mit den Markdown-Dateien.
+    input_dir = "md"
     output_pdf = "da.pdf"
-    cover_pdf = "temp_cover.pdf"
-    document_pdf = "temp_document.pdf"
     disable_hyphenation_file = "disable_hyphenation.tex"
     dynamic_font_file = "dynamic_font.tex"
 
-    # Neuer LaTeX-Header: Deaktiviert Silbentrennung und fügt Layout-Anpassungen ein.
-    # Enthält außerdem den Hack, um die pdfpages-Rahmenfarbe auf Grau zu setzen.
-    disable_hyphenation = r"""
+    # LaTeX preamble for layout and basic settings.
+    preamble = r"""
 \usepackage[none]{hyphenat}
+\usepackage{float}
 \sloppy
 \usepackage{caption}
 \captionsetup[figure]{aboveskip=10pt, belowskip=10pt}
@@ -180,116 +255,69 @@ def generate_pdf():
 \titleformat{\subsection}{\raggedright\large\bfseries}{}{0em}{}
 \titleformat{\subsubsection}{\raggedright\normalsize\bfseries}{}{0em}{}
 
-% We need pdfpages for embedding external PDFs
+% pdfpages for embedding PDFs
 \usepackage{pdfpages}
-
-% We need xcolor to set the frame color to gray
 \usepackage{xcolor}
-
-% ------------------------------------------------------------------
-% Hack to force the border color (frame) in pdfpages to be gray.
-% (pdfpages normally draws the frame in black.)
-% ------------------------------------------------------------------
-\makeatletter
-\def\AM@ruleColor{gray}%
-\def\AM@rule{%
-    \@tempdima\AM@pageht
-    \advance\@tempdima-\dp\@currbox
-    \edef\AM@pageht{\the\@tempdima}
-    \leavevmode
-    \color{\AM@ruleColor}
-    \vrule\@width\AM@frame\@height\AM@pageht
-    \hb@xt@\wd\@currbox{\hss
-        \vbox to \ht\@currbox{\box\@currbox\vss}%
-    \hss}%
-}
-\makeatother
 """
-
+    # Write the preamble to a file.
     try:
         with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
-            f.write(disable_hyphenation)
-        print(f"✅ Header (Silbentrennung, TOC-Anpassung, Abstände, grauer Rahmen) erstellt: {disable_hyphenation_file}")
+            f.write(preamble)
+        print(f"✅ Preamble written to: {disable_hyphenation_file}")
     except Exception as e:
-        print(f"❌ Fehler beim Erstellen der Header-Datei: {e}")
+        print(f"❌ Error writing preamble: {e}")
         return
 
-    # Dynamischen Font-Header erzeugen.
     if not generate_dynamic_font_header(dynamic_font_file, fonts_dir="fonts"):
-        print("❌ Dynamischer Font-Header konnte nicht erzeugt werden. Abbruch.")
+        print("❌ Dynamic font header generation failed. Aborting.")
         return
 
-    # Prüfe, ob das Eingabeverzeichnis existiert.
     if not os.path.exists(input_dir):
-        print(f"❌ Verzeichnis '{input_dir}' existiert nicht.")
+        print(f"❌ Directory '{input_dir}' does not exist.")
         return
 
-    # Alle Markdown-Dateien (sortiert) einlesen.
     md_files = sorted(glob(os.path.join(input_dir, "*.md")))
     if not md_files:
-        print(f"❌ Keine Markdown-Dateien gefunden in '{input_dir}'.")
+        print(f"❌ No Markdown files found in '{input_dir}'.")
         return
 
-    ########################################################################
-    # 1) Titelseite erzeugen (ohne Seitenzahlen)
-    ########################################################################
-    try:
-        with open(md_files[0], "r", encoding="utf-8") as f:
-            original_cover_md = f.read()
-        # Ersetze PDF-Links (falls dort schon PDFs verlinkt sind).
-        original_cover_md = replace_pdf_links(original_cover_md)
-
-        # LaTeX-Befehle voranstellen, damit die Titelseite keine Seitenzahlen hat.
-        cover_md = (
-            r"\pagenumbering{gobble}" "\n"
-            r"\thispagestyle{empty}" "\n" +
-            original_cover_md
-        )
-
-        cmd_cover = [
-            "pandoc",
-            "-f", "markdown+footnotes",
-            "-o", cover_pdf,
-            "--pdf-engine=xelatex",
-            "-V", "geometry=a4paper",
-            "-V", "fontsize=14pt",
-            "-V", "margin=1in",
-            "-V", "fig-pos=H",
-            "-H", disable_hyphenation_file,
-            "-H", dynamic_font_file
-        ]
-
-        subprocess.run(cmd_cover, input=cover_md, text=True, check=True, encoding="utf-8")
-        print(f"✅ Titelseite erstellt: {cover_pdf}")
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Fehler bei der Erstellung der Titelseite: {e}")
-        return
-
-    ########################################################################
-    # 2) Hauptdokument erzeugen
-    ########################################################################
+    # Create one combined Markdown string.
     main_doc_header = r"""
-\pagenumbering{gobble}
-\thispagestyle{empty}
+\thispagestyle{plain}
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \renewcommand*\contentsname{Inhaltsverzeichnis}
 \tableofcontents
 \clearpage
-\pagenumbering{arabic}
-\pagestyle{plain}
 """
     combined_md = main_doc_header
-    for md_file in md_files[1:]:
+    for md_file in md_files:
         with open(md_file, "r", encoding="utf-8") as f:
             content = f.read()
-        # Ersetze PDF-Links in jedem Markdown-Inhalt.
-        content = replace_pdf_links(content)
-        combined_md += f"\n\\newpage\n\n{content}\n"
+        content = replace_abb_syntax(content)
+        content = replace_anh_syntax(content)
+        combined_md += "\n\\newpage\n\n" + content + "\n"
+
+    # Append the final sections as plain Markdown (not in the TOC).
+    combined_md += "\n\\newpage\n\n# Abbildungsverzeichnis\n\n"
+    if abb_entries:
+        for entry in abb_entries:
+            combined_md += "- " + entry + "\n"
+    else:
+        combined_md += "Keine Abbildungen vorhanden.\n"
+    
+    combined_md += "\n\\newpage\n\n# Anhängeverzeichnis\n\n"
+    if anh_entries:
+        for entry in anh_entries:
+            combined_md += "- " + entry + "\n"
+    else:
+        combined_md += "Keine Anhänge vorhanden.\n"
 
     try:
         cmd_document = [
             "pandoc",
             "-f", "markdown+footnotes",
-            "-o", document_pdf,
+            "-o", output_pdf,
             "--pdf-engine=xelatex",
             "-V", "geometry=a4paper",
             "-V", "fontsize=12pt",
@@ -300,33 +328,18 @@ def generate_pdf():
             "-H", disable_hyphenation_file,
             "-H", dynamic_font_file
         ]
-
         subprocess.run(cmd_document, input=combined_md, text=True, check=True, encoding="utf-8")
-        print(f"✅ Hauptdokument erstellt: {document_pdf}")
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Fehler bei der Erstellung des Hauptdokuments: {e}")
-        return
+        print(f"✅ Final PDF created successfully: {output_pdf}")
 
-    ########################################################################
-    # 3) Titelseite und Hauptdokument zusammenführen
-    ########################################################################
-    try:
-        merger = PdfMerger()
-        merger.append(cover_pdf)
-        merger.append(document_pdf)
-        merger.write(output_pdf)
-        merger.close()
-        print(f"✅ Finale PDF erfolgreich erstellt: {output_pdf}")
-
-        # Temporäre Dateien löschen.
-        for temp_file in [cover_pdf, document_pdf, disable_hyphenation_file, dynamic_font_file]:
+        # Optionally, remove temporary preamble files.
+        for temp_file in [disable_hyphenation_file, dynamic_font_file]:
             try:
                 os.remove(temp_file)
             except Exception as e:
-                print(f"⚠️ Konnte '{temp_file}' nicht löschen: {e}")
-        print("🗑️ Temporäre Dateien gelöscht.")
-    except Exception as e:
-        print(f"❌ Fehler beim Zusammenfügen der PDFs: {e}")
+                print(f"⚠️ Could not delete '{temp_file}': {e}")
+        print("🗑️ Temporary files deleted.")
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Error during document creation: {e}")
 
 if __name__ == "__main__":
     generate_pdf()
