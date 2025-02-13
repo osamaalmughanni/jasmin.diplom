@@ -144,7 +144,7 @@ def replace_abb_syntax(md_content):
             "\\begin{figure}[htbp]\n"
             "\\centering\n"
             f"\\includegraphics[width=0.9\\textwidth]{{\\detokenize{{{pdf_file}}}}}\n"
-            f"\\caption{{Abb.{abb_count}: {title}}}\n"
+            f"\\caption{{{title}}}\n"
             "\\end{figure}\n"
         )
     return pattern.sub(abb_repl, md_content)
@@ -170,10 +170,8 @@ def replace_anh_syntax(md_content):
         entry = f"Anh.{anh_count}: {title}. {desc}"
         anh_entries.append(entry)
         
-        # Title block for the attachment.
         title_block = (
             "\\clearpage\n"
-            "\\thispagestyle{empty}\n"
             "\\begin{center}\n"
             f"{{\\Huge \\textbf{{{title}}}}}\\par\n"
         )
@@ -182,7 +180,6 @@ def replace_anh_syntax(md_content):
         title_block += "\\end{center}\n"
         title_block += "\\clearpage\n"
         
-        # Open the PDF and determine its page count.
         try:
             reader = PdfReader(pdf_file)
             num_pages = len(reader.pages)
@@ -190,35 +187,61 @@ def replace_anh_syntax(md_content):
             print(f"⚠️ Could not determine page count for {pdf_file}: {e}")
             num_pages = 0
         
-        # For each page, detect orientation and include appropriately.
         pdf_includes = ""
         for i in range(1, num_pages + 1):
             page = reader.pages[i - 1]
             width = float(page.mediabox.width)
             height = float(page.mediabox.height)
-            # If page is landscape, rotate it by 90°.
             angle_option = "angle=90," if width > height else ""
             pdf_includes += (
                 f"\\includepdf[pages={{{i}}},frame,scale=0.75,{angle_option}"
-                "pagecommand={\\thispagestyle{empty}\\stepcounter{page}}]"
+                "pagecommand={\\stepcounter{page}}]"
                 f"{{\\detokenize{{{pdf_file}}}}}\n"
             )
         return title_block + pdf_includes
     return pattern.sub(anh_repl, md_content)
 
+def exclude_cover_headers_from_toc(md_content):
+    """
+    Modifies all markdown headers in the cover page so they are excluded from the TOC.
+    It appends the attribute "{-}" to each header.
+    """
+    def process_line(line):
+        if line.lstrip().startswith("#"):
+            # If the line already ends with "{-}" (allowing whitespace variations), leave it.
+            if re.search(r'\s\{\s*-\s*\}\s*$', line):
+                return line
+            # If an attribute block exists, insert the hyphen before the closing brace.
+            m = re.match(r'^(#+\s+.*?)(\s*\{.*\})\s*$', line)
+            if m:
+                header_text = m.group(1)
+                attr_block = m.group(2)
+                if not re.search(r'-\s*$', attr_block[:-1]):
+                    new_attr = attr_block[:-1] + " -}"
+                    return header_text + " " + new_attr
+                else:
+                    return line
+            else:
+                # No attribute block present, so simply append " {-}".
+                return line + " {-}"
+        return line
+
+    lines = md_content.splitlines()
+    processed_lines = [process_line(line) for line in lines]
+    return "\n".join(processed_lines)
+
 def generate_pdf():
     """
     Generates one single PDF by concatenating Markdown files.
-    - The cover page and TOC are printed without any page numbers.
-    - Real content starts with page numbering reset to 1.
-    - Final sections (Abbildungsverzeichnis and Anhängeverzeichnis) are appended.
+    - The cover page (first MD file) is included in the PDF with no header or numbering.
+    - Its markdown headers are also excluded from the table of contents.
+    - The TOC, main content, and final sections (including Anhänge) all show headers and numbering.
     """
     input_dir = "md"
     output_pdf = "da.pdf"
     disable_hyphenation_file = "disable_hyphenation.tex"
     dynamic_font_file = "dynamic_font.tex"
 
-    # Preamble with added packages for better footnote URL breaking.
     preamble = r"""
 \usepackage[none]{hyphenat}
 \usepackage{float}
@@ -243,10 +266,18 @@ def generate_pdf():
 % pdfpages for embedding PDFs
 \usepackage{pdfpages}
 \usepackage{xcolor}
-\usepackage{xurl} % Allow URL breaks.
+\usepackage{xurl}
 \renewcommand{\UrlBreaks}{\do\/\do-}
-\usepackage[hang,flushmargin]{footmisc} % Better footnote formatting.
+\usepackage[hang,flushmargin]{footmisc}
 \setlength{\emergencystretch}{3em}
+
+\usepackage[automark,headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\automark[subsection]{section}
+\ihead{\headmark}
+\ohead{\pagemark}
+\setlength{\headheight}{15pt}
+\setkomafont{pagehead}{\normalfont}
 """
     try:
         with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
@@ -269,9 +300,16 @@ def generate_pdf():
         print(f"❌ No Markdown files found in '{input_dir}'.")
         return
 
-    # Read the cover page (first MD file) and the remaining MD files.
+    # Read the cover page (first MD file) and process its headers.
     with open(md_files[0], "r", encoding="utf-8") as f:
         cover_md = f.read()
+    cover_md = exclude_cover_headers_from_toc(cover_md)
+    # Prepend commands to remove header and numbering on the cover page.
+    cover_md = "\\thispagestyle{empty}\n\\pagenumbering{gobble}\n" + cover_md
+    # Append commands to clear the page and re-enable Arabic numbering.
+    cover_md += "\n\\clearpage\n\\pagenumbering{arabic}\n"
+
+    # Read the remaining MD files.
     rest_md = ""
     for md_file in md_files[1:]:
         with open(md_file, "r", encoding="utf-8") as f:
@@ -283,23 +321,14 @@ def generate_pdf():
     rest_md = replace_abb_syntax(rest_md)
     rest_md = replace_anh_syntax(rest_md)
 
-    # Build the combined Markdown.
-    # The cover page and TOC should be unnumbered, and numbering starts only with the content.
-    # Prepend the cover with commands to disable page numbering.
-    cover_header = r"\pagenumbering{gobble}" + "\n" + r"\thispagestyle{empty}"
     toc_block = r"""
 \clearpage
-\pagenumbering{gobble}
-\thispagestyle{empty}
 \renewcommand*\contentsname{Inhaltsverzeichnis}
 \tableofcontents
 \clearpage
-\pagenumbering{arabic}
-\setcounter{page}{1}
 """
-    combined_md = cover_header + "\n" + cover_md + "\n" + toc_block + "\n" + rest_md
+    combined_md = cover_md + "\n" + toc_block + "\n" + rest_md
 
-    # Append final sections as plain Markdown (not added to the TOC).
     combined_md += "\n\\newpage\n\n# Abbildungsverzeichnis\n\n"
     if abb_entries:
         for entry in abb_entries:
