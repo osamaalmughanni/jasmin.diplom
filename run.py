@@ -228,11 +228,12 @@ def generate_pdf():
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 \setlength{\floatsep}{10pt plus 2pt minus 2pt}
 \setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\flushbottom
+
 \usepackage{tocloft}
 \setlength{\cftbeforetoctitleskip}{-1em}
 \setlength{\cftaftertoctitleskip}{1em}
 \setlength{\cftparskip}{0pt}
-\flushbottom
 
 \usepackage{titlesec}
 \titleformat{\section}{\raggedright\Large\bfseries}{}{0em}{}
@@ -283,7 +284,9 @@ def generate_pdf():
     rest_md = replace_anh_syntax(rest_md)
 
     # Build the combined Markdown.
-    # The cover and TOC are unnumbered (using gobble), then numbering starts at content.
+    # The cover page and TOC should be unnumbered, and numbering starts only with the content.
+    # Prepend the cover with commands to disable page numbering.
+    cover_header = r"\pagenumbering{gobble}" + "\n" + r"\thispagestyle{empty}"
     toc_block = r"""
 \clearpage
 \pagenumbering{gobble}
@@ -294,7 +297,7 @@ def generate_pdf():
 \pagenumbering{arabic}
 \setcounter{page}{1}
 """
-    combined_md = cover_md + "\n" + toc_block + "\n" + rest_md
+    combined_md = cover_header + "\n" + cover_md + "\n" + toc_block + "\n" + rest_md
 
     # Append final sections as plain Markdown (not added to the TOC).
     combined_md += "\n\\newpage\n\n# Abbildungsverzeichnis\n\n"
