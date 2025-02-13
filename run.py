@@ -5,6 +5,9 @@ import unicodedata
 from glob import glob
 from PyPDF2 import PdfReader
 
+# Constant for maximum size factor for images.
+MAX_SIZE_FACTOR = 0.8
+
 # Global variables for collecting entries.
 abb_entries = []  # For figures (Abbildungsverzeichnis)
 abb_count = 0
@@ -124,18 +127,19 @@ def replace_abb_syntax(md_content):
     """
     Replaces !Abb: syntax with a LaTeX figure block and collects data.
     Expected syntax:
-      !Abb: Some Title {pdf="pdf/17.pdf", note="Footnote text", scale="0.75"}
-    If the optional scale attribute is provided the image is scaled using the
-    graphicx scale option with origin=c (ensuring scaling from the center).
-    Otherwise a default width of 0.9\\textwidth is applied.
-    
+      !Abb: Some Title {pdf="pdf/17.pdf", note="Footnote text", scale="0.75", rotation="90"}
+    The 'scale' attribute is optional. If provided, the image is scaled using the graphicx scale
+    option with origin=c (ensuring scaling from the center). Otherwise a default width of MAX_SIZE_FACTOR\\textwidth
+    is applied. The 'rotation' attribute is also optional and allows specifying an angle (e.g., 90 or -90)
+    to rotate the graphic.
+
     The figure environment now uses the [H] specifier to force the figure to
     appear exactly where it is in the markdown.
     """
     global abb_count, abb_entries
 
     pattern = re.compile(
-        r'^\!Abb:\s*(.*?)\s*\{pdf="([^"]+)",\s*note="([^"]+)"(?:,\s*scale="([^"]+)")?\}',
+        r'^\!Abb:\s*(.*?)\s*\{pdf="([^"]+)",\s*note="([^"]+)"(?:,\s*scale="([^"]+)")?(?:,\s*rotation="([^"]+)")?\}',
         flags=re.MULTILINE
     )
     def abb_repl(match):
@@ -144,6 +148,7 @@ def replace_abb_syntax(md_content):
         pdf_file = unicodedata.normalize("NFC", match.group(2).strip())
         note = escape_latex(match.group(3).strip())
         scale = match.group(4)
+        rotation = match.group(5)
         abb_count += 1
         entry = f"Abb.{abb_count}: {title}. {note}"
         abb_entries.append(entry)
@@ -151,14 +156,18 @@ def replace_abb_syntax(md_content):
             # Using scale with origin=c ensures the scaling transformation is performed about the center.
             graphics_options = f"scale={scale},origin=c"
         else:
-            graphics_options = "width=0.9\\textwidth"
-        return (
-            "\\begin{figure}[H]\n"  # Changed from [htbp] to [H]
+            graphics_options = f"width={MAX_SIZE_FACTOR}\\textwidth"
+        if rotation:
+            graphics_options += f",angle={rotation}"
+        figure_str = (
+            "\\begin{figure}[H]\n"
             "\\centering\n"
-            f"\\includegraphics[{graphics_options}]{{\\detokenize{{{pdf_file}}}}}\n"
-            f"\\caption{{{title}}}\n"
+            "\\adjustbox{max size={%(max_size)s\\textwidth}{%(max_size)s\\textheight},center}{\\includegraphics[%(graphics_options)s]{\\detokenize{%(pdf_file)s}}}\n" % 
+            {"max_size": MAX_SIZE_FACTOR, "graphics_options": graphics_options, "pdf_file": pdf_file}
+            + f"\\caption{{{title}}}\n"
             "\\end{figure}\n"
         )
+        return figure_str
     return pattern.sub(abb_repl, md_content)
 
 def replace_anh_syntax(md_content):
@@ -298,6 +307,7 @@ def generate_pdf():
 \usepackage{pdfpages}
 \usepackage{xcolor}
 \usepackage{xurl}
+\usepackage{adjustbox} % Added to ensure images never exceed text size.
 \renewcommand{\UrlBreaks}{\do\/\do-}
 \usepackage[hang,flushmargin]{footmisc}
 \setlength{\emergencystretch}{3em}

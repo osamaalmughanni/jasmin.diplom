@@ -112,7 +112,7 @@ Als Grundlage dient die Darstellung der Kostenhauptgruppen gemäß ÖNORM B 1801
 
 Die nachfolgenden Analysetabellen veranschaulichen die Gebäudekosten über einen Lebenszyklus von 30 Jahren. Anfangs zeigen sich die höheren Baukosten der nachhaltigen Holzbauweise, doch durch geringere laufende Folgekosten reduziert sich der initiale Unterschied im Laufe der Zeit – was zu einer vorteilhafteren Gesamtbilanz zugunsten des Klimaschutzes führt.
 
-!Abb: Eigenberechnung: Lebenszyklusberechnung mineralische Bauweise im Vergleich zur Holzbauweise {pdf="pdf/50.pdf", note="eigene Darstellung"}
+!Abb: Eigenberechnung: Lebenszyklusberechnung mineralische Bauweise im Vergleich zur Holzbauweise {pdf="pdf/50.pdf", note="eigene Darstellung", scale="1", rotation="90"}
 
 ### Zusammenfassende Analyse der Lebenszykluskosten
 
