@@ -88,17 +88,6 @@ Als Basis für den nachfolgenden Bauweisenvergleich werden die Kostenhauptgruppe
 
 Die nachfolgende Übersicht stellt die festgelegten Indizes dar und bildet die Grundlage für die folgenden Berechnungstabellen. Dabei wurden Indexanpassungen zum Baupreis- und Verbraucherpreisindex der Jahre 2022 und 2023 nicht berücksichtigt, da diese aufgrund der herausfordernden wirtschaftlichen Gesamtlage keinen repräsentativen Mittelwert ergeben hätten.
 
-| **Parameter Rechenmethodik**                                                              |             |
-| ----------------------------------------------------------------------------------------- | ----------- |
-| Baupreisindex^a^:                                                                         | 2,90%       |
-| Verbraucherpreisindex^a^:                                                                 | 2,90%       |
-| Energiepreisindex^a1^:                                                                    | 5,90%       |
-| Abzinsungsfaktor^b^:                                                                      | 1,20%       |
-| Lebensdauer:                                                                              | 2026 - 2055 |
-| ^a^ gemittelte Kennwerte Österreich der letzten 5 Jahre (Ann.: ausgen. Jahre 2022 & 2023) |             |
-| ^a1^ Wert aus 2023-2024                                                                   |             |
-| ^b^ Sekundärmarktrendite des Bundes, 10/2013                                              |             |
-
 !Abb: definierte Indexanpassungen {pdf="pdf/54.pdf", note="eigene Darstellung Vgl. ÖNORM B 1801-1:2021-02"}
 
 ### Kalkulatorischer Vergleich der Errichtungskosten

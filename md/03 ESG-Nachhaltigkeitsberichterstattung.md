@@ -103,7 +103,7 @@ Im Mittelpunkt stehen Kriterien wie eine Stakeholder-Analyse, die Erfassung des 
 
 Dieser Begriff bezieht sich auf alle Personen, Gruppen oder Institutionen, die direkt oder indirekt von den Aktivitäten eines Unternehmens betroffen sind oder die selbst Einfluss auf dessen Handeln ausüben.
 
-!Abb: Institutionen für eine Stakeholderanalyse {pdf="pdf/29.pdf", note="Stakeholderanalyse -- Sonia Mos"}
+!Abb: Institutionen für eine Stakeholderanalyse {pdf="pdf/29.pdf", note="Stakeholderanalyse -- Sonia Mos", scale="0.75"}
 
 #### Fragebögen an Stakeholder
 
