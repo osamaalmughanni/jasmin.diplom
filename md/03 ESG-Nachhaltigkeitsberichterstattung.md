@@ -1,3 +1,9 @@
+\newpage
+
+!Abs: ESG {desc="Berichterstattung in Bau & Immobilien"}
+
+\newpage
+
 # ESG Berichterstattung in Bau & Immobilien
 
 ## ESG – Nachhaltigkeitsberichterstattung
@@ -58,28 +64,31 @@ Nachhaltigkeit im Unternehmen zu verankern, geht weit über die Reduzierung des 
 
 !Abb: Bildliche Darstellung eines Ablaufes zum ESG Reporting {pdf="pdf/17.pdf", note="Eigene Darstellung"}
 
-#### Schritt 1: Information und Begleitung zum Thema Nachhaltigkeit
+**Schritt 1: Information und Begleitung zum Thema Nachhaltigkeit**
 
 Die Einbeziehung von beratenden Unternehmen zur Erstellung des Nachhaltigkeitsberichtes wird im vorliegenden Fall durch das Beratungsunternehmen PwC erbracht. Eine frühe Erörterung des gemeinsamen Weges bringt zahlreiche Vorteile mit sich. Dabei entsteht gemeinsam mit den Experten eine klare Weichenstellung.
 
-#### Schritt 2: Bewusstsein schaffen und ein Team bestimmen
+**Schritt 2: Bewusstsein schaffen und ein Team bestimmen**
 
 Hierbei muss ein internes Mitarbeiterteam ausgewählt werden, das sich mit Pflichtbewusstsein in Sachen Nachhaltigkeit auseinandersetzt. In größeren Unternehmen gibt es hierfür eigene Abteilungen, die sich intensiv mit diesen Themen beschäftigen. In kleineren Betrieben übernehmen üblicherweise Angestellte, die sich neben ihrem gewohnten Arbeitsalltag um die Bereiche Umwelt, Soziales und Unternehmensführung für die Nachhaltigkeitsberichterstattung – in Abstimmung mit der Geschäftsführung – kümmern.
 
-#### Schritt 3: Umfeldanalyse und Datensammlung
+**Schritt 3: Umfeldanalyse und Datensammlung**
 
 Kriterien wie eine Stakeholder-Analyse, die Erfassung des Energieverbrauchs zur Berechnung des CO₂-Fußabdrucks sowie eine doppelte Wesentlichkeitsanalyse nach den Interessen der verschiedenen Gruppen stehen dabei im Vordergrund. Dies bildet die Basis für die anschließenden Zielsetzungen.
 
-#### Schritt 4: Ziele und Maßnahmen festlegen
+**Schritt 4: Ziele und Maßnahmen festlegen**
 
 Durch das Sammeln von Daten, Umfragen sowie internen Abstimmungsrunden können anschließend Verbesserungspläne erarbeitet und in die Tat umgesetzt werden.
 
-#### Schritt 5: Nachhaltigkeitsbericht verfassen und veröffentlichen
+**Schritt 5: Nachhaltigkeitsbericht verfassen und veröffentlichen**
 
 Die Ergebnisse werden abschließend in einer offenen, klaren und transparenten Weise zusammengeführt und in einem sogenannten ESG-Nachhaltigkeitsbericht veröffentlicht. Die ESG-Bewertung ist für Investoren ein wichtiges Mittel zur Beurteilung der Nachhaltigkeits- und Ethikleistung eines Unternehmens. Dabei kann ein Rating von 0 bis 100 erreicht werden, wobei ein Rating unter 50 als schlecht und ein Rating ab 70 als gut bewertet wird.
 
-> ESG  
-> **Road Map**
+\newpage
+
+!Abs: ESG Road Map {desc="Praxisbeispiel: Glorit Bausysteme GmbH"}
+
+\newpage
 
 ## ESG Reporting: Die richtige Herangehensweise
 
@@ -121,7 +130,7 @@ Es besteht die Möglichkeit, den CO₂-Ausstoß eines Unternehmens (Scope 1 und 
 
 !Abb: Scope 1+2 Verbräuche bei Glorit im Jahr 2023 {pdf="pdf/23.pdf", note="Eigene Darstellung"}
 
-!Abb: THG-Bilanz Glorit im Jahr 2023 {pdf="pdf/37.pdf", note="Eigene Darstellung"}
+!Abb: THG-Bilanz Glorit im Jahr 2023 {pdf="pdf/34.pdf", note="Eigene Darstellung"}
 
 ### Wesentlichkeitsanalyse
 
@@ -135,7 +144,7 @@ Durch das Sammeln von Daten, Umfragen und internen Abstimmungsrunden können ans
 
 #### Ziele und Maßnahmen festlegen
 
-Strategieplan: Die Ergebnisse der gemeinsamen Diskussionsrunden fließen in einen sogenannten Strategieplan ein, der den aktuellen Reifegrad sowie die Tendenz in den jeweiligen Themenbereichen (Umwelt, Soziales und Unternehmensführung) abbildet (siehe nachfolgende Auflistungen).
+**Strategieplan:** Die Ergebnisse der gemeinsamen Diskussionsrunden fließen in einen sogenannten Strategieplan ein, der den aktuellen Reifegrad sowie die Tendenz in den jeweiligen Themenbereichen (Umwelt, Soziales und Unternehmensführung) abbildet (siehe nachfolgende Auflistungen).
 
 !Abb: Ergebnisse Reifegradanalyse Environment {pdf="pdf/26.pdf", note="Eigene Darstellung"}
 

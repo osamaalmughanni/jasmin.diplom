@@ -386,7 +386,7 @@ def generate_pdf():
             "-o", output_pdf,
             "--pdf-engine=xelatex",
             "-V", "geometry=a4paper",
-            "-V", "fontsize=12pt",
+            "-V", "fontsize=11pt",
             "-V", "lang=de",
             "-V", "margin=1in",
             "-V", "fig-pos=H",

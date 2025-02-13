@@ -1,3 +1,9 @@
+\newpage
+
+!Abs: Projektvorstellung, Bauweisenvergleich & Wirtschaftlichkeitsanalyse {desc="Donaufelder Straße 174-178"}
+
+\newpage
+
 # Praxisbeispiel
 
 ## Projektvorstellung, Bauweisenvergleich & Wirtschaftlichkeitsanalyse
@@ -42,6 +48,12 @@ Straßenseitig ist zwischen den auskragenden Bauteilen ein Rankgerüst vorgesehe
 
 _Hinweis: Inhalte zum Neuentwurf in Holzbauweise können hier ergänzt werden._
 
+\newpage
+
+!Abs: Praxisbeispiel {desc="Lebenszykluskosten (LCC)"}
+
+\newpage
+
 ## Lebenszykluskosten (LCC)
 
 22. Donaufelder Straße 174-178
@@ -58,25 +70,7 @@ Die Wirtschaftlichkeit von Gebäuden wird maßgeblich nicht nur durch die Erträ
 
 Die nachfolgende Lebenszykluskostenberechnung basiert auf den ÖNORM B 1801-1 und B 1801-2. In dieser Analyse wird das Referenzprojekt in der 22. Donaufelder Straße 174-178 hinsichtlich der Errichtungskosten der geplanten mineralischen Bauweise mit einem Entwurf in Holzbauweise verglichen.
 
----
-
-#### Kennwerte Gebäudemodell 1
-
-Nutzung: ausschließlich Wohnzwecke  
-Lage: Wien, 22. Bezirk  
-Fläche: 2953,29 m²  
-Bauweise: mineralische Bauweise (eher kein großer Einfluss an ökologischen Baustoffen)
-
 !Abb: Daten zum Modell in der mineralischen Bauweise {pdf="pdf/51.pdf", note="eigene Darstellung"}
-
----
-
-#### Kennwerte Gebäudemodell 2
-
-Nutzung: ausschließlich Wohnzwecke  
-Lage: Wien, 22. Bezirk  
-Fläche: 2753 m²  
-Bauweise: Holzbauweise mit hohem Anteil an ökologischen Baustoffen
 
 !Abb: Daten zum Modell in der Holzbauweise {pdf="pdf/52.pdf", note="eigene Darstellung"}
 
@@ -88,14 +82,14 @@ Als Basis für den nachfolgenden Bauweisenvergleich werden die Kostenhauptgruppe
 
 Die nachfolgende Übersicht stellt die festgelegten Indizes dar und bildet die Grundlage für die folgenden Berechnungstabellen. Dabei wurden Indexanpassungen zum Baupreis- und Verbraucherpreisindex der Jahre 2022 und 2023 nicht berücksichtigt, da diese aufgrund der herausfordernden wirtschaftlichen Gesamtlage keinen repräsentativen Mittelwert ergeben hätten.
 
-!Abb: definierte Indexanpassungen {pdf="pdf/54.pdf", note="eigene Darstellung Vgl. ÖNORM B 1801-1:2021-02"}
+!Abb: definierte Indexanpassungen {pdf="pdf/54.pdf", note="eigene Darstellung Vgl. ÖNORM B 1801-1:2021-02", scale="0.85"}
 
 ### Kalkulatorischer Vergleich der Errichtungskosten
 
 Die Werte für die Errichtungskosten der mineralischen Bauweise wurden im Rahmen dieser Masterarbeit ermittelt und dienen als Grundlage für den Vergleich. Zudem wurden Preise für Verwaltungshonorare sowie Reinigungs- und Pflegekosten bereitgestellt. Die Parameter der angewandten Rechenmethodik wurden unter Berücksichtigung der entsprechenden Indizes angepasst.
 
-!Abb: Errichtungskosten (mineralische Bauweise) laut Bauträger Glorit GmbH {pdf="pdf/55.pdf", note="eigene Darstellung Basis Glorit Vgl. ÖNORM B 1801-1:2021-02"}  
-!Abb: Eigenberechnung: Errichtungskosten Holzbauweise {pdf="pdf/56.pdf", note="eigene Darstellung Vgl. ÖNORM B 1801-1:2021-02"}
+!Abb: Errichtungskosten (mineralische Bauweise) laut Bauträger Glorit GmbH {pdf="pdf/55.pdf", note="eigene Darstellung Basis Glorit Vgl. ÖNORM B 1801-1:2021-02", scale="0.85"}  
+!Abb: Eigenberechnung: Errichtungskosten Holzbauweise {pdf="pdf/56.pdf", note="eigene Darstellung Vgl. ÖNORM B 1801-1:2021-02", scale="0.85"}
 
 Das Ergebnis dieses Vergleichs zeigt, dass der Neubau in Holzbauweise deutlich höhere Errichtungskosten verursacht. Dabei wurde jedoch die kürzere Bauzeit der Holzbauweise, die zu erheblichen Kostenvorteilen führen würde, nicht berücksichtigt.
 
@@ -103,7 +97,7 @@ Das Ergebnis dieses Vergleichs zeigt, dass der Neubau in Holzbauweise deutlich h
 
 Als Grundlage dient die Darstellung der Kostenhauptgruppen gemäß ÖNORM B 1801-2. Die Werte für die mineralische Bauweise basieren auf einem realisierten Referenzobjekt, bei dem weitgehend auf den Einsatz ökologischer Baustoffe verzichtet wird. Im Gegensatz dazu wird eine nachhaltige Ausführungsvariante in Holzbauweise aufgeführt, die ökologische Aspekte zur Reduktion von Treibhausgasemissionen berücksichtigt – idealerweise als Beispiel für klimaneutrales Bauen.
 
-_Dies soll erreicht werden durch:_
+**Dies soll erreicht werden durch:**
 
 - Vermeidung von CO₂-Emissionen bereits in der Produktionsphase
 - Verwendung möglichst CO₂-neutraler Baumaterialien
@@ -111,8 +105,8 @@ _Dies soll erreicht werden durch:_
 - Erzeugung von Strom durch Solarthermie
 - Kühlung durch Bauteilaktivierung
 
-!Abb: Objektfolgekosten mineralische Bauweise {pdf="pdf/57.pdf", note="eigene Darstellung"}  
-!Abb: Objektfolgekosten Holzbauweise {pdf="pdf/58.pdf", note="eigene Darstellung"}
+!Abb: Objektfolgekosten mineralische Bauweise {pdf="pdf/57.pdf", note="eigene Darstellung", scale="0.85"}  
+!Abb: Objektfolgekosten Holzbauweise {pdf="pdf/58.pdf", note="eigene Darstellung", scale="0.85"}
 
 ### Lebenszyklusberechnung
 
@@ -128,6 +122,12 @@ Die nachfolgenden Analysetabellen veranschaulichen die Gebäudekosten über eine
 - Die Einflussgröße der Lebenszykluskosten nimmt im Projektverlauf ab.
 - Rahmenbedingungen zur Berechnung sind in nationalen und internationalen Normen klar definiert.
 
+\newpage
+
+!Abs: Darstellung der Lebenszyklusanalyse (LCA) {desc="nach EN 15978"}
+
+\newpage
+
 ## Darstellung der Lebenszyklusanalyse (LCA) nach EN 15978
 
 ### Lebenszyklusanalyse (LCA) eines Gebäudes | Bauweisenvergleich
@@ -138,13 +138,13 @@ Die Auswertung basiert in der Regel auf einem detaillierten BIM-Modell, in dem s
 
 ## OIB 7 (Nachhaltige Nutzung der natürlichen Ressourcen)
 
-Zusätzlich zu den bestehenden sechs OIB-Richtlinien ist die Einführung der siebten Grundanforderung mit dem Titel „Nachhaltige Nutzung der natürlichen Ressourcen" geplant. Vorgesehen sind:
+Zusätzlich zu den bereits bestehenden sechs OIB-Richtlinien ist die Einführung der siebten Grundanforderung mit dem Titel „Nachhaltige Nutzung der natürlichen Ressourcen“ geplant. Der genaue Zeitpunkt der nationalen Umsetzung steht zwar noch nicht fest, jedoch sind folgende Vorgaben vorgesehen (laut OIB):
 
 1. Das Bauwerk, seine Baustoffe und Teile müssen nach dem Abriss wiederverwendet oder recycelt werden können;
 2. Das Bauwerk muss dauerhaft sein;
 3. Umweltverträgliche Rohstoffe und Sekundärbaustoffe müssen verwendet werden.
 
-Ziel ist es, den Herausforderungen von Ressourcenknappheit und Klimawandel durch nachhaltige Bauweisen aktiv zu begegnen. Die neue OIB-Richtlinie 7 legt zudem Anforderungen zur Reduktion des globalen Erwärmungspotenzials (GWP) fest.
+Ziel ist es, den Herausforderungen wie der Ressourcenknappheit und dem Klimawandel durch eine nachhaltige Bauweise aktiv zu begegnen. Die neue OIB Richtlinien 7 „Nachhaltige Nutzung der natürlichen Ressourcen“ Die Auswirkungen des Bauwerks auf das Klima, insbesondere das globale Erwärmungspotenzial (GWP), sowie mögliche Anforderungen zur Verringerung der Treibhausgasemissionen, werden in der OIB-Richtlinie 7 festgelegt.
 
 ## Lebenszyklusphasen
 
@@ -157,32 +157,37 @@ Die Lebenszyklusphasen werden gemäß ÖNROM EN 15978-1 in folgende Module unter
 
 !Abb: Schematische Darstellung eines Produktkreislaufs für die Ökobilanz {pdf="pdf/16.pdf", note="Eigene Darstellung nach: Hannah Strotgmann, Berlin"}
 
-_Anwendungsbeispiel: Ökobilanzierung | Vergleich – 22. Donaufelder Straße 174-178_
+\newpage
+
+!Abs: Anwendungsbeispiel: Ökobilanzierung | Vergleich {desc="22. Donaufelder Straße 174-178"}
+
+\newpage
 
 ## Bewertung der Ökobilanzierung
 
 Die folgende Analysebewertung wurde mit dem webbasierten BIM-Planungswerkzeug „SCALE" durchgeführt. Dabei wird die geplante mineralische Bauweise mit einer optionalen nachhaltigen Holzbauweise hinsichtlich produktspezifischer Daten verglichen. Das GWP des Bauwerks spielt dabei eine zentrale Rolle.
 
-!Anh: Darstellung SCALE - Ökobilanzierung mineralische Bauweise {pdf="pdf/Ökobilanzierung_Mineralische-Bauweise.pdf", desc="Platzhalter."}  
-!Anh: Darstellung SCALE - Ökobilanzierung Holzbauweise {pdf="pdf/Ökobilanzierung_Holzbau-Bauweise.pdf", desc="Platzhalter."}
+!Abb: Ökobilanzierung 22. Donaufelder Straße 174-178 Holzbauweise {pdf="pdf/Ökobilanzierung_Holzbau-Bauweise.pdf", note="Darstellung SCALE"}
+
+!Abb: Ökobilanzierung 22. Donaufelder Straße 174-178 mineralische Bauweise {pdf="pdf/Ökobilanzierung_Mineralische-Bauweise.pdf", note="Darstellung SCALE"}
 
 ## Bauweisenvergleich – Treibhauspotenzial (GWP)
 
-Dieser Vergleich verdeutlicht den Unterschied zwischen einer herkömmlichen mineralischen Bauweise und einem nachhaltig geplanten Holzbauwerk hinsichtlich des GWP über den gesamten Lebenszyklus:
+Dieser Bauweisenvergleich verdeutlich klar den Unterschied dieser beiden Ausführungen zwischen einer gewöhnlichen mineralischen Bauweise und eines nachhaltig geplanten Holzbaubauwerkes mit einer ähnlichen Konfiguration hinsichtlich des GWP-Wertes. Betrachtet man den gesamten Lebenszyklus dieser beiden Bauweisen erhält man folgende Werte zum CO₂ Ausstoß:
 
 **Ergebnis GWP (Global Warming Potential):**
 
 - Mineralische Bauweise: 234 kg CO₂-Äq./m² BGF
 - Holzbauweise: -31 kg CO₂-Äq./m² BGF
 
-In der Analyse wurden nicht alle Bauprodukte exakt zugeordnet, weshalb ähnliche produktspezifische Alternativen verwendet wurden.
+In der vorliegenden Analyse mit dem Programm SCALE konnten nicht alle Bauprodukte und Baustoffe vollständig korrekt zugeordnet werden, da sie im bestehenden Bauproduktekatalog nicht in identischer Form vorhanden waren. In diesem Fall wurden diese Produkte durch ähnliche, produktspezifische Bauprodukte ersetzt, um die Berechnung dennoch durchführen zu können.
 
 ## Nutzen einer Ökobilanzierung
 
-Eine Ökobilanzierung bietet eine präzise, zahlenbasierte Analyse der Nachhaltigkeit interner Prozesse und liefert eine fundierte Entscheidungsgrundlage für ökologische Optimierungen. Das Beispiel zeigt, wie durch Anpassung der Bauweise und Integration nachhaltiger Energiesysteme die Umweltbelastung signifikant reduziert werden kann.
+Die Vorteile einer Ökobilanzierung für Unternehmen sind vielfältig und weitreichend. Sie bietet nicht nur eine präzise und zahlenbasierte Analyse der Nachhaltigkeit interner Produktionsprozesse und Aktivitäten, sondern bildet auch eine fundierte Entscheidungsgrundlage für gezielte ökologische Optimierungen. Das folgende praxisorientierte Beispiel veranschaulicht, wie Unternehmen durch den Einsatz von Ökobilanzen gezielt Maßnahmen ergreifen können, um ihre Umweltauswirkungen nachhaltig zu minimieren. Im konkreten Fall eines Bauvorhabens des Bauträgers wird deutlich, dass durch die Anpassung der Bauweise und die Integration nachhaltiger Energiesysteme eine signifikante Reduktion der Umweltbelastung erreicht werden kann.
 
 ## Kreislaufwirtschaft – Rückbaufähigkeit mit Holz
 
-Besonders im Holzbau können ökologische Vorteile voll ausgeschöpft werden. Die neu geplante OIB-Richtlinie 7 fördert die Rückgewinnung von Bauteilen und Baustoffen zur Wiederverwendung, um den Verbrauch natürlicher Ressourcen zu minimieren.
+Besonders im Bereich des Holzbaus kann dieser seine ökologischen Vorteile voll entfalten, was wiederum einen nachhaltigen Beitrag zum Umweltschutz leistet. Die neu geplante OIB-Richtlinie 7 setzt bereits in der frühen Planungsphase an und fordert, dass durch die Rückgewinnung von Bauteilen, Bauprodukten und Baustoffen zur Wiederverwendung der Verbrauch natürlicher Ressourcen signifikant reduziert wird.
 
-Dr. Koppelhuber und sein Expertenteam geben in einem aktuellen Leitfaden zum „Rückbauorientierten Planen und Bauen im Holzbau" nicht nur rechtliche Grundlagen, sondern auch praxisnahe Beispiele in Form eines Rückbaukatalogs.
+Einen umfassenden Einblick, wie solche Konzepte entwickelt werden können, gibt Dr. Koppelhuber zusammen mit seinem Expertenteam in einem kürzlich veröffentlichten Leitfaden zum Thema „Rückbauorientiertes Planen und Bauen im Holzbau“. Der Leitfaden beleuchtet nicht nur die rechtlichen Grundlagen, sondern stellt auch praxisnahe Beispiele in Form eines Rückbaukatalogs vor.
