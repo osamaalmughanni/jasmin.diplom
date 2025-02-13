@@ -11,9 +11,9 @@ fontsize: 11pt
 
 **Diplomarbeit**
 
-**Die EU‑Taxonomie: Chancen und Herausforderungen für kleine und mittlere Unternehmen**
+**Die EU‑Taxonomie: Chancen und Herausforderungen für kleine- und mittelständische Unternehmen**
 
-_Analyse eines Neubauprojektes aus der Perspektive eines privaten österreichischen Bauträgers_
+_Nachhaltigkeitsanalyse eines Neubauprojektes aus der Perspektive eines privaten österreichischen Bauträgers_
 
 zur Erlangung des akademischen Grades
 
@@ -34,8 +34,6 @@ ausgeführt am
 Fakultät für Interdisziplinäre Tragwerksplanung und Ingenieurholzbau  
 Technische Universität Wien
 
-**Betreuung**
-
 **Betreuer:** Associate Professor Dipl.-Ing. Dr. Alireza FADAI  
 **Mitwirkung:** Univ.-Ass. Dipl.-Ing. Marius VALENTE
 
@@ -46,5 +44,22 @@ Wien, im Februar 2025
 \vspace{2cm}
 
 (Unterschrift Verfasser/in)
+
+\newpage
+
+**Eidesstattliche Erklärung**
+
+Ich erkläre an Eides statt, dass ich die vorliegende Arbeit
+selbstständig und ohne fremde Hilfe verfasst, andere als die angegebenen
+Quellen und Hilfsmittel nicht benutzt bzw. die wörtlich oder sinngemäß
+entnommenen Stellen als solche kenntlich gemacht habe.
+
+Wien, im Februar 2025
+
+\vspace{5cm}
+
+...............................................................
+
+Jasmin Fejzic
 
 \newpage

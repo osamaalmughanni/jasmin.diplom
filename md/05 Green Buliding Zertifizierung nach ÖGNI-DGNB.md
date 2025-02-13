@@ -113,7 +113,7 @@ Nach der endgültigen Freigabe des Auftraggebers und der Übermittlung einer Pro
 
 Das ÖGNI/DGNB-Zertifizierungssystem verfolgt das Ziel, eine gleichbleibend hohe Qualität von Bauvorhaben zu fördern. Daher reicht der Gesamterfüllungsgrad allein nicht aus, um eine Auszeichnung zu erhalten. Zusätzlich muss in den relevanten Themenbereichen ein bestimmtes Mindestniveau – der Mindesterfüllungsgrad – erreicht werden. So ist beispielsweise für die Platin-Zertifizierung ein Mindesterfüllungsgrad von 65 % in den ersten fünf Themenbereichen erforderlich. Für eine Gold-Auszeichnung sind mindestens 50 % notwendig, während für die Silber-Auszeichnung bereits 35 % ausreichen.
 
-!Abb: Gesamterfüllungsgrad zu den Auszeichnungen {pdf="pdf/59.pdf", note="www.ögni.at/Systembroschüre"}
+!Abb: Gesamterfüllungsgrad zu den Auszeichnungen {pdf="pdf/59.pdf", note="www.ögni.at/Systembroschüre", scale="0.5"}
 
 > **ÖGNI/DGNB Road Map**  
 > zur Gebäudezertifizierung

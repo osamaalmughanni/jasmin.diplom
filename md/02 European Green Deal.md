@@ -6,7 +6,7 @@ Der europäische Green Deal ist eine umfassende Strategie zur Förderung einer n
 
 !Abb: Globale Oberflächentemperaturerhöhung über das vorindustrielle Niveau 1990 {pdf="pdf/01.pdf", note="Eigene Darstellung nach: www.quarks.de/umwelt/klimawandel/1-5-grad-ziel/ - Quelle: Copernicus (2025)"}
 
-Laut dem EU-Klimaüberwachungsdienst Copernicus war 2024 sogar 1,6 Grad wärmer als der vorindustrielle Zeitraum 1850–1900. Der Grund hierfür liegt zum größten Teil an der menschengemachten Erderwärmung, so Experten^[Vgl. https://www.quarks.de/umwelt/klimawandel/1-5-grad-ziel/#einskommafünf2].
+Laut dem EU-Klimaüberwachungsdienst Copernicus war 2024 sogar 1,6 Grad wärmer als der vorindustrielle Zeitraum 1850–1900. Der Grund hierfür liegt zum größten Teil an der menschengemachten Erderwärmung laut Experten^[Vgl. quarks.de/umwelt/klimawandel/1-5-grad-ziel/#einskommafünf2].
 
 Die zentrale Anstrengung des europäischen Green Deals soll als Zwischenziel innerhalb der EU bis 2030 eine Senkung der Netto-Treibhausgasemissionen um 55 % im Vergleich zu 1990 und bis 2050 eine vollständige Klimaneutralität erreichen. Die zahlreichen Bereiche in Wirtschaft und Industrie werden durch diese umfangreiche Palette an Maßnahmen zu nachhaltigem Wirtschaften verpflichtet.
 
@@ -20,8 +20,8 @@ Die Voraussetzung für die zielgerichtete Steuerung von Finanzmitteln in nachhal
 
 Unter den zahlreichen Neuerungen lassen sich die drei wichtigsten EU-Regularien zur Unternehmens­transparenz wie folgt zusammenfassen:
 
-- [Corporate Sustainability Reporting Directive (CSRD)](http://ffe.de/veroeffentlichungen/info-was-ist-eigentlich-die-corporate-sustainability-reporting-directive-csrd/)
-- [Sustainable Finance Disclosure Regulation (SFDR)](http://ffe.de/veroeffentlichungen/info-was-ist-eigentlich-die-sustainable-finance-disclosure-regulation-sfdr/)
+- Corporate Sustainability Reporting Directive (CSRD)
+- Sustainable Finance Disclosure Regulation (SFDR)
 - EU-Taxonomie für nachhaltige Aktivitäten
 
 Die folgende Darstellung verdeutlicht die drei zentralen Instrumente (CSRD, SFDR und EU-Taxonomie), die zusammenwirken und sich ergänzen, um einen klaren, glaubwürdigen und einheitlichen Rahmen für nachhaltige Finanzierungen zu schaffen. Die EU-Taxonomie bietet eine einheitliche Grundlage für das Verständnis von Nachhaltigkeit und hebt die Bedeutung von „grünen“ Aktivitäten hervor. Die SFDR sorgt dafür, dass Finanzprodukte transparent bewertet und dargestellt werden. Mit der CSRD wird auf Unternehmensebene mehr Klarheit geschaffen, indem Anforderungen an die Nachhaltigkeitsberichterstattung formuliert werden^[Vgl. www.sustainabilityand.com/de/aktuelles/blog/eu-taxonomie-csrd-und-sfdr-erklaert].

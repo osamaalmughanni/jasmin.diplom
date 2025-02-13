@@ -125,8 +125,12 @@ def replace_abb_syntax(md_content):
     Replaces !Abb: syntax with a LaTeX figure block and collects data.
     Expected syntax:
       !Abb: Some Title {pdf="pdf/17.pdf", note="Footnote text", scale="0.75"}
-    If the optional scale attribute is provided, it is used in the \\includegraphics command.
-    Otherwise, a default width of 0.9\\textwidth is applied.
+    If the optional scale attribute is provided the image is scaled using the
+    graphicx scale option with origin=c (ensuring scaling from the center).
+    Otherwise a default width of 0.9\\textwidth is applied.
+    
+    The figure environment now uses the [H] specifier to force the figure to
+    appear exactly where it is in the markdown.
     """
     global abb_count, abb_entries
 
@@ -144,11 +148,12 @@ def replace_abb_syntax(md_content):
         entry = f"Abb.{abb_count}: {title}. {note}"
         abb_entries.append(entry)
         if scale:
-            graphics_options = f"scale={scale}"
+            # Using scale with origin=c ensures the scaling transformation is performed about the center.
+            graphics_options = f"scale={scale},origin=c"
         else:
             graphics_options = "width=0.9\\textwidth"
         return (
-            "\\begin{figure}[htbp]\n"
+            "\\begin{figure}[H]\n"  # Changed from [htbp] to [H]
             "\\centering\n"
             f"\\includegraphics[{graphics_options}]{{\\detokenize{{{pdf_file}}}}}\n"
             f"\\caption{{{title}}}\n"
@@ -273,7 +278,7 @@ def generate_pdf():
 \usepackage{float}
 \sloppy
 \usepackage{caption}
-\captionsetup[figure]{aboveskip=10pt, belowskip=10pt}
+\captionsetup[figure]{font=footnotesize, aboveskip=10pt, belowskip=10pt}
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 \setlength{\floatsep}{10pt plus 2pt minus 2pt}
 \setlength{\intextsep}{10pt plus 2pt minus 2pt}
@@ -285,9 +290,9 @@ def generate_pdf():
 \setlength{\cftparskip}{0pt}
 
 \usepackage{titlesec}
-\titleformat{\section}{\raggedright\Large\bfseries}{}{0em}{}
-\titleformat{\subsection}{\raggedright\large\bfseries}{}{0em}{}
-\titleformat{\subsubsection}{\raggedright\normalsize\bfseries}{}{0em}{}
+\titleformat{\section}{\raggedright\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\raggedright\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\raggedright\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
 % pdfpages for embedding PDFs
 \usepackage{pdfpages}
