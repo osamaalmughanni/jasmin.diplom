@@ -158,11 +158,11 @@ Im Folgenden werden die Analyseblätter zur Erstbewertung aufgelistet und anschl
 
 ### Praxisbeispiel – Optimierungspotenziale (BW Beton)
 
-[Pre-Assessment: Donaufelder Straße 174-178, Neubau Wohnen (mehr als 6 WE)]{pdf="pdf/Pre-Assessment_Auswertung-Gesamt.pdf", note=""}
+!Anh: Praxisbeispiel – Optimierungspotenziale (BW Beton) {pdf="pdf/Pre-Assessment_Auswertung-Gesamt.pdf", desc="Platzhalter"}
 
 ### Praxisbeispiel – Ergebnis
 
-[Pre-Assessment: Donaufelder Straße 174-178, Neubau Wohnen (mehr als 6 WE)]{pdf="pdf/Optimierungspotenzial-Gesamt.pdf", note=""}
+!Anh: Praxisbeispiel – Ergebnis {pdf="pdf/Optimierungspotenzial-Gesamt.pdf", desc="Platzhalter"}
 
 ### Ergebnisdarstellung Erstbewertung nach ÖGNI/DGNB
 

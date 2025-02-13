@@ -151,9 +151,10 @@ def replace_abb_syntax(md_content):
 
 def replace_anh_syntax(md_content):
     """
-    Replaces !Anh: syntax with a title block and embeds each PDF page.
+    Replaces !Anh: syntax by embedding each PDF page.
     Detects page orientation: if landscape, rotates the page.
     Also collects data for the final Anhängeverzeichnis.
+    (No title/description page is generated here.)
     """
     global anh_count, anh_entries
 
@@ -169,16 +170,6 @@ def replace_anh_syntax(md_content):
         anh_count += 1
         entry = f"Anh.{anh_count}: {title}. {desc}"
         anh_entries.append(entry)
-        
-        title_block = (
-            "\\clearpage\n"
-            "\\begin{center}\n"
-            f"{{\\Huge \\textbf{{{title}}}}}\\par\n"
-        )
-        if desc:
-            title_block += f"{{\\Large {desc}}}\\par\n"
-        title_block += "\\end{center}\n"
-        title_block += "\\clearpage\n"
         
         try:
             reader = PdfReader(pdf_file)
@@ -198,8 +189,39 @@ def replace_anh_syntax(md_content):
                 "pagecommand={\\stepcounter{page}}]"
                 f"{{\\detokenize{{{pdf_file}}}}}\n"
             )
-        return title_block + pdf_includes
+        return pdf_includes
     return pattern.sub(anh_repl, md_content)
+
+def replace_abs_syntax(md_content):
+    """
+    Replaces !Abs: syntax with a title page centered in the very heart of the page.
+    Expected syntax:
+      !Abs: Some Title {desc="Some description"}
+    Produces a dedicated title page without a header.
+    """
+    pattern = re.compile(
+        r'^\!Abs:\s*(.*?)\s*\{(?:desc="([^"]+)")?\}',
+        flags=re.MULTILINE
+    )
+    def abs_repl(match):
+        title = escape_latex(match.group(1).strip())
+        desc = escape_latex(match.group(2).strip()) if match.group(2) else ""
+        block = (
+            "\\clearpage\n"
+            "\\thispagestyle{empty}\n"
+            "\\vspace*{\\fill}\n"
+            "\\begin{center}\n"
+            f"{{\\Huge \\textbf{{{title}}}}}\\par\n"
+        )
+        if desc:
+            block += f"{{\\Large {desc}}}\\par\n"
+        block += (
+            "\\end{center}\n"
+            "\\vspace*{\\fill}\n"
+            "\\clearpage\n"
+        )
+        return block
+    return pattern.sub(abs_repl, md_content)
 
 def exclude_cover_headers_from_toc(md_content):
     """
@@ -208,10 +230,8 @@ def exclude_cover_headers_from_toc(md_content):
     """
     def process_line(line):
         if line.lstrip().startswith("#"):
-            # If the line already ends with "{-}" (allowing whitespace variations), leave it.
             if re.search(r'\s\{\s*-\s*\}\s*$', line):
                 return line
-            # If an attribute block exists, insert the hyphen before the closing brace.
             m = re.match(r'^(#+\s+.*?)(\s*\{.*\})\s*$', line)
             if m:
                 header_text = m.group(1)
@@ -222,7 +242,6 @@ def exclude_cover_headers_from_toc(md_content):
                 else:
                     return line
             else:
-                # No attribute block present, so simply append " {-}".
                 return line + " {-}"
         return line
 
@@ -233,9 +252,9 @@ def exclude_cover_headers_from_toc(md_content):
 def generate_pdf():
     """
     Generates one single PDF by concatenating Markdown files.
-    - The cover page (first MD file) is included in the PDF with no header or numbering.
-    - Its markdown headers are also excluded from the table of contents.
-    - The TOC, main content, and final sections (including Anhänge) all show headers and numbering.
+    - The cover page (first MD file) is included with no header or numbering.
+    - Its markdown headers are modified to be excluded from the table of contents.
+    - The TOC, main content, and final sections (including Anhänge) show headers and numbering.
     """
     input_dir = "md"
     output_pdf = "da.pdf"
@@ -278,6 +297,13 @@ def generate_pdf():
 \ohead{\pagemark}
 \setlength{\headheight}{15pt}
 \setkomafont{pagehead}{\normalfont}
+
+% Added for better table formatting:
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\setlength{\tabcolsep}{12pt} % increase space between table columns
+\renewcommand{\arraystretch}{1.2} % increase row height for better readability
 """
     try:
         with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
@@ -300,26 +326,24 @@ def generate_pdf():
         print(f"❌ No Markdown files found in '{input_dir}'.")
         return
 
-    # Read the cover page (first MD file) and process its headers.
+    # Process the cover page.
     with open(md_files[0], "r", encoding="utf-8") as f:
         cover_md = f.read()
     cover_md = exclude_cover_headers_from_toc(cover_md)
-    # Prepend commands to remove header and numbering on the cover page.
     cover_md = "\\thispagestyle{empty}\n\\pagenumbering{gobble}\n" + cover_md
-    # Append commands to clear the page and re-enable Arabic numbering.
     cover_md += "\n\\clearpage\n\\pagenumbering{arabic}\n"
+    cover_md = replace_abb_syntax(cover_md)
+    cover_md = replace_anh_syntax(cover_md)
+    cover_md = replace_abs_syntax(cover_md)
 
-    # Read the remaining MD files.
+    # Process the remaining Markdown files.
     rest_md = ""
     for md_file in md_files[1:]:
         with open(md_file, "r", encoding="utf-8") as f:
             rest_md += "\n\\newpage\n\n" + f.read() + "\n"
-
-    # Process custom syntaxes.
-    cover_md = replace_abb_syntax(cover_md)
-    cover_md = replace_anh_syntax(cover_md)
     rest_md = replace_abb_syntax(rest_md)
     rest_md = replace_anh_syntax(rest_md)
+    rest_md = replace_abs_syntax(rest_md)
 
     toc_block = r"""
 \clearpage

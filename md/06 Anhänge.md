@@ -1,5 +1,7 @@
 # Anhänge
 
+!Abs: Appendix Title {desc="Details about the appendix"}
+
 ## Wesentlichkeitsanalyse
 
 !Anh: Wesentlichkeitsanalyse {pdf="pdf/Anhang_A_Wesentlichkeitsanalyse.pdf", desc="Analyse der wesentlichen ESG-Themen und deren Bedeutung."}
