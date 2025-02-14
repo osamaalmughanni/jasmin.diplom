@@ -52,9 +52,9 @@ In den folgenden Kapiteln wird ein praxisorientierter Leitfaden zur Erstellung e
 
 ## ESG im Unternehmen
 
-Nachhaltigkeit im Unternehmen zu verankern, geht weit über die Reduzierung des ökologischen Fußabdrucks oder den sparsamen Umgang mit Ressourcen hinaus – es erfordert eine umfassende ESG-Strategie. Eine solche Strategie kann nicht nur Risiken mindern, sondern auch neue Chancen eröffnen, was sich unmittelbar auf die Unternehmensleistung und -bewertung auswirkt. Daher ist ESG-Berichterstattung längst kein „Nice-to-have“ mehr, sondern eine essenzielle Notwendigkeit. Der Aufbau und die Pflege einer ganzheitlichen ESG-Strategie stellt jedoch eine Herausforderung dar, da sie bereichsübergreifend ist und sowohl interne als auch externe Stakeholder einbeziehen muss. Im Folgenden werden fünf entscheidende Schritte aufgezeigt, die notwendig sind, um eine ESG-Strategie erfolgreich im Unternehmen zu integrieren^[Vgl. www.cubemos.com/sustainability-blog/so-starten-sie-ihre-esg-strategie-und-ihre-csrd-berichterstattung-in-5-einfachen-schritten].
+Nachhaltigkeit im Unternehmen zu verankern, geht weit über die Reduzierung des ökologischen Fußabdrucks oder den sparsamen Umgang mit Ressourcen hinaus – es erfordert eine umfassende ESG-Strategie. Eine solche Strategie kann nicht nur Risiken mindern, sondern auch neue Chancen eröffnen, was sich unmittelbar auf die Unternehmensleistung und -bewertung auswirkt. Daher ist ESG-Berichterstattung längst kein „Nice-to-have“ mehr, sondern eine essenzielle Notwendigkeit. Der Aufbau und die Pflege einer ganzheitlichen ESG-Strategie stellt jedoch eine Herausforderung dar, da sie bereichsübergreifend ist und sowohl interne als auch externe Stakeholder einbeziehen muss. Im Folgenden werden fünf entscheidende Schritte aufgezeigt, die notwendig sind, um eine ESG-Strategie erfolgreich im Unternehmen zu integrieren^[Vgl. cubemos.com/sustainability-blog/so-starten-sie-ihre-esg-strategie-und-ihre-csrd-berichterstattung-in-5-einfachen-schritten].
 
-### Chronologie ESG Reporting:
+**Chronologie ESG Reporting**
 
 1. Information und Begleitung zum Thema Nachhaltigkeit
 2. Bewusstsein schaffen und ein Team bestimmen
@@ -62,7 +62,7 @@ Nachhaltigkeit im Unternehmen zu verankern, geht weit über die Reduzierung des 
 4. Ziele und Maßnahmen festlegen
 5. Nachhaltigkeitsbericht verfassen und veröffentlichen
 
-!Abb: Bildliche Darstellung eines Ablaufes zum ESG Reporting {pdf="pdf/17.pdf", note="Eigene Darstellung"}
+!Abb: Bildliche Darstellung eines Ablaufes zum ESG Reporting {pdf="pdf/36.pdf", note="Eigene Darstellung"}
 
 **Schritt 1: Information und Begleitung zum Thema Nachhaltigkeit**
 
@@ -75,6 +75,8 @@ Hierbei muss ein internes Mitarbeiterteam ausgewählt werden, das sich mit Pflic
 **Schritt 3: Umfeldanalyse und Datensammlung**
 
 Kriterien wie eine Stakeholder-Analyse, die Erfassung des Energieverbrauchs zur Berechnung des CO₂-Fußabdrucks sowie eine doppelte Wesentlichkeitsanalyse nach den Interessen der verschiedenen Gruppen stehen dabei im Vordergrund. Dies bildet die Basis für die anschließenden Zielsetzungen.
+
+\newpage
 
 **Schritt 4: Ziele und Maßnahmen festlegen**
 
@@ -114,15 +116,19 @@ Dieser Begriff bezieht sich auf alle Personen, Gruppen oder Institutionen, die d
 
 !Abb: Institutionen für eine Stakeholderanalyse {pdf="pdf/29.pdf", note="Stakeholderanalyse -- Sonia Mos", scale="0.75"}
 
-#### Fragebögen an Stakeholder
+\newpage
+
+**Fragebögen an Stakeholder**
 
 Der folgende Fragebogen wurde im Zuge der Befragung an alle Stakeholder aus den verschiedensten Gruppierungen gesendet:
 
 !Abb: Vorgefertigter Fragebogen für eine Stakeholderbefragung {pdf="pdf/24.pdf", note="PwC/Glorit"}
 
-#### Auswertung zu erfolgten Rückmeldungen
+**Auswertung zu erfolgten Rückmeldungen**
 
 !Abb: Antworten je Stakeholdergruppe {pdf="pdf/25.pdf", note="PwC/Glorit"}
+
+\newpage
 
 ### Energieverbräuche (GWP) auswerten
 
@@ -131,6 +137,8 @@ Es besteht die Möglichkeit, den CO₂-Ausstoß eines Unternehmens (Scope 1 und 
 !Abb: Scope 1+2 Verbräuche bei Glorit im Jahr 2023 {pdf="pdf/23.pdf", note="Eigene Darstellung"}
 
 !Abb: THG-Bilanz Glorit im Jahr 2023 {pdf="pdf/34.pdf", note="Eigene Darstellung"}
+
+\newpage
 
 ### Wesentlichkeitsanalyse
 
@@ -142,7 +150,7 @@ Durch das Sammeln von Daten, Umfragen und internen Abstimmungsrunden können ans
 
 !Abb: Workshop: Ergebnisrunde betreffend (G)overnance {pdf="pdf/31.pdf", note="Eigene Darstellung"}
 
-#### Ziele und Maßnahmen festlegen
+### Ziele und Maßnahmen festlegen
 
 **Strategieplan:** Die Ergebnisse der gemeinsamen Diskussionsrunden fließen in einen sogenannten Strategieplan ein, der den aktuellen Reifegrad sowie die Tendenz in den jeweiligen Themenbereichen (Umwelt, Soziales und Unternehmensführung) abbildet (siehe nachfolgende Auflistungen).
 
@@ -158,8 +166,10 @@ Im Anhang mit dem Buchstaben A findet sich die vollständige Liste der Maßnahme
 
 Die Ergebnisse werden abschließend in einer offenen, klaren und transparenten Weise zusammengeführt und in einem sogenannten ESG-Nachhaltigkeitsbericht veröffentlicht. Die ESG-Bewertung stellt für Investoren ein wichtiges Instrument zur Beurteilung der Nachhaltigkeits- und Ethikleistung eines Unternehmens dar. Diese Bewertung erfolgt auf einer Skala von 0 bis 100, wobei ein Wert unter 50 als unzureichend und ein Wert ab 70 als gut gilt. Der ESG-Bericht der Firma Glorit Bausysteme GmbH wurde bislang noch keiner Prüfungsphase unterzogen.
 
-#### Ergebnisdarstellung – ESG Reporting Glorit Bausysteme GmbH
+\newpage
+
+### Ergebnisdarstellung – ESG Reporting Glorit Bausysteme GmbH
 
 Der vollständige ESG-Bericht der Fa. Glorit Bausysteme GmbH wird als Anhang dieser Diplomarbeit beigefügt und kann als Referenz für eine Nachhaltigkeitsberichterstattung herangezogen werden.
 
-!Abb: Workshop: Titelseite Glorit Nachhaltigkeitsbericht 2023 {pdf="pdf/49.pdf", note="Darstellung Glorit"}
+!Abb: Workshop: Titelseite Glorit Nachhaltigkeitsbericht 2023 {pdf="pdf/49.pdf", note="Darstellung Glorit", scale="0.7"}

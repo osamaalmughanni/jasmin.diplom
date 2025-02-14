@@ -6,7 +6,7 @@ from glob import glob
 from PyPDF2 import PdfReader
 
 # Constant for maximum size factor for images.
-MAX_SIZE_FACTOR = 0.8
+MAX_SIZE_FACTOR = 0.9
 
 # Global variables for collecting entries.
 abb_entries = []  # For figures (Abbildungsverzeichnis)
@@ -123,70 +123,81 @@ def generate_dynamic_font_header(header_filename="dynamic_font.tex", fonts_dir="
         print(f"❌ Error writing dynamic font header: {e}")
         return False
 
+def parse_properties(prop_string):
+    """
+    Parses a property string of the form:
+      key="value", key2="value2", ...
+    Supports properties in any order and both standard (") and smart (“ ”) quotes.
+    Returns a dictionary.
+    """
+    pattern = re.compile(r'(\w+)\s*=\s*["“](.*?)["”]')
+    return dict(pattern.findall(prop_string))
+
 def replace_abb_syntax(md_content):
     """
     Replaces !Abb: syntax with a LaTeX figure block and collects data.
+    Supports properties in any order.
     Expected syntax:
       !Abb: Some Title {pdf="pdf/17.pdf", note="Footnote text", scale="0.75", rotation="90"}
-    The 'scale' attribute is optional. If provided, the image is scaled using the graphicx scale
-    option with origin=c (ensuring scaling from the center). Otherwise a default width of MAX_SIZE_FACTOR\\textwidth
-    is applied. The 'rotation' attribute is also optional and allows specifying an angle (e.g., 90 or -90)
-    to rotate the graphic.
-
-    The figure environment now uses the [H] specifier to force the figure to
-    appear exactly where it is in the markdown.
     """
     global abb_count, abb_entries
-
-    pattern = re.compile(
-        r'^\!Abb:\s*(.*?)\s*\{pdf="([^"]+)",\s*note="([^"]+)"(?:,\s*scale="([^"]+)")?(?:,\s*rotation="([^"]+)")?\}',
-        flags=re.MULTILINE
-    )
+    pattern = re.compile(r'!Abb:\s*(.*?)\s*\{([^}]+)\}', flags=re.DOTALL)
+    
     def abb_repl(match):
         global abb_count, abb_entries
         title = escape_latex(match.group(1).strip())
-        pdf_file = unicodedata.normalize("NFC", match.group(2).strip())
-        note = escape_latex(match.group(3).strip())
-        scale = match.group(4)
-        rotation = match.group(5)
+        prop_str = match.group(2)
+        props = parse_properties(prop_str)
+        pdf_file = unicodedata.normalize("NFC", props.get("pdf", "").strip())
+        note = escape_latex(props.get("note", "").strip())
+        
+        # Get the scale factor; default is 1.0 if not specified.
+        scale_str = props.get("scale", "").strip()
+        try:
+            scale_value = float(scale_str) if scale_str else 1.0
+        except ValueError:
+            scale_value = 1.0
+        
+        # Get rotation angle if provided.
+        angle = props.get("rotation", props.get("angle", "")).strip()
+        
+        # Build the \includegraphics options. Only include angle if specified.
+        include_opts = f"[angle={angle}]" if angle else ""
+        
         abb_count += 1
         entry = f"Abb.{abb_count}: {title}. {note}"
         abb_entries.append(entry)
-        if scale:
-            graphics_options = f"scale={scale},origin=c"
-        else:
-            graphics_options = f"width={MAX_SIZE_FACTOR}\\textwidth"
-        if rotation:
-            graphics_options += f",angle={rotation}"
+        
         figure_str = (
             "\\begin{figure}[H]\n"
             "\\centering\n"
-            "\\adjustbox{max size={%(max_size)s\\textwidth}{%(max_size)s\\textheight},center}{\\includegraphics[%(graphics_options)s]{\\detokenize{%(pdf_file)s}}}\n" % 
-            {"max_size": MAX_SIZE_FACTOR, "graphics_options": graphics_options, "pdf_file": pdf_file}
-            + f"\\caption{{{title}}}\n"
+            "\\adjustbox{max size={0.9\\textwidth}{0.9\\textheight},center,keepaspectratio}{%\n"
+            "\\scalebox{" + str(scale_value) + "}{\\includegraphics" + include_opts + "{\\detokenize{" + pdf_file + "}}}\n"
+            "}\n"
+            "\\caption{" + title + "}\n"
             "\\end{figure}\n"
         )
         return figure_str
+    
     return pattern.sub(abb_repl, md_content)
 
 def replace_anh_syntax(md_content):
     """
     Replaces !Anh: syntax by embedding each PDF page.
-    Detects page orientation: if landscape, rotates the page.
-    Also collects data for the final Anhängeverzeichnis.
-    (No title/description page is generated here.)
+    Supports properties in any order.
+    Expected syntax:
+      !Anh: Some Title {pdf="pdf/17.pdf", desc="Description text", angle="90"}
     """
     global anh_count, anh_entries
-
-    pattern = re.compile(
-        r'^\!Anh:\s*(.*?)\s*\{pdf="([^"]+)"(?:,\s*desc="([^"]+)")?\}',
-        flags=re.MULTILINE
-    )
+    pattern = re.compile(r'!Anh:\s*(.*?)\s*\{([^}]+)\}', flags=re.DOTALL)
+    
     def anh_repl(match):
         global anh_count, anh_entries
         title = escape_latex(match.group(1).strip())
-        pdf_file = unicodedata.normalize("NFC", match.group(2).strip())
-        desc = escape_latex(match.group(3).strip()) if match.group(3) else ""
+        prop_str = match.group(2)
+        props = parse_properties(prop_str)
+        pdf_file = unicodedata.normalize("NFC", props.get("pdf", "").strip())
+        desc = escape_latex(props.get("desc", "").strip())
         anh_count += 1
         entry = f"Anh.{anh_count}: {title}. {desc}"
         anh_entries.append(entry)
@@ -199,17 +210,23 @@ def replace_anh_syntax(md_content):
             num_pages = 0
         
         pdf_includes = ""
+        given_angle = props.get("angle", props.get("rotation", "")).strip()
         for i in range(1, num_pages + 1):
             page = reader.pages[i - 1]
             width = float(page.mediabox.width)
             height = float(page.mediabox.height)
-            angle_option = "angle=90," if width > height else ""
+            angle_option = ""
+            if given_angle:
+                angle_option = f"angle={given_angle},"
+            elif width > height:
+                angle_option = "angle=90,"
             pdf_includes += (
                 f"\\includepdf[pages={{{i}}},frame,scale=0.75,{angle_option}"
                 "pagecommand={\\stepcounter{page}}]"
                 f"{{\\detokenize{{{pdf_file}}}}}\n"
             )
         return pdf_includes
+    
     return pattern.sub(anh_repl, md_content)
 
 def replace_abs_syntax(md_content):
@@ -217,36 +234,30 @@ def replace_abs_syntax(md_content):
     Replaces !Abs: syntax with a title page.
     Expected syntax:
       !Abs: Some Title {desc="Some description", note="Some note"}
-    The note property is optional. The title is printed in Huge bold,
-    followed by the description in LARGEText and the optional note in large text.
-    The spacing between title and description is less than between description and note.
-    The content is left-aligned.
     """
-    pattern = re.compile(
-        r'^\!Abs:\s*(.*?)\s*\{(?:(?:desc="([^"]+)")(?:,\s*note="([^"]+)")?)?\}',
-        flags=re.MULTILINE
-    )
+    pattern = re.compile(r'!Abs:\s*(.*?)\s*\{([^}]*)\}', flags=re.DOTALL)
+    
     def abs_repl(match):
         title = escape_latex(match.group(1).strip())
-        desc = escape_latex(match.group(2).strip()) if match.group(2) else ""
-        note = escape_latex(match.group(3).strip()) if match.group(3) else ""
+        prop_str = match.group(2)
+        props = parse_properties(prop_str)
+        desc = escape_latex(props.get("desc", "").strip())
+        note = escape_latex(props.get("note", "").strip())
         block = (
             "\\clearpage\n"
             "\\thispagestyle{empty}\n"
             "\\begin{flushleft}\n"
             f"{{\\Huge \\textbf{{{title}}}}}\\par\n"
-            "\\vspace{0.5em}\n"  # smaller spacing between title and description
+            "\\vspace{0.5em}\n"
         )
         if desc:
             block += f"{{\\LARGE {desc}}}\\par\n"
-            block += "\\vspace{1.5em}\n"  # larger spacing between description and note
+            block += "\\vspace{1.5em}\n"
         if note:
             block += f"{{\\large {note}}}\\par\n"
-        block += (
-            "\\end{flushleft}\n"
-            "\\clearpage\n"
-        )
+        block += "\\end{flushleft}\n\\clearpage\n"
         return block
+    
     return pattern.sub(abs_repl, md_content)
 
 def exclude_cover_headers_from_toc(md_content):
@@ -274,6 +285,49 @@ def exclude_cover_headers_from_toc(md_content):
     lines = md_content.splitlines()
     processed_lines = [process_line(line) for line in lines]
     return "\n".join(processed_lines)
+
+def is_sticky_line(line):
+    """
+    Returns True if the given line is considered “sticky” – meaning it is
+    a heading (starting with '#' characters) or is a line that is entirely
+    marked up with strong (** or __) or italic (* or _) text (but not a bullet).
+    """
+    stripped = line.strip()
+    # Check for markdown headings.
+    if re.match(r'^#+\s+', stripped):
+        return True
+    # Check for strong text: **...** or __...__
+    if (stripped.startswith("**") and stripped.endswith("**")) or \
+       (stripped.startswith("__") and stripped.endswith("__")):
+        return True
+    # Check for italic text: *...* or _..._ (ensure it's not a bullet list).
+    if (stripped.startswith("*") and stripped.endswith("*") and not stripped.startswith("* ")) or \
+       (stripped.startswith("_") and stripped.endswith("_") and not stripped.startswith("_ ")):
+        return True
+    return False
+
+def prevent_page_break_between_sticky_and_abb(md_content):
+    """
+    Scans the Markdown content for any sticky line (e.g., headings,
+    or lines entirely enclosed in **, __, * or _)
+    that is immediately (ignoring blank lines) followed by a LaTeX figure environment.
+    If found, appends a "\nopagebreak[4]" to the sticky line so that the sticky text and the figure stay together.
+    """
+    lines = md_content.splitlines()
+    new_lines = []
+    for i, line in enumerate(lines):
+        new_lines.append(line)
+        if is_sticky_line(line):
+            # Look ahead for the next non-empty line.
+            next_line = ""
+            for j in range(i+1, len(lines)):
+                if lines[j].strip():
+                    next_line = lines[j].strip()
+                    break
+            if next_line.startswith("\\begin{figure}"):
+                # Append the nopagebreak command to the current sticky line.
+                new_lines[-1] = line + " \\nopagebreak[4]"
+    return "\n".join(new_lines)
 
 def generate_pdf():
     """
@@ -393,6 +447,10 @@ def generate_pdf():
             combined_md += "- " + entry + "\n"
     else:
         combined_md += "Keine Anhänge vorhanden.\n"
+
+    # --- NEW STEP: Prevent page breaks between sticky text and following Abb figures ---
+    combined_md = prevent_page_break_between_sticky_and_abb(combined_md)
+    # -----------------------------------------------------------------------------
 
     try:
         cmd_document = [

@@ -10,6 +10,8 @@ Laut dem EU-Klimaüberwachungsdienst Copernicus war 2024 sogar 1,6 Grad wärmer 
 
 Die zentrale Anstrengung des europäischen Green Deals soll als Zwischenziel innerhalb der EU bis 2030 eine Senkung der Netto-Treibhausgasemissionen um 55 % im Vergleich zu 1990 und bis 2050 eine vollständige Klimaneutralität erreichen. Die zahlreichen Bereiche in Wirtschaft und Industrie werden durch diese umfangreiche Palette an Maßnahmen zu nachhaltigem Wirtschaften verpflichtet.
 
+\newpage
+
 Besonders im Mittelpunkt der EU-Initiativen stehen die Klimaschutzambitionen. Dabei wurden gezielt die folgenden Sektoren als Schwerpunkte gewählt: Kreislaufwirtschaft, Landwirtschaft, Energiewirtschaft, Biodiversität, Gebäude sowie neue Technologien. Die nachfolgende Abbildung veranschaulicht den prozentualen Anteil der einzelnen Sektoren am weltweiten Ausstoß von Treibhausgasen.
 
 !Abb: Treibhausgasverursacher nach Sektoren (Global) {pdf="pdf/02.pdf", note="www.landschafftleben.at/hintergruende/landwirtschaft-ernaehrung-klima/daten"}
@@ -24,6 +26,8 @@ Unter den zahlreichen Neuerungen lassen sich die drei wichtigsten EU-Regularien 
 - Sustainable Finance Disclosure Regulation (SFDR)
 - EU-Taxonomie für nachhaltige Aktivitäten
 
+\newpage
+
 Die folgende Darstellung verdeutlicht die drei zentralen Instrumente (CSRD, SFDR und EU-Taxonomie), die zusammenwirken und sich ergänzen, um einen klaren, glaubwürdigen und einheitlichen Rahmen für nachhaltige Finanzierungen zu schaffen. Die EU-Taxonomie bietet eine einheitliche Grundlage für das Verständnis von Nachhaltigkeit und hebt die Bedeutung von „grünen“ Aktivitäten hervor. Die SFDR sorgt dafür, dass Finanzprodukte transparent bewertet und dargestellt werden. Mit der CSRD wird auf Unternehmensebene mehr Klarheit geschaffen, indem Anforderungen an die Nachhaltigkeitsberichterstattung formuliert werden^[Vgl.sustainabilityand.com/de/aktuelles/blog/eu-taxonomie-csrd-und-sfdr-erklaert].
 
 !Abb: Synergien der EU-Taxonomie, CSRD und SFDR {pdf="pdf/03.pdf", note="Eigene Darstellung nach: sustainabilityand.com/de/aktuelles/blog/eu-taxonomie-csrd-und-sfdr-erklaert"}
@@ -34,11 +38,15 @@ Der Kreis der Unternehmen, die der Berichtspflicht unterliegen, hat sich in kür
 
 Mit der Einführung der neuen Corporate Sustainability Reporting Directive (CSRD) wurde die NFRD im europäischen Raum ersetzt. Diese Richtlinie trat bereits am 5. Jänner 2023 in Kraft, wodurch sich der Kreis der berichtspflichtigen Unternehmen erheblich vergrößerte und der Anwendungsbereich der EU-Taxonomie erweitert wurde.
 
+\newpage
+
 Während sich die NFRD ausschließlich auf kapitalmarktorientierte Unternehmen mit durchschnittlich 500 oder mehr Mitarbeitenden konzentrierte, umfasst die CSRD-Richtlinie nun eine wesentlich breitere Gruppe von Unternehmen und bezieht alle Kapitalgesellschaften gemäß §221 UGB ein. Die nachstehende Übersicht zeigt den Zeitpunkt, zu dem Unternehmen in der Europäischen Union zur Berichterstattung verpflichtet sind^[Vgl. icon.at/hot-topics/esg-nachhaltigkeit].
 
 !Abb: Welche Unternehmen ab wann berichtspflichtig sind {pdf="pdf/04.pdf", note="Eigene Darstellung nach: www.icon.at/hot-topics/esg-nachhaltigkeit"}
 
 Unternehmen, die bereits betroffen sind, haben die Verpflichtung, ihre Berichterstattung extern überprüfen zu lassen.
+
+\newpage
 
 ## EU-Taxonomie-Verordnung
 
@@ -50,7 +58,7 @@ Aufgrund dieser erheblichen Umweltauswirkungen hat die EU-Kommission am 18. Ju
 
 Im Folgenden sind die maßgeblichen Rechtsakte aufgeführt, die gegenwärtig die Bewertungskriterien der EU-Taxonomie festlegen und auf denen dieser Leitfaden basiert:
 
-!Abb: Aufbau und Rechtsgrundlage der EU-Taxonomie {pdf="pdf/08.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
+!Abb: Aufbau und Rechtsgrundlage der EU-Taxonomie {pdf="pdf/08.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf", scale="1.1", angle="90"}
 
 Diese EU-Verordnung identifiziert spezifische Kriterien für wirtschaftliche Aktivitäten, die sich positiv auswirken, die Kreislaufwirtschaft ermöglichen und auf lange Sicht fördern. Der Bau- und Immobiliensektor wird somit systematisch dazu gedrängt, an ökologischen und sozialen Nachhaltigkeitskonzepten zu arbeiten.
 
@@ -69,15 +77,18 @@ Die unmittelbar anwendbare Verordnung umfasst aktuell sechs Umweltziele, die erf
 
 Die EU-Taxonomie-Verordnung stellt einen Katalog von Kriterien auf, der es ermöglicht, wirtschaftliche Aktivitäten anhand objektiver Maßstäbe als ökologisch nachhaltig zu klassifizieren. Der Begriff „taxonomiefähig“ bezeichnet dabei eine wirtschaftliche Tätigkeit, die grundsätzlich den festgelegten gesetzlichen Anforderungen entspricht und das Potenzial hat, einen bedeutenden Beitrag zu einem der sechs Umweltziele zu leisten. Diese Verordnung definiert klare Vorgaben, um wirtschaftliche Tätigkeiten nach ökologischen Nachhaltigkeitskriterien zu bewerten. Damit eine Tätigkeit als ökologisch nachhaltig gilt, müssen drei grundlegende Anforderungen erfüllt sein:
 
-!Abb: Bewertungstrichter der ökologischen Nachhaltigkeit von allen Geschäftsaktivitäten {pdf="pdf/07.pdf", note="Eigene Darstellung nach: mhl.de/de/wissen/eu-taxonomie.php"}
+!Abb: Bewertungstrichter der ökologischen Nachhaltigkeit von allen Geschäftsaktivitäten {pdf="pdf/07.pdf", note="Eigene Darstellung nach: mhl.de/de/wissen/eu-taxonomie.php", scale="0.4"}
 
 **Schritt 1**
+
 Sie muss einen bedeutenden Beitrag zur Erreichung eines oder mehrerer der sechs Umweltziele der EU-Taxonomie leisten.
 
 **Schritt 2**
+
 Sie darf keines dieser Umweltziele wesentlich schädigen (DNSH).
 
 **Schritt 3**
+
 Sie muss unter Einhaltung grundlegender sozialer Standards in Bezug auf Arbeitssicherheit und Menschenrechte durchgeführt werden
 
 ### Mindestschutz: Minimum Safeguards
@@ -104,17 +115,11 @@ Im Bau- und Immobiliensektor kann derzeit ein bedeutender Beitrag zu maximal dre
 - Anpassung an den Klimawandel (UZ 2)
 - Übergang zu einer Kreislaufwirtschaft (UZ 4)
 
-!Abb: Übersicht der taxonomiefähigen Wirtschaftstätigkeiten in der Bau- und Immobilienbranche {pdf="pdf/09.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
+!Abb: Übersicht der taxonomiefähigen Wirtschaftstätigkeiten in der Bau- und Immobilienbranche {pdf="pdf/09.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf", angle="90"}
 
 ### Wirtschaftliche Aktivitäten im Bausektor
 
-Folgende wirtschaftliche Aktivitäten werden in diesem Sektor bewertet:
-
-- Neubau von Gebäuden
-- Renovierung bestehender Gebäude
-- Erwerb von Eigentum an Gebäuden
-
-!Abb: Übersicht Zusammenspiel Wirtschaftstätigkeit, wesentlicher Beitrag und DNSH-Kriterien {pdf="pdf/10.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
+!Abb: Übersicht Zusammenspiel Wirtschaftstätigkeit, wesentlicher Beitrag und DNSH-Kriterien {pdf="pdf/10.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf", angle="90"}
 
 ### Do No Significant Harm – Kriterien (DNSH)
 
@@ -136,7 +141,7 @@ Eine derartige Klima- und Risikoanalyse ist am Ende dieser Arbeit als Anhang bei
 
 In der folgenden Abbildung werden einige Beispiele für physische Klimarisiken aufgeführt, die im Rahmen der Analyse von Klimarisiken und Verwundbarkeiten berücksichtigt werden sollten^[Vgl. wko.at/ooe/industrie/wkoo-leitfaden-eu-taxonomie-241002-web-1].
 
-!Abb: Übersicht 28 physische Klimagefahren {pdf="pdf/11.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
+!Abb: Übersicht 28 physische Klimagefahren {pdf="pdf/11.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf", scale="0.9", angle="90"}
 
 \newpage
 
@@ -154,17 +159,17 @@ Die EU-Taxonomie-Verordnung definiert einen Kriterienkatalog, der eine objektive
 
 Nachfolgend werden Bewertungstabellen auf Basis des Leitfadens der ÖGNI zur Nachweisführung für das Erreichen der Klimaschutzziele im Bauwesen dargestellt. In diesem Fall wird ausschließlich auf das Kriterium Neubau eingegangen.
 
-#### Umweltziel 1 – Klimaschutz
+**Umweltziel 1 – Klimaschutz**
 
-!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen des Klimaschutzes {pdf="pdf/19.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
+!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen des Klimaschutzes {pdf="pdf/19.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf", angle="-90"}
 
-#### Umweltziel 2 – Anpassung an den Klimawandel
+**Umweltziel 2 – Anpassung an den Klimawandel**
 
-!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen der Anpassung an den Klimawandel {pdf="pdf/20.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
+!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für das Erreichen der Anpassung an den Klimawandel {pdf="pdf/20.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf", angle="-90"}
 
-#### Umweltziel 3 – Nachhaltige Nutzung und Schutz von Wasser- und Meeresressourcen
+**Umweltziel 3 – Nachhaltige Nutzung und Schutz von Wasser- und Meeresressourcen**
 
-!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für die nachhaltige Nutzung und den Schutz von Wasser- und Meeresressourcen {pdf="pdf/21.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf"}
+!Abb: Übersicht Prinzip einer Nachweisführung lt. EU-Taxonomie für die nachhaltige Nutzung und den Schutz von Wasser- und Meeresressourcen {pdf="pdf/21.pdf", note="Eigene Darstellung nach: ogni.at/wp-content/uploads/OeGNI_EU-TaxonomieLeitfaden.pdf", angle="-90"}
 
 ## Fazit zur EU-Taxonomie im Neubau
 
@@ -201,7 +206,7 @@ Aus diesem Grund hat die EU zahlreiche Verordnungen im Bereich Nachhaltigkeit be
 
 !Abb: Übersicht Nachhaltigkeitsverordnungen in der EU {pdf="pdf/12.pdf", note="Eigene Darstellung nach: scale.co.at_Präsentation 9.10.24_LCC v. Lukas Röder & Nino Ivic"}
 
-## Relevanz der Kreislaufwirtschaft
+### Relevanz der Kreislaufwirtschaft
 
 Produzieren, konsumieren und anschließend weg damit – das soll das Konzept von gestern sein. Die Zukunft liegt eindeutig in der Zirkularität, besser bekannt als Kreislaufwirtschaft. Die Tendenz zur Wiederverwertung bzw. Wiederverwendung, insbesondere im Zusammenhang mit der EU-Taxonomie, wird immer wichtiger. Ziel ist es, Rohstoffe präziser zu nutzen und Materialien mehrfach einzusetzen, um unsere begrenzten weltweiten Ressourcen zu schonen.
 
@@ -230,7 +235,7 @@ In der Europäischen Kommission wurden viele weitere ähnliche regulatorische Ri
 
 Die Novellierung der neuen EU-Bauproduktenverordnung wurde am 18. Dezember 2024 im Amtsblatt der EU-Kommission unter der Nr. 2024/3110 kundgemacht. Die bisherige Verordnung gilt mit einer mehrjährigen (15-jährigen) Übergangsfrist weiterhin.
 
-Seit über einem Jahrzehnt sorgt die Bauprodukteverordnung (EU-BauPVO) europaweit für einheitliche technische Standards. Diese Richtlinie ist entscheidend für den freien Warenverkehr und sorgt für hohe Transparenz und Sicherheit am Markt. In der BauPVO werden Leistungserklärungen, CE-Kennzeichnungen sowie Konformitätsbewertungen von Bauprodukten geregelt – was für hohe Qualität und Zuverlässigkeit am Markt sorgt^[Vgl. https://www.forum-verlag.com/fachwissen/bau-und-gebäudemanagement/bauproduktenverordnung-alles-wissenswerte/#:\~:text=Wichtige%20Neuerungen%20der%20BauPVO%202024,und%20die%20Kreislaufwirtschaft%20gestärkt%20werden].
+Seit über einem Jahrzehnt sorgt die Bauprodukteverordnung (EU-BauPVO) europaweit für einheitliche technische Standards. Diese Richtlinie ist entscheidend für den freien Warenverkehr und sorgt für hohe Transparenz und Sicherheit am Markt. In der BauPVO werden Leistungserklärungen, CE-Kennzeichnungen sowie Konformitätsbewertungen von Bauprodukten geregelt – was für hohe Qualität und Zuverlässigkeit am Markt sorgt^[Vgl. forum-verlag.com/fachwissen/bau-und-gebäudemanagement/].
 
 Folgende Neuerungen bringt die BauPVO mit sich, die vor allem im Bausektor weitreichende Veränderungen bewirken:
 
@@ -238,7 +243,7 @@ Folgende Neuerungen bringt die BauPVO mit sich, die vor allem im Bausektor weitr
 - Beschleunigter Normungsprozess: Der Fokus liegt auf neuen Produkten, die bereits alle sicherheitsrelevanten Aspekte umfassen und somit auch Umwelt- und Klimaschutz sowie Kreislaufwirtschaft berücksichtigen.
 - Öffentliche Aufträge sollen verstärkt nachhaltige Bauprodukte bevorzugen.
 
-## Ökodesign Verordnung (ESPR)
+### Ökodesign Verordnung (ESPR)
 
 Seit 18. Juli 2024 gilt die neue Ökodesign Verordnung. Mit dem Inkrafttreten dieser Richtlinie sollen neue Schritte in Sachen Nachhaltigkeit in Europa gesetzt werden.  
 Die Richtlinie hat zum Ziel, die Umweltbelastung, den sogenannten ökologischen Fußabdruck eines Produktes, so gering wie möglich zu halten. Dies umfasst das Produkt von der Entstehung bis zur Entsorgung.^[Vgl. www.forum-verlag.com/fachwissen/energie-und-umwelt/oekodesign-verordnung-die-wichtigsten-fragen-und-antworten/]
@@ -250,7 +255,7 @@ Die neue Ökodesign-Verordnung (ESPR) ist ein wichtiger Schritt in Richtung eine
 
 Die Einführung des digitalen Produktpasses ermöglicht es Verbrauchern und Unternehmen, nachhaltigere Entscheidungen zu treffen.
 
-## EU-Lieferkettengesetz (CSDDD)
+### EU-Lieferkettengesetz (CSDDD)
 
 Das zentrale Ziel dieses Gesetzes besteht darin, die menschenrechtlichen und ökologischen Standards in internationalen Lieferketten zu verbessern und Unternehmen für etwaige Verstöße zur Rechenschaft zu ziehen.  
 Diese Initiative stellt eine Reaktion auf verschiedene Vorfälle dar, bei denen sowohl Menschenrechte missachtet als auch Umweltschäden verursacht wurden, insbesondere durch multinationale Unternehmen.
@@ -269,11 +274,13 @@ Folgende Unternehmen mit Sitz in der EU sind davon betroffen:
 - Mehr als 1.000 Arbeitnehmer:innen beschäftigt und
 - Mehr als 450 Millionen Euro weltweiter Jahresumsatz
 
+\newpage
+
 Unternehmen, die ihren Sitz in einem Drittstaat haben, unterliegen dieser Richtlinie, wenn sie in der EU einen Umsatz von mehr als 450 Millionen Euro erzielt haben.^[Vgl. www.wko.at/nachhaltigkeit/haeufige-fragen-eu-lieferkettengesetz]
 
 !Abb: Übersicht Nachhaltigkeitsverordnungen in der EU {pdf="pdf/13.pdf", note="Eigene Darstellung nach: wko.at/nachhaltigkeit/haeufige-fragen-eu-lieferkettengesetz"}
 
-## EU-Gebäuderichtlinie (EPBD)
+### EU-Gebäuderichtlinie (EPBD)
 
 Die Neufassung der EU-Gebäuderichtlinie schreibt EU-weit bis 2050 – entsprechend den Nachhaltigkeitszielen des Green Deals – Nullemissionsgebäude sowie anspruchsvolle Sanierungsziele vor.
 
@@ -294,10 +301,12 @@ Geplant ist das Inkrafttreten ab 1. Jänner 2027 mit folgenden Vorgabepunkten:
 - Alle EU-Mitgliedsstaaten müssen sicherstellen, dass die sozialen Auswirkungen der Renovierungskosten begrenzt werden.
 - Weitere Vorgaben betreffen Solarenergie, Maßnahmen für E-Mobilität sowie Fahrradabstellplätze.
 
+\newpage
+
 **Sanierung**  
 Die Gebäuderichtlinie bietet eine große Chance für Sanierungen und Sanierungsberatungen. Es werden sich jedoch viele Fragen hinsichtlich der technischen Umsetzung in Bestandsgebäuden ergeben. Zudem wird die Verfügbarkeit alternativer bzw. erneuerbarer Energiesysteme eine große Herausforderung darstellen. Zu befürchten ist, dass die hohen Kosten für die Sanierungen das zentrale Thema sein werden.
 
-## OIB 7 – der nationale Plan
+### OIB 7 – der nationale Plan
 
 Die Umsetzung auf nationaler Ebene hat innerhalb von 24 Monaten ab Veröffentlichung der neuen EPBD zu erfolgen.  
 Da Wärme und Energie grundsätzlich in die Zuständigkeit der Bundesländer fallen, werden diese die Vorgaben der Gebäuderichtlinie im Baurecht – konkret in den OIB-Richtlinien 6 und der neu geplanten Richtlinie 7 – umsetzen. Sämtliche Fäden laufen wie gewohnt im _Österreichischen Institut für Bautechnik_ zusammen.
@@ -310,7 +319,7 @@ Die Inhalte der zukünftigen OIB-Richtlinie 7 („Nachhaltige Nutzung an Bauwerk
 - Nutzungsdauer, Anpassungsfähigkeit und Dauerhaftigkeit von Bauwerken
 - Rückbau: Erstellung eines Rückbaukonzeptes
 
-## Abfallwirtschaftsgesetz (AWG)
+### Abfallwirtschaftsgesetz (AWG)
 
 Die gesetzlichen Bestimmungen für die Abfallwirtschaft in Österreich bildet das Abfallwirtschaftsgesetz (AWG). Dieses Gesetz zielt darauf ab, eine umweltfreundliche und ressourcenschonende Entsorgung von Abfällen sicherzustellen.
 
@@ -325,10 +334,12 @@ Neben zahlreichen nationalen Bestimmungen gibt es auch viele europarechtliche Vo
 - Pflichten für Personen, die in der Abfallwirtschaft beschäftigt sind
 - Vorgaben zur Abfallbehandlung
 
+\newpage
+
 **Nachweisführung**  
 Für bestimmte Abfälle, wie z. B. gefährliche Abfälle, sind Nachweise und Zertifikate erforderlich, um die ordnungsgemäße Entsorgung zu dokumentieren. Die Nachweispflichten umfassen sowohl die Entsorgung als auch die Verwertung von Abfällen.
 
-## Level(s)
+### Level(s)
 
 **Level(s)** ist ein europäisches Bewertungssystem zur nachhaltigen Beurteilung der ökologischen Leistung von Gebäuden.  
 Dieses System fungiert als Maßstab für die Umweltwirkungen von Gebäuden und steht im Zusammenhang mit den Zielen der EU-Taxonomie für nachhaltige Aktivitäten. Geschaffen wurde Level(s) im Rahmen der EU-Initiative zur Förderung der Kreislaufwirtschaft und der Minimierung der CO₂-Emissionen.
