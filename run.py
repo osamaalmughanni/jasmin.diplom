@@ -215,10 +215,10 @@ def replace_anh_syntax(md_content):
 
 def replace_abs_syntax(md_content):
     """
-    Replaces !Abs: syntax with a title page centered in the very heart of the page.
+    Replaces !Abs: syntax with a title page.
     Expected syntax:
       !Abs: Some Title {desc="Some description"}
-    Produces a dedicated title page without a header.
+    Produces a dedicated title page without extra vertical filling.
     """
     pattern = re.compile(
         r'^\!Abs:\s*(.*?)\s*\{(?:desc="([^"]+)")?\}',
@@ -230,7 +230,6 @@ def replace_abs_syntax(md_content):
         block = (
             "\\clearpage\n"
             "\\thispagestyle{empty}\n"
-            "\\vspace*{\\fill}\n"
             "\\begin{center}\n"
             f"{{\\Huge \\textbf{{{title}}}}}\\par\n"
         )
@@ -238,7 +237,6 @@ def replace_abs_syntax(md_content):
             block += f"{{\\Large {desc}}}\\par\n"
         block += (
             "\\end{center}\n"
-            "\\vspace*{\\fill}\n"
             "\\clearpage\n"
         )
         return block
@@ -291,7 +289,7 @@ def generate_pdf():
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
 \setlength{\floatsep}{10pt plus 2pt minus 2pt}
 \setlength{\intextsep}{10pt plus 2pt minus 2pt}
-\flushbottom
+\raggedbottom
 
 \usepackage{tocloft}
 \setlength{\cftbeforetoctitleskip}{-1em}
@@ -307,7 +305,7 @@ def generate_pdf():
 \usepackage{pdfpages}
 \usepackage{xcolor}
 \usepackage{xurl}
-\usepackage{adjustbox} % Added to ensure images never exceed text size.
+\usepackage{adjustbox} % Ensures images never exceed text size.
 \renewcommand{\UrlBreaks}{\do\/\do-}
 \usepackage[hang,flushmargin]{footmisc}
 \setlength{\emergencystretch}{3em}
@@ -324,8 +322,8 @@ def generate_pdf():
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{longtable}
-\setlength{\tabcolsep}{12pt} % increase space between table columns
-\renewcommand{\arraystretch}{1.2} % increase row height for better readability
+\setlength{\tabcolsep}{12pt} % Increase space between table columns
+\renewcommand{\arraystretch}{1.2} % Increase row height for better readability
 """
     try:
         with open(disable_hyphenation_file, "w", encoding="utf-8") as f:
