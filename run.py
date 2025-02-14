@@ -153,7 +153,6 @@ def replace_abb_syntax(md_content):
         entry = f"Abb.{abb_count}: {title}. {note}"
         abb_entries.append(entry)
         if scale:
-            # Using scale with origin=c ensures the scaling transformation is performed about the center.
             graphics_options = f"scale={scale},origin=c"
         else:
             graphics_options = f"width={MAX_SIZE_FACTOR}\\textwidth"
@@ -217,26 +216,34 @@ def replace_abs_syntax(md_content):
     """
     Replaces !Abs: syntax with a title page.
     Expected syntax:
-      !Abs: Some Title {desc="Some description"}
-    Produces a dedicated title page without extra vertical filling.
+      !Abs: Some Title {desc="Some description", note="Some note"}
+    The note property is optional. The title is printed in Huge bold,
+    followed by the description in LARGEText and the optional note in large text.
+    The spacing between title and description is less than between description and note.
+    The content is left-aligned.
     """
     pattern = re.compile(
-        r'^\!Abs:\s*(.*?)\s*\{(?:desc="([^"]+)")?\}',
+        r'^\!Abs:\s*(.*?)\s*\{(?:(?:desc="([^"]+)")(?:,\s*note="([^"]+)")?)?\}',
         flags=re.MULTILINE
     )
     def abs_repl(match):
         title = escape_latex(match.group(1).strip())
         desc = escape_latex(match.group(2).strip()) if match.group(2) else ""
+        note = escape_latex(match.group(3).strip()) if match.group(3) else ""
         block = (
             "\\clearpage\n"
             "\\thispagestyle{empty}\n"
-            "\\begin{center}\n"
+            "\\begin{flushleft}\n"
             f"{{\\Huge \\textbf{{{title}}}}}\\par\n"
+            "\\vspace{0.5em}\n"  # smaller spacing between title and description
         )
         if desc:
-            block += f"{{\\Large {desc}}}\\par\n"
+            block += f"{{\\LARGE {desc}}}\\par\n"
+            block += "\\vspace{1.5em}\n"  # larger spacing between description and note
+        if note:
+            block += f"{{\\large {note}}}\\par\n"
         block += (
-            "\\end{center}\n"
+            "\\end{flushleft}\n"
             "\\clearpage\n"
         )
         return block
@@ -310,7 +317,7 @@ def generate_pdf():
 \usepackage[hang,flushmargin]{footmisc}
 \setlength{\emergencystretch}{3em}
 
-\usepackage[automark,headsepline]{scrlayer-scrpage}
+\usepackage[automark]{scrlayer-scrpage}
 \clearpairofpagestyles
 \automark[subsection]{section}
 \ihead{\headmark}

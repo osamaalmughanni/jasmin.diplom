@@ -1,6 +1,6 @@
 # Anhänge
 
-!Abs: Wesentlichkeitsanalyse {desc="Analyse der wesentlichen ESG-Themen und deren Bedeutung."}
+!Abs: Wesentlichkeitsanalyse {desc="Analyse der wesentlichen ESG-Themen und deren Bedeutung.", note="Platzhalter"}
 !Anh: Wesentlichkeitsanalyse {pdf="pdf/Anhang_A_Wesentlichkeitsanalyse.pdf", desc="Analyse der wesentlichen ESG-Themen und deren Bedeutung."}
 
 !Abs: ESG-Bericht {desc="Detaillierter ESG-Bericht mit Nachhaltigkeitsbewertungen."}
